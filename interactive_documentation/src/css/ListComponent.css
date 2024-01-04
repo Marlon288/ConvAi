@@ -1,0 +1,36 @@
+.list-container{
+    height: 48vh; /* Responsive height */
+    width: 15.625vw;
+    position: fixed;
+    border-radius: 10px;
+    top: 40vh; /* Distance from bottom */
+    left: 25px; /* Distance from right */
+    z-index: 5; /* Ensure it's above other content */
+    border: 1px solid #D3D9DB;
+    margin-top: 35px;
+    overflow: scroll;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.list-item {
+  padding: 10px 20px; /* Padding inside each item */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  border-bottom: 1px solid #eee; /* Border between items */
+  color: #D3D9DB;
+  font-size: 20px;
+}
+
+.list-item:hover {
+  background-color: #D3D9DB; /* Change background color on hover */
+  color: #383c44;
+}
+.list-item:first-child{
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* Remove the bottom border for the last item */
+.list-item:last-child {
+  border-bottom: none;
+}

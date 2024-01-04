@@ -1,0 +1,19 @@
+.map-container, .map-container .leaflet-container {
+    transition: all 0.5s ease-in-out;
+    position: relative; /* or 'absolute' if the App component is positioned 'relative' */
+    height: 100vh; /* Full height initially */
+    width: 100%; /* Full width initially */
+    transform-origin: top left;
+  }
+  
+.map-container.minimized, .map-container.minimized .leaflet-container{
+    height: 34.073vh; /* Responsive height */
+    width: 15.625vw;
+    position: fixed;
+    border-radius: 10px;
+    top: 35px; /* Distance from bottom */
+    left: 25px; /* Distance from right */
+    z-index: 5; /* Ensure it's above other content */
+  }
+
+  

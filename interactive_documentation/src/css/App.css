@@ -1,0 +1,10 @@
+.app-container {
+  height: 100vh; /* Full height of the viewport */
+}
+
+.chat-wrapper {
+  overflow: hidden; /* In case the content overflows */
+  margin-left: auto; 
+  margin-right: 0;
+  width: 85%;
+}

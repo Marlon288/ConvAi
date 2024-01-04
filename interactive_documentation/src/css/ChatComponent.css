@@ -1,0 +1,130 @@
+    @font-face {
+        font-family: 'PilotTemp';
+        src: url('./Fonts/pilotcommand.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        color: #D3D9DB;
+    }
+    
+    .chat-title {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: 'PilotTemp',  sans-serif;
+        font-size: 3vw;
+    }
+    
+    .chat-display {
+        display: flex;
+        width: 75%;
+        flex-direction: column;
+        align-items: flex-start;
+        flex-grow: 1;
+        overflow-y: auto;
+        padding-left: 12.5%;
+        padding-right: 12.5%;
+    }
+    
+    .message {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .message-icon{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border-radius: 50%; /* Makes the icon round */
+        height: 30px; 
+        width: 30px;
+        background-color: #7d7d7d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .message-icon .user-icon {
+        stroke: #D3D9DB;
+        height: 30px; 
+        width: 30px;
+    }
+
+
+    .message-icon .gpt-icon{
+        height: 22px; 
+        width: 22px; 
+    }
+    
+    
+    .chat-input {
+        border: 1px solid #D3D9DB; /* Example border */
+        padding: 15px;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        
+    }
+    
+    .chat-input input[type="text"] {
+        border: none;
+        background-color: transparent;
+        flex-grow: 1;
+        margin-right: 10px;
+        color: #D3D9DB;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    .chat-input input[type="text"]:focus {
+        /* Styles for the input field when it is active */
+        outline: none; /* Removes the default focus outline */
+        background-color: transparent; /* Example: slightly white transparent background */
+        /* Add other desired styles */
+    }
+
+    .chat-input .svg-wrapper {
+        display: flex;
+        align-items: center; /* Align vertically */
+        justify-content: center; /* Center horizontally */
+        padding: 2px;
+        border: 1px solid #D3D9DB;
+        border-radius: 4px;
+    }
+
+    .chat-input .svg-wrapper:hover {
+        background-color: #D3D9DB;
+        svg{
+            fill: #383c44 !important;
+            color: #383c44 !important;
+        }
+    }
+
+
+    .chat-input .svg-wrapper.submit-svg svg{   
+        height: 25px;
+        width: 25px;
+        fill: #D3D9DB;
+    }
+    
+    .chat-input .svg-wrapper.stop-svg svg{   
+        height: 22px;
+        width: 22px;
+        fill: #D3D9DB;
+    } 
+    .chat-input .svg-wrapper.stop-svg{ 
+        width: 25px;
+        height: 25px;
+    }
+
+    .chat-input .svg-wrapper{
+        top:5px;
+    }

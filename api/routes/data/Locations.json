@@ -1,0 +1,30 @@
+[
+    {
+              "coordinates": [55.87268928133002, -4.307316847333048],
+              "location_label": "Glasgow",
+              "api_link": "Test"
+          },
+          {
+              "coordinates": [52.62182878962327, 1.3180185409636702],
+              "location_label": "Norwich",
+              "api_link": ""
+          },
+          {
+              "coordinates": [53.44094910166132, -2.9810707456479886],
+              "location_label": "Liverpool",
+              "api_link": ""
+          },
+          {
+              "coordinates": [47.566453725650305, 8.903938751666576],
+              "location_label": "Frauenfeld",
+              "api_link": "Test"
+          },
+          {
+              "coordinates": [59.37899874769561, 18.000285058139394],
+              "location_label": "Stockholm",
+              "api_link": ""
+          }
+  
+  ]
+  
+  
