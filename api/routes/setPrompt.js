@@ -1,7 +1,9 @@
 var express = require("express");
 var router = express.Router();
 require("dotenv").config();
-var { ChatOpenAI, ChatPromptTemplate, StringOutputParser } = require("langchain");
+var ChatOpenAI = require("@langchain/openai").ChatOpenAI;
+var ChatPromptTemplate = require("@langchain/core/prompts").ChatPromptTemplate;
+var StringOutputParser = require("@langchain/core/output_parsers").StringOutputParser
 
 const chatModel = new ChatOpenAI({
   openAIApiKey: process.env.OPENAI_API_KEY,
