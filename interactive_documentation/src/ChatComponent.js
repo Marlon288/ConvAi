@@ -1,30 +1,17 @@
-  import OpenAI from "openai";
-  import React, { useState, useEffect, useRef } from "react";
+ import React, { useState, useEffect, useRef } from "react";
   import "./css/ChatComponent.css"; // Make sure to create this CSS file
-  import { ChatOpenAI } from "langchain/chat_models/openai";
-  import { ChatPromptTemplate } from "@langchain/core/prompts";
-  import { StringOutputParser } from "@langchain/core/output_parsers";
 
   //const openai = new OpenAI({apiKey: process.env.REACT_APP_OPENAI_API_KEY,  dangerouslyAllowBrowser: true});
     
-  const chatModel = new ChatOpenAI({
+  /*const chatModel = new ChatOpenAI({
     openAIApiKey: process.env.REACT_APP_OPENAI_API_KEY,
     modelName: "gpt-3.5-turbo"
-  });
+  });*/
 
   const initilized = false;
 
   //const loader = new PDFLoader("../Documents/Documents.pdf");
   //const docs = await loader.load();
-
-
-  const prompt = ChatPromptTemplate.fromMessages([
-    ["system", "As EAM Expert, your primary role is to provide answers strictly based on the documentation provided for Enterprise Asset Management (EAM) systems. You should not use external sources or general knowledge to answer questions. Your responses should closely align with the specific information, guidelines, and procedures detailed in the EAM documentation. This approach ensures the utmost accuracy and relevance of the information shared, tailored specifically to inquiries about EAM systems"],
-    ["user", "{input}"],
-  ]);
-  const controller = new AbortController();
-  const outputParser = new StringOutputParser();
-  const chain = prompt.pipe(chatModel).pipe(outputParser);
 
 
   const ChatComponent = ({location}) => {

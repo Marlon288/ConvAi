@@ -1,12 +1,16 @@
 var express = require("express");
 var router = express.Router();
+var path = require("path");
+var fs = require('fs');
 
 router.get('/getLocations', (req, res) => {
-    res.sendFile('/data/Locations.json', { root: __dirname }, (err) => {
+    const filePath = path.join(__dirname, '../data/Locations.json');
+    fs.readFile(filePath, 'utf8', function(err, data) {
         if (err) {
-            console.log("Error :" + err);
-            res.status(500).send("Error loading the file");
+            console.error('Error reading file:', err);
+            return res.status(500).send('Internal Server Error');
         }
+        res.json(JSON.parse(data));
     });
 });
 module.exports = router;

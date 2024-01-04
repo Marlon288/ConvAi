@@ -1,0 +1,122 @@
+Department - Specify the department for which to calculate labor availability.
+The system totals employee exceptions for Trade and Department to calculate
+the total amount of labor hours available for a specific time-frame.
+Enter the Start Date and End Date of the period for which to calculate available labor.
+End Date must be later than or equal to Start Date.
+4. Click Calculate.
+5. Click Close.
+
+Viewing labor utilization
+View labor utilization percentages for each calendar day.
+To view labor utilization:
+1. Select Work > WO Planning > WO Scheduling.
+2. Specify this information:
+Organization - Specify the organization for which to view labor utilization if you use
+multi-organization security.
+Schedule By - Select one of the following options:
+• Employee - Select to view the schedule by employee.
+The system displays Employee. Enter for Employee, the Employee for whom you
+wish to view the labor utilization for the date selected on the calendar.
+• Trade/Department - Select to view the schedule by trade/department.
+The system displays Trade and Department. Enter for Trade, the trade for which
+you wish to view the labor utilization for the date selected on the calendar. You
+may also enter, for Department, the department for which you wish to view the
+labor utilization to further filter the trade records for the date selected on the
+calendar.
+3. Place the cursor over a calendar day to view the employee or trade/department
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+776 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+utilization percentage for that day. The colors indicating labor utilization only appear on
+the calendar after you calculate labor availability. See this table when viewing the labor
+utilization.
+
+Color
+
+Significance
+
+Gray
+
+Non-working day for the organization or no labor
+scheduled for this day.
+
+Green
+
+Total scheduled hours are less than total available hours,
+and labor utilization is less than 80%.
+
+Yellow
+
+Total scheduled hours are between 80% and 100% of total
+available hours.
+
+Red
+
+Total scheduled hours exceed the total available hours.
+
+Scheduling or rescheduling work orders
+Schedule unscheduled or backlogged work orders. Reschedule work orders as necessary. To
+schedule or reschedule work orders:
+1. Select Work > WO Planning > WO Scheduling.
+2. Specify this information:
+Organization - Specify the organization for which to schedule work if you use multiorganization security.
+Schedule By - Select one of the following options:
+• Employee - Select to schedule by employee. The system displays Employee.
+Enter, for Employee, the Employee for whom you wish to schedule the work.
+• Trade/Department - Select to schedule by trade/department. The system displays
+Trade and Department. Enter, for Trade and Department, the trade and
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+777 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+department for which you wish to schedule the work.
+• Auto Refresh - Select for the system to automatically refresh the Daily Schedule
+list after scheduling an activity on the calendar. If you do not select Auto Refresh,
+the activity will not automatically appear in the Daily Schedule list until you
+manually click Refresh.
+See this table when scheduling or rescheduling work orders:
+
+Function
+
+Procedure
+
+Schedule unscheduled work orders
+
+Select Unscheduled WOs for Dataspy in
+the Activities section of the form, and then
+select a work order from the list and drag it
+to the day on the calendar for which to
+schedule it. The system creates a new
+work order schedule record.
+
+Schedule backlogged work orders
+
+Select Backlogged WOs for Dataspy in the
+Activities section of the form, and selects
+a work order from the list and drag it to the
+day on the calendar for which to schedule
+it. The system creates a new work order
+schedule record.
+
+Reschedule work orders
+
+Select the work order to reschedule in the
+Daily Schedule list, and then drag it to the
+day on the calendar for which to
+reschedule it. You must select either
+today’s date or a future date as the
+reschedule date on the calendar.
+
+Viewing work order comments
+View work order planning and work order activity-related comments on the Work Order
