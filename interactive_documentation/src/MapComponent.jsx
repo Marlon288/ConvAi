@@ -43,7 +43,7 @@ const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, locations}) => {
         setResetZoomData({ position: location.coordinates, zoom: defaultZoom });
         setIsChatOpen(true);
         console.log(location);
-        setLocation(location.location_label);
+        setLocation(location);
     };
     
     const position = [47.566453725650305, 8.903938751666576]; // Frauenfeld

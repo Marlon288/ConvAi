@@ -1,13 +1,13 @@
 import React from 'react';
 import './css/ListComponent.css'; // Make sure to create this CSS file
 
-const ListComponent = ({locations}) => {
+const ListComponent = ({locations, setLocation}) => {
   
 
 
 
-  const handleClick = (item) => {
-    console.log(item.api_link); // Replace with your click handling logic
+  const handleClick = (location) => {
+    setLocation(location);
   };
 
   return (

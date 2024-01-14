@@ -8,7 +8,7 @@ import ListComponent from './ListComponent';
 
 const App = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState([]);
   const [locations, setLocations] = useState([]);
 
   const fetchLocations = () => {
@@ -27,9 +27,9 @@ const App = () => {
       <MapComponent locations={locations} isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen} setLocation={setLocation}></MapComponent>
       {isChatOpen &&
         <>
-        <ListComponent locations={locations}></ListComponent>
-        <div className='chat-wrapper' location={location}>
-          <ChatComponent></ChatComponent>
+        <ListComponent locations={locations} setLocation={setLocation}></ListComponent>
+        <div className='chat-wrapper'>
+          <ChatComponent location={location}></ChatComponent>
         </div>
         </>
       }

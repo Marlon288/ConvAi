@@ -120,3 +120,616 @@ reschedule date on the calendar.
 
 Viewing work order comments
 View work order planning and work order activity-related comments on the Work Order
+
+
+Scheduling form.
+To view work order comments:
+1. Select Work > WO Planning > WO Scheduling.
+2. Select a work order for which to view comments from the Activities list, and then click
+View Comments.
+3. Specify this information:
+Comments Type - Select one of the following options:
+• Activity - Select to view comments associated with the work order activity.
+• Task Instructions - Select to view task instructions associated with the task
+defined on the work order activity.
+• Work Order - Select to view work requested comments associated with the work
+order.
+4. Click Close.
+
+Changing work order status
+Change work order status on the Work Order Scheduling form.
+To change work order status:
+1. Select Work > WO Planning > WO Scheduling.
+2. Select a work order and a daily schedule record for which to change the status, and
+then click Actions > Change WO Status.
+3. Specify this information:
+New Status - Select the status to which to change the work order.
+You may only select a New Status with a system status of R.
+4. Click Submit.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+779 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+Freezing and unfreezing activity schedules
+Temporarily freeze a schedule to compare the actual work done against the work that you
+scheduled. Frozen activity schedules cannot be updated.
+To freeze and unfreeze activity schedules:
+1. Select Work > WO Planning > WO Scheduling.
+2. Right-click on the form, and then choose Freeze/Unfreeze.
+3. Specify this information:
+Freeze/Unfreeze - Select Freeze to freeze the schedule, or select Unfreeze to unfreeze
+the schedule.
+From Date/To Date - Specify the starting and ending dates for the freeze period.
+Department - Specify the department for which to freeze or unfreeze schedules.
+4. Click Submit.
+
+Balancing the workload
+Balance the workload by adjusting the schedule. The WO Load Balancing form consists of
+three pages: the Parameters page, on which you define the selection criteria for locating the
+work orders to balance; the Preview page, on which you can preview the work orders prior to
+actually balancing them and select or clear the work orders to process as necessary; and the
+Balance Load page, on which you can balance the work order load.
+The Generate Options section of the Parameters page enables you to specify the manner in
+which the system processes the work orders.
+The Preview page allows you to preview all of the work orders selected for processing based
+on the selection parameters, enabling you to select or clear the work orders to balance. You
+can select or clear individual work orders for processing, or you can select or clear all work
+orders for processing.
+Balancing the workload for work orders of Type ST (standing work order) or MEC
+(multiple equipment child) is not supported.
+The Balance Load page enables you to view labor availability and reschedule work.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+780 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+1. Select Work > WO Planning > WO Load Balancing.
+2. Specify this information:
+Work Order Org. - Specify the organization to which the work order belongs if you use
+multi-organization security.
+3. Specify selection criteria as necessary in the Selection Parameters section of the form.
+You can enter wild cards for the Department, PM Schedule, Project Budget,
+WO Type, Priority, Trade, Status, Reported By, Work Order, Assigned To, and
+Assigned By parameters. Enter the first character of the parameter followed by a
+percentage sign, and then click Process. For example, if you enter E% for Trade, the
+system retrieves all work orders with a trade that begin with the letter "E" on the
+Preview tab.
+4. Specify this information:
+Schedule Window (Days) - Specify the number of days into the future for which to
+calculate labor availability.
+Sort By - Select whether to sort by Reported Date or by Scheduled Start Date.
+5. Click Process.
+6. Select each work order you wish to balance, or you can clear each work order you do
+not wish to balance as necessary.
+To select all the work orders at once, select Select. To clear all the work orders
+at once, clear Select.
+7. Click Lock Selected Work Orders.
+8. Select a work order, and then click the next arrow to move the current work order ahead
+in time. Click the previous arrow to move the current work order back in time. You may
+also click a specific date cell to change the work order date. In the lower section of the
+form, the system displays colors to represent labor availability versus labor required for
+the work order:
+• Green - Available labor hours exceed required labor hours
+• Yellow - Required labor hours equal available labor hours
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+781 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+• Red - Required labor hours exceed available labor hours
+By adjusting work orders in the schedule, you can reschedule them at times when
+enough labor is available, and thus balance the workload.
+9. Click Update Activity to update the work order activity.
+10. Specify this information:
+Activity-Trade - Select the activity-trade for which to update the trade or start date.
+Trade - Specify the trade to update for the activity.
+Start Date - Specify the starting date to update for the activity.
+11. Click Save.
+12. Click Close Session and Update Work Orders.
+
+Viewing work order details while balancing the workload
+View work order details while balancing the workload for a work order to access specific
+information about a work order that can affect the scheduling of the work order, such as the
+location, priority, start and due dates, etc.
+To view work order details while balancing the workload:
+1. Select Work > WO Planning > WO Load Balancing.
+2. Generate, preview, and lock the list of work orders to balance as necessary. See
+Balancing the workload.
+3. Select the work order for which to view details, and then click View WO Details.
+4. View the work order details for the work order to balance.
+5. Click Close.
+
+Booking labor corrections for work orders
+Book labor corrections for existing booked labor records on the work order.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+782 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+Corrections can only be made to records that have not yet been corrected and are
+not themselves a correction.
+1. Select Work > Work Orders.
+2. Click the Book Labor tab.
+3. Select the record for which to create a correction, and then click Create Correction.
+4. In the Book Labor Correction pop-up window, specify the desired corrections.
+5. Click Submit.
+
+Dispatching employees to work order activities on a map
+Dispatch employees or a crew to open work order activities on a map.
+Select work order activities for which to dispatch employees, from a list or from a map.
+Choose employees or crews to assign to the work order activities based on their qualifications
+to perform the work as well as their availability to complete the work.
+1. Select Work > Work Orders > GIS Map WO Dispatching.
+2. Click the Parameters tab.
+3. Specify this information:
+Work Order Org. - Specify the organization of the work order for which to perform work.
+Dispatch Date - Specify the date the crew will be dispatched.
+Employee Shift - Specify the shift from which to select qualified workers to complete
+the work.
+Map - Specify the map to use when selecting the equipment for which to perform the
+work order activities.
+4. Click Save.
+
+Deleting dispatched labor records
+View or delete current dispatch records for employees or crews.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+783 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+Only current dispatch labor records are shown and available. Completed dispatch
+records are not shown on the map or in any of the panels on the screen.
+1. Select Work > Work Orders > GIS Map WO Dispatching.
+2. On the map, select the employees or the crew whose labor records you want to delete,
+right-click, and then select View/Delete Dispatch Labor. The Dispatch Labor pop up
+window is opened.
+Alternately, you may select the labor records to delete in the Available Crews or
+Available Employees panels below the map. Right-click the record in the panel, and
+select View/Delete Dispatch Labor.
+3. Select the check box of the dispatched labor record(s) to delete.
+4. Click Delete Selected Records. Total Dispatched Hrs. is recalculated based on the
+remaining labor records in the grid.
+5. Click Close.
+
+Creating crews for dispatched labor
+Create crews to dispatch work order activities to when the crew is geographically closest to
+the work area; and one, several, or all employees in the crew meets the qualifications of the
+work order activity.
+Crews can be:
+• temporary
+• permanent
+• made up of employees with unique qualifications for special tasks
+• expanded by adding new employees
+• downsized by removing existing employees
+• enhanced by adding temporary employee replacements
+You can also modify crews by adding or removing employees from the crew permanently, or
+for a temporary period of time. As an example, a dispatcher may need to add an employee to
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+784 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+the crew temporarily when a permanent crew employee calls in sick or goes on vacation. To
+temporarily add an employee to the crew, the dispatcher assigns the appropriate date range
+for the substitute employee.
+All employees and crews available for dispatching on this screen have met the
+minimum qualifications to perform work for the selected work order activity for the date range
+determined by the Dispatch Date plus work order activity Duration.
+1. Open the GIS Map WO Dispatching screen.
+2. Select the work order activity for which to dispatch labor.
+3. Click Create Crew. The Create Crew pop up window is opened.
+4. Optionally, if this crew is being created for a temporary period of time, select the
+Temporary check box, and then specify the date the "temporary" crew will expire in
+Expiration Date.
+5. Optionally, select the Show Available Only check box to only display available
+employees and crews that have enough remaining available hours to perform the
+selected WO activities.
+6. In the Crew field, specify a unique code or name to identify this crew, and then specify a
+description of this crew in the adjacent field.
+If no name or unique code is specified for the new crew, a code is automatically
+assigned when the new record is saved.
+7. Next, specify this Crew Details information:
+Organization - Specify the organization of the work order for the work being performed.
+Supervisor - Optionally, assign a supervisor for the crew.
+End Date - Optionally, specify an end date for the employees assigned to this crew if it
+is a permanent crew which will not expire.
+Profile Picture - Optionally, associate a picture with this crew.
+8. Next, add employees to the new crew, or select a crew, to which to dispatch the work
+order activities.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+785 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+• To add employees to the crew, browse to the Available Employees section, and on
+each employee card, choose one the following right-click options:
+• Dispatch the work order activity to the employee.
+• View the employee's description and trade information.
+• View or delete the dispatched labor record for the employee.
+Employees selected in this step are shown in the Proposed Crew
+section on the screen.
+• To select a crew, browse to the Available Crews section, and on the crew card,
+choose one of the following options:
+• Dispatch the work order activity to the crew.
+• View or delete the dispatched labor record.
+• Edit the crew.
+The crew selected in this step is shown in the Proposed Crew
+section on the screen.
+9. Next, review the employees or the crew isolated for the purpose of creating this new
+crew in the Proposed Crew section. Drag and drop individual employees or a full crew to
+the Proposed Crew section, or remove employees from this section to modify the new
+crew as necessary until the ideal crew is obtained.
+10. When no further modifications to the crew are necessary, click Create Crew and
+Dispatch. The new crew is shown in the Dispatched Employees/Crews section on the
+GIS Map WO Dispatching screen for the selected work order activity.
+
+Modifying existing crews for dispatched labor
+Modify existing crews for dispatched labor. Add or remove employees for a temporary period
+of time, or on a permanent basis.
+1. Open the GIS Map WO Dispatching screen, and browse to the Dispatched
+Crew/Employee section.
+2. In the Available Crew section, find the crew you want to edit, and then right click on the
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+786 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+crew record, and click Edit Crew.
+3. In the Edit Crew pop up window, specify this information:
+End Date - Specify the end date for the crew if this is a permanent crew.
+Expiration Date - Specify the date the crew expires if this is a temporary crew. Once
+the crew expires, the crew will no longer show in Crews lookups throughout the system.
+Supervisor - Specify the supervisor for the crew.
+4. Add or remove employees to the modified crew as needed.
+5. Click Save. If the end date or expiration date is updated, the end date for each
+employee in the crew is set to the new date. The start date for any employees added to
+the crew in this instance is set to the dispatch date.
+
+Completing work
+This section describes the process for completing work information. You may close work
+orders on the Closing page or on the Work Order Quick Close form. Depending on your
+particular system parameter configuration, you may or may not be able to complete
+transactions for the closed work order. Also, in certain cases, you may not be able to close
+work orders if there are still purchases outstanding. Reopen closed work orders if necessary.
+
+Closing work orders
+Close completed work orders.
+If you close a PM work order, the system generates the next PM work order. You
+may also close work orders on the Work Order Quick Close page. See Closing work orders
+on the quick close page.
+You cannot close a work order if any of the following conditions is true:
+• If Prevent WO Completion is selected for the Equipment on the work order header or
+any of the associated MEC work orders
+• If the WOCLPOUT installation parameter is set to NO and the work order or one of the
+MEC work orders is referenced on an active purchase order or requisition line
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+787 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+• If the WOCLPOUT installation parameter is set to NO and the work order or one of the
+MEC work orders contains one or more direct purchase parts that have been received
+to a Store but not yet issued to the work order
+• If the EVTCASCD installation parameter is set to NO and the work order is the parent of
+at least one open dependent child work order
+The setting of the EVTCASCD installation parameter does not affect the Status
+of a MEC work order when you change the Status of the parent multiple equipment
+order because the system always cascades the Status of the parent multiple equipment
+work order to the associated MEC work orders.
+To close work orders:
+1. Select Work > Work Orders.
+2. Select the work order to close, and then click the Closing tab.
+3. Specify this information:
+Status - Select Completed as the status of the work order.
+If you close a work order that is a template standard work order and that has
+children attached, the system recalculates and updates the status of all child work
+orders attached. If you close the last child work order in a sequence, the system
+recalculates the requested start and end dates for all child work orders.
+Depending on your system configuration, you may not be able to close a parent work
+order until all dependent child work orders have been closed. Contact your system
+administrator for more information.
+You can reopen a work order after it is closed if the REOPENPM installation parameter
+is set to YES and you have the proper status authorization to do so. However reopening a parent work order does not affect any child work orders of the parent work
+order regardless of whether the child work order is dependent on the parent or the
+setting of the EVTCASCD installation parameter.
+If the work order is a multiple equipment work order, then the system updates the Status
+of all MEC work orders associated with the work order to the Status of the parent work
+order.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+788 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+Equipment - Specify the equipment on which the work was performed.
+If the equipment record was previously flagged as Prevent WO Completion,
+you will not be able to close the work order.
+Start Date - Specify the date on which the work started.
+Date Completed - Specify the date on which the work was completed.
+When closing a multiple equipment work order, the system copies the Date
+Completed to any open MEC work orders associated with the parent multiple
+equipment work order and overwrites the existing Date Completed on the MEC work
+orders. However, the system does not overwrite the Date Completed on any MEC work
+orders that were completed prior to closing parent multiple equipment work order.
+Downtime Cost - Specify the cost of the downtime to the production process.
+Downtime Hours - Specify the number of hours that the equipment was down.
+Problem Code - Specify the code of the problem that required work.
+Failure Code - Specify the reason that the equipment or component failed.
+Cause Code - Specify the problem cause code, i.e., the root cause of the problem.
+Action Code - Specify the code of the action taken to correct the problem.
+If the work order is a multiple equipment work order and you modify the
+Problem Code, Failure Code, Cause Code, and/or Action Code, the system
+cascades the change to the corresponding codes on any MEC work orders that are not
+completed, overwriting any existing values.
+4. Click Save Record.
+
+Closing work orders on the quick close page
+Quickly close completed work orders on the Work Order Quick Close page. When you enter
+a work order number, the system automatically enters a status of Completed and enters
+today’s date as the date completed so that you may quickly close the work order. However,
+you may also update any information about the work order and book additional hours for the
+work order activities on this page.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+789 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+If you close a PM work order, the system generates the next PM work order as long
+as the PM work order is not a duplicate.
+You may also close work orders on the Closing tab. See Closing work orders.
+To close work orders on the Work Order Quick Close page:
+1. Select Work > WO Quick Close.
+2. Specify this information:
+Work Order - Specify the work order number of the work order you wish to close.
+The system automatically populates the work order description, Organization, and New
+Status with a value of Completed.
+Equipment - Specify the equipment on which the work was performed.
+If the work order is a multiple equipment work order, then Equipment (on the
+work order header) is protected.
+New Status - Select Completed as the new status of the work order.
+If you close a work order that is a template standard work order and that has
+children attached, the system recalculates and updates the status of all child work
+orders attached. If you close the last child work order in a sequence, the system
+recalculates the requested start and end dates for all child work orders.
+A parent work order cannot be closed until all dependent child work orders have been
+closed.
+Start Date - Specify the date and time on which the work started.
+Date Completed - Specify the date on which the work was completed.
+Downtime Cost - Specify the cost of the downtime to the production process.
+Downtime Hours - Specify the number of hours that the equipment was down.
+Problem Code - Specify the code of the problem that required work.
+Failure Code - Specify the reason that the equipment or component failed.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+790 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+Cause Code - Specify problem cause code, i.e., the root cause of the problem.
+Action Code - Specify the action taken to correct the problem.
+Closing Comments - Enter closing comments about the work order.
+Specify the following information to book additional hours to the work order:
+Activity-Trade - Select the activity-trade performing the work for which to book labor
+hours.
+When you select an Activity-Trade, the system temporarily protects Work
+Order to prevent an accidental change during the process of booking hours. However,
+upon saving the booked hours or clicking Clear, the system enables Work Order and
+clears the Activity-Trade. However, if you manually clear Activity-Trade, Work Order
+remains protected.
+If the selected Work Order is a multiple equipment work order, then the system enables
+Equipment in the details section of the form, and it is required. If you clear ActivityTrade for a multiple equipment work order, the system also clears the Equipment,
+Equipment Org., and Related Work Order.
+Employee - Specify the personnel performing the work for which to book hours.
+Date - Specify the date on which the work was performed.
+Equipment - Choose one of the following options if the work order is a multiple
+equipment work order:
+• All Equipment - Enter All Equipment to evenly distribute the booked labor to
+each equipment record on the work order. Upon saving the transaction, the
+system creates the labor booking records and applies them to each related work
+order for each equipment and selected activity. The Rate applicable to the multiple
+equipment work order will also be applied to all MEC work orders.
+The system automatically applies any remainder of the Hours Worked to
+the last equipment record added to the work order.
+If you select All Equipment for Equipment and at least one of the related work
+orders has Completed status (or equivalent user status), the system displays a
+message enabling you to select whether to distribute the labor hours against only
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+791 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+open related work orders or against all equipment.
+Also, the system disregards the setting of the COMDAYS installation parameter
+when posting labor booking transactions if you select All Equipment.
+• WO Header Equipment - Enter WO Header Equipment to apply the booked
+labor to the work order header only.
+• Equipment - Enter a specific Equipment record to apply the booked labor to the
+selected Equipment and the corresponding Related Work Order. The system
+automatically populates Equipment Org. and Related Work Order from the
+selected Equipment record. See Adding equipment to work orders to split work
+order costs.
+Type of Hours - Select the type of hours worked (e.g., hourly rate, overtime rate,
+corrective booking, etc.).
+Hours - Specify the number of hours spent performing the work.
+End Time - Specify the scheduled start time and end time of the work order
+activity.
+3. Click Save Hours.
+4. Repeat these steps as necessary to book any additional hours against the work order
+activity.
+5. Click Save Record.
+
+Reopening closed work orders
+Reopen closed work orders when changes to the work order are required or when requisitions
+or purchase orders related to the closed work order must be generated. Only users with
+proper authorization may reopen closed work orders. Depending on your system
+configuration, you may not be able to reopen closed work orders. Contact your system
+administrator for more information.
+To reopen closed work orders:
+1. Select Work > Work Orders.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+792 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+2. Select the work order to reopen, and then click the Closing tab.
+3. Specify this information:
+Status - Select Released as the status of the work order.
+4. Click Save Record.
+Reopened is selected when the work order is saved.
+
+Entering meter readings for work order equipment
+Enter meter readings for equipment defined on a work order. You can view recent meter
+readings for equipment, and you can also add a new meter reading for equipment on a work
+order.
+You can delete a meter reading if you find that the reading has been entered in error;
+however, you cannot modify the value of an existing meter reading.
+In many cases, the meter for a piece of equipment on a work order is the child meter of a
+meter attached to the parent equipment in an asset hierarchy. In such cases, the new meter
+reading needs to be entered/submitted for the parent equipment/meter even though you are
+entering the reading via the child equipment/meter on the work order. Also, the new reading
+must also roll down to all children of the parent within the asset hierarchy. Use Target
+Equipment to indicate the equipment for which to add the meter reading.
+The Target Equipment for a meter reading is the equipment of the work order only if
+the equipment meter is a standalone meter.
+However, if the equipment on the work order is a child in a hierarchy; and both the child and
+parent equipment have the same unit of measure for the meter usage definition; and the
+usage definitions are defined as parent-child meters, then Target Equipment can also be a
+parent of the equipment on the work order.
+To enter meter readings for work order equipment:
+1. Select Work > Work Orders.
+2. Select the work order containing the equipment for which to enter meter readings, and
+then click the Meter Readings tab.
+3. Specify this information:
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+793 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+Target Equipment - Modify the equipment for which to enter meter readings as
+necessary. Target Equipment is automatically populated with the top-level equipment in
+the meter structure and Equipment with the equipment defined on the work order.
+If you select a new Target Equipment, all the fields are updated on the form based on
+the new combination of the Target Equipment and UOM, with the exception of
+Equipment, Equipment Org., and Equipment Description.
+The meter for the Equipment on a work order can be the child meter of a
+meter attached to a parent of the Equipment. In such cases, the parent equipment and
+parent meter should receive the new reading submitted for the child meter, and the new
+reading must roll down to all of the child equipment of the parent.
+The Target Equipment is the Equipment on the work order header only if the
+equipment meter is a stand-alone meter. However, if the Equipment on the work order
+header is a child equipment in an asset hierarchy whose parent equipment has the
+same UOM on the usage definition and the usage definitions are defined as parent-child
+meters, then the Target Equipment may be the parent of the Equipment on the work
+order header.
+Equipment - Specify the equipment for which to enter the meter reading if the work
+order is a multiple equipment work order.
+If a usage definition exists for the equipment, then the system automatically populates
+Equipment with the equipment on the work order header. However, if a usage definition
+does not exist for any of the work order equipment or if the work order is not a multiple
+equipment work order, then Equipment is protected.
+If you select a new Equipment, the system updates all the fields on the form based on
+the new combination of the Target Equipment, UOM, and Equipment.
+UOM - Select the unit of measure.
+If the primary UOM on the equipment record is equal to one of the existing
+usage definitions for the equipment, the system automatically populates UOM with the
+primary UOM of the equipment.
+Entry Type - Select one of the following options:
+Reading - Select to enter the current meter reading.
+
+04/01/2024, 16:43
+
+Hexagon Documentation Site Export
+
+794 of 2039
+
+https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...
+
+You may enter Reading only if the meter is selected as Up/Down Meter on the
+Meters tab of the Assets, Positions, Systems, or Locations page.
+Difference - Select to enter the difference between the last reading and the current
+reading.
+Date/Time - Specify the date and time of the meter reading.
+New Value - Specify the meter reading value.
+4. Click Submit.
+This table shows how the system updates the Meter Readings list with the following
+information:
+
+Field
+
+Value
+
+Last Value
+
+Indicates the value of the previous meter
+reading.
+Last Value is zero when the new
+meter reading record is the first entry made
+for the UOM of the Target Equipment.
+
+Meter
+
+Identifies the meter of the reading.
+
+Meter Rollover Point
+
+Indicates the value at which the meter rolls
+over.

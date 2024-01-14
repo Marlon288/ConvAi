@@ -1,5 +1,7 @@
- import React, { useState, useEffect, useRef } from "react";
-  import "./css/ChatComponent.css"; // Make sure to create this CSS file
+import React, { useState, useEffect, useRef } from "react";
+import "./css/ChatComponent.css"; // Make sure to create this CSS file
+import generateRequestId from "./modules/requestId";
+
 
   //const openai = new OpenAI({apiKey: process.env.REACT_APP_OPENAI_API_KEY,  dangerouslyAllowBrowser: true});
     
@@ -9,6 +11,7 @@
   });*/
 
   const initilized = false;
+  const requestId = generateRequestId();
 
   //const loader = new PDFLoader("../Documents/Documents.pdf");
   //const docs = await loader.load();
@@ -18,6 +21,7 @@
     const [inputValue, setInputValue] = useState("");
     const [messages, setMessages] = useState([]);
     const [isLoading, setIsLoading] = useState(false); // New state variable
+    //const [requestId, setRequestId] = useState(null);
 
     const chatDisplayRef = useRef(null); // Create a ref for the chat display container
 
@@ -68,26 +72,43 @@
       }
     };
 
-    const cancelRequest = () =>{
-      
+    const cancelRequest = async () =>{
+      try {
+        const response = await fetch('http://localhost:9000/api/cancelRequest', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ requestId }),
+        });
+    
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+    
+        const data = await response.json();
+        console.log('Cancellation response:', data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
     }
 
     const handleSubmit = async () => {
       // Placeholder for handling message submit
       // This is where you would integrate with the ChatGPT API
       setIsLoading(true);
-      console.log(isLoading);
       setMessages([...messages, { text: inputValue, sender: "user" }]);
       const tempInputValue = inputValue
       setInputValue("");
+      console.log("This is the id: " + requestId);
       try {
         const response = await fetch('http://localhost:9000/api/setPrompt', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+              'Content-Type': 'application/json',
           },
-          body: JSON.stringify({ input: inputValue }),
-        });
+          body: JSON.stringify({ input: tempInputValue, requestId }),
+      });
     
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -159,7 +180,9 @@
     
     return (
       <div className="chat-container">
-        <div className="chat-title">{location ? `${location} - GPT` : 'RailVision - Glasgow'}</div>
+        <div className="chat-title">
+          {location ? `RailVision - ${location.location_label}` : 'RailVision - Location'}
+        </div>
         <div className="chat-display" ref={chatDisplayRef}>
           {messages.map((message, index) => (
             <div key={index} className="message">
