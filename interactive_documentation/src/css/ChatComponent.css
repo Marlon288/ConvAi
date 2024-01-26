@@ -1,130 +1,164 @@
-    @font-face {
-        font-family: 'PilotTemp';
-        src: url('./Fonts/pilotcommand.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
+@font-face {
+  font-family: "PilotTemp";
+  src: url("./Fonts/pilotcommand.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-    .chat-container {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
-        color: #D3D9DB;
-    }
-    
-    .chat-title {
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-family: 'PilotTemp',  sans-serif;
-        font-size: 3vw;
-    }
-    
-    .chat-display {
-        display: flex;
-        width: 75%;
-        flex-direction: column;
-        align-items: flex-start;
-        flex-grow: 1;
-        overflow-y: auto;
-        padding-left: 12.5%;
-        padding-right: 12.5%;
-    }
-    
-    .message {
-        display: flex;
-        margin-bottom: 10px;
-    }
-    .message-icon{
-        margin-right: 10px;
-        margin-bottom: 10px;
-        border-radius: 50%; /* Makes the icon round */
-        height: 30px; 
-        width: 30px;
-        background-color: #7d7d7d;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: #d3d9db;
+}
 
-    .message-icon .user-icon {
-        stroke: #D3D9DB;
-        height: 30px; 
-        width: 30px;
-    }
+.chat-title {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: "PilotTemp", sans-serif;
+  font-size: 3vw;
+}
 
+.chat-display {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-left: 12.5%;
+  padding-right: 12.5%;
+}
 
-    .message-icon .gpt-icon{
-        height: 22px; 
-        width: 22px; 
-    }
-    
-    
-    .chat-input {
-        border: 1px solid #D3D9DB; /* Example border */
-        padding: 15px;
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        border-radius: 10px;
-        margin-bottom: 30px;
-        margin-top: 30px;
-        
-    }
-    
-    .chat-input input[type="text"] {
-        border: none;
-        background-color: transparent;
-        flex-grow: 1;
-        margin-right: 10px;
-        color: #D3D9DB;
-        font-size: 20px;
-        margin-left: 20px;
-    }
+.message {
+  display: flex;
+  margin-bottom: 10px;
+}
+.message-icon {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 50%; /* Makes the icon round */
+  height: 30px;
+  width: 30px;
+  background-color: #7d7d7d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 
-    .chat-input input[type="text"]:focus {
-        /* Styles for the input field when it is active */
-        outline: none; /* Removes the default focus outline */
-        background-color: transparent; /* Example: slightly white transparent background */
-        /* Add other desired styles */
-    }
+.message-icon .user-icon {
+  stroke: #d3d9db;
+  height: 30px;
+  width: 30px;
+}
 
-    .chat-input .svg-wrapper {
-        display: flex;
-        align-items: center; /* Align vertically */
-        justify-content: center; /* Center horizontally */
-        padding: 2px;
-        border: 1px solid #D3D9DB;
-        border-radius: 4px;
-    }
+.message-icon .gpt-icon {
+  height: 22px;
+  width: 22px;
+}
+.message-text h1,
+.message-text h2,
+.message-text h3 {
+  margin-top: 5px;
+}
+.message-text li {
+  margin-top: 4px;
+}
+.message-text:first-of-type div:first-child {
+  margin-top: 2px !important;
+}
 
-    .chat-input .svg-wrapper:hover {
-        background-color: #D3D9DB;
-        svg{
-            fill: #383c44 !important;
-            color: #383c44 !important;
-        }
-    }
+.chat-input {
+  border: 1px solid #d3d9db; /* Example border */
+  padding: 15px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 
+.chat-input input[type="text"] {
+  border: none;
+  background-color: transparent;
+  flex-grow: 1;
+  margin-right: 10px;
+  color: #d3d9db;
+  font-size: 20px;
+  margin-left: 20px;
+}
 
-    .chat-input .svg-wrapper.submit-svg svg{   
-        height: 25px;
-        width: 25px;
-        fill: #D3D9DB;
-    }
-    
-    .chat-input .svg-wrapper.stop-svg svg{   
-        height: 22px;
-        width: 22px;
-        fill: #D3D9DB;
-    } 
-    .chat-input .svg-wrapper.stop-svg{ 
-        width: 25px;
-        height: 25px;
-    }
+.chat-input input[type="text"]:focus {
+  /* Styles for the input field when it is active */
+  outline: none; /* Removes the default focus outline */
+  background-color: transparent; /* Example: slightly white transparent background */
+  /* Add other desired styles */
+}
 
-    .chat-input .svg-wrapper{
-        top:5px;
-    }
+.chat-input .svg-wrapper {
+  display: flex;
+  align-items: center; /* Align vertically */
+  justify-content: center; /* Center horizontally */
+  padding: 2px;
+  border: 1px solid #d3d9db;
+  border-radius: 4px;
+}
+
+.chat-input .svg-wrapper:hover {
+  background-color: #d3d9db;
+  svg {
+    fill: #383c44 !important;
+    color: #383c44 !important;
+  }
+}
+
+.chat-input .svg-wrapper.submit-svg svg {
+  height: 25px;
+  width: 25px;
+  fill: #d3d9db;
+}
+
+.chat-input .svg-wrapper.stop-svg svg {
+  height: 22px;
+  width: 22px;
+  fill: #d3d9db;
+}
+.chat-input .svg-wrapper.stop-svg {
+  width: 25px;
+  height: 25px;
+}
+
+.chat-input .svg-wrapper {
+  top: 5px;
+}
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.pulsating-ball {
+  width: 10px;
+  height: 10px;
+  background-color: #d3d9db;
+  border-radius: 50%;
+  animation: pulsate 1s ease-out infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+}

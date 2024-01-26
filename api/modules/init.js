@@ -4,15 +4,26 @@ var router = express.Router();
 require("dotenv").config();
 var path = require("path");
 
-var {TextLoader} = require("langchain/document_loaders/fs/text");
-var { ChatOpenAI,OpenAIEmbeddings } = require("@langchain/openai");
-var { ChatPromptTemplate } = require("@langchain/core/prompts");
+var { TextLoader } = require("langchain/document_loaders/fs/text");
+var { ChatOpenAI, OpenAIEmbeddings } = require("@langchain/openai");
+var { ChatPromptTemplate, PromptTemplate } = require("@langchain/core/prompts");
 var { RecursiveCharacterTextSplitter } = require("langchain/text_splitter");
-var { createStuffDocumentsChain } = require("langchain/chains/combine_documents");
-var {CloseVectorNode} =   require("@langchain/community/vectorstores/closevector/node");
+var {
+  createStuffDocumentsChain,
+} = require("langchain/chains/combine_documents");
+var {
+  CloseVectorNode,
+} = require("@langchain/community/vectorstores/closevector/node");
+var { ConversationalRetrievalQAChain, loadQAStuffChain, RetrievalQAChain } = require("langchain/chains");
+var { ConversationSummaryMemory } = require ("langchain/memory");
 var { createRetrievalChain } = require("langchain/chains/retrieval");
 
-const { getVectorStore, setVectorStore, setRetrievalChain } = require("../modules/sharedData");
+const {
+  getVectorStore,
+  setVectorStore,
+  setRetrievalChain,
+  setModel,
+} = require("../modules/sharedData");
 
 async function initialize() {
   await initVectorStore();
@@ -32,49 +43,78 @@ async function initVectorStore() {
   const splitter = new RecursiveCharacterTextSplitter();
 
   const splitDocs = await splitter.splitDocuments(docs);
-  console.log("Breakpoint 1");
   var vectorStore = await CloseVectorNode.fromDocuments(
     splitDocs,
-    new OpenAIEmbeddings({openAIApiKey: process.env.OPENAI_API_KEY})
+    new OpenAIEmbeddings({ openAIApiKey: process.env.OPENAI_API_KEY })
   );
-  console.log("Breakpoint 2");
   setVectorStore(vectorStore);
 }
 
 async function initRetrievalChain() {
 
-    
-//const outputParser = new StringOutputParser();
-//const chain = prompt.pipe(chatModel).pipe(outputParser);
-
-
   const chatModel = new ChatOpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
-    modelName: "gpt-3.5-turbo",
+   // modelName: "gpt-3.5-turbo",
+    modelName: "gpt-4-1106-preview",
+    temperature: 0.5,
+    maxTokens: 500
   });
 
-  const prompt =
-    ChatPromptTemplate.fromTemplate(`Answer the following question based only on the provided context:
+  setModel(chatModel);
 
-      <context>
-      {context}
-      </context>
-      
-      Question: {input}`);
+  const prompt = ChatPromptTemplate.fromTemplate(`
+  Chat History:
+  <chat_history>
+  {chat_history}
+  </chat_history>
 
+    Answer the following question based on the provided context and refer to the previous conversation, if required. 
+  
+    If the context is insufficient, use your general knowledge. 
+    Clearly indicate whether your response is based on the provided documentation or general knowledge. 
+
+    Return your answer in a Markdown format, this is really important:
+    - Use <ul> and <li> tags for bullet points or numbered lists.
+    - Employ <b> tags for emphasizing bold text.
+    - Utilize <h3> tags for headings. Use headings sensibly - only with related subtext or content.
+    - Insert <br> tags for line breaks to visually separate items or steps.
+    - For links, use the <a> tag w  ith the text "Source" as the anchor text and include the attribute target="_blank" so that links open in a new window. The actual URL should be in the href attribute of the <a> tag.
+  
+    Context:
+    <context>
+    {context}
+    </context>
+
+
+
+    Question: {input}
+    
+    
+    Answer in HTML:
+      `);
+   /*const QA_CHAIN_PROMPT = new PromptTemplate({
+        inputVariables: ["context", "question", "chat_history"],
+        template,
+    });
+    const chain = new RetrievalQAChain({
+      combineDocumentsChain: loadQAStuffChain(
+        this.chatModel, {
+        prompt: QA_CHAIN_PROMPT,
+      }),
+      retriever: getVectorStore().asRetriever(),
+    }); */
   const documentChain = await createStuffDocumentsChain({
     llm: chatModel,
-    prompt,
+    prompt: prompt,
   });
-  console.log("Breakpoint 3");
   const retriever = getVectorStore().asRetriever();
-  const retrievalChain = await createRetrievalChain({
+  const chain = await createRetrievalChain({
     combineDocsChain: documentChain,
     retriever,
+    streaming: true
   });
-  console.log("Breakpoint 4");
-  setRetrievalChain(retrievalChain);
+  console.log("Chains Setup");
+  setRetrievalChain(chain);
 }
-
 
 module.exports = { initialize };

@@ -6,28 +6,34 @@ const {
   storeController,
   getController,
   removeController,
-  generateRequestId,
+  setupStreamingForModel
 } = require("../modules/sharedData");
 
-router.post("/setPrompt", async (req, res) => {
-  const requestId = req.body.requestId;
 
+
+router.post("/setPrompt", async (req, res) => {
+  const requestId = req.body.id;
   if (!requestId) {
     return res.status(400).send("Request ID is missing");
   }
+
+
   const controller = new AbortController();
   storeController(requestId, controller);
 
   try {
+    const history = req.body.history || [];
     const userInput = req.body.input;
-    console.log(`Received input: ${userInput}`);
+    console.log(userInput);
+    const limitedHistory = history.slice(-2); // Adjust this number as needed
 
+    setupStreamingForModel(res);
+    
     const response = await getRetrievalChain().invoke({
       input: userInput,
-      signal: controller.signal,
+      chat_history: limitedHistory,
+      //signal: controller.signal
     });
-    res.json({ response: response.answer });
-    // Cleanup or mark request as completed
   } catch (error) {
     if (error.name === "AbortError") {
       console.log("Request was cancelled");
@@ -38,6 +44,7 @@ router.post("/setPrompt", async (req, res) => {
     }
   } finally {
     removeController(requestId);
+    res.end();
   }
 });
 
