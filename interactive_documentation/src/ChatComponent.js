@@ -98,7 +98,7 @@ import generateRequestId from "./modules/requestId";
           let newChunk = new TextDecoder().decode(value);
           newChunk = newChunk.replace('```', '');
           if (counter < 3) {
-            newChunk = newChunk.replace('html', '');
+            newChunk = newChunk.replace('html', '').replace("markdown", "");
             counter++;
           }
           aiResponseContent += newChunk;

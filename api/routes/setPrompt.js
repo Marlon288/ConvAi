@@ -25,7 +25,7 @@ router.post("/setPrompt", async (req, res) => {
     const history = req.body.history || [];
     const userInput = req.body.input;
     console.log(userInput);
-    const limitedHistory = history.slice(-2); // Adjust this number as needed
+    const limitedHistory = history.slice(-6); // Adjust this number as needed
 
     setupStreamingForModel(res);
     

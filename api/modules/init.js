@@ -34,7 +34,7 @@ async function initialize() {
 async function initVectorStore() {
   const filePath = path.join(
     __dirname,
-    "../data/TrainingData/HexagonDocumentationSmallSet.txt"
+    "../data/TrainingData/HexagonDocumentation.txt"
   );
   const loader = new TextLoader(filePath);
 
@@ -73,7 +73,7 @@ async function initRetrievalChain() {
     If the context is insufficient, use your general knowledge. 
     Clearly indicate whether your response is based on the provided documentation or general knowledge. 
 
-    Return your answer in a Markdown format, this is really important:
+    Return your answer in a HTML format, this is really important:
     - Use <ul> and <li> tags for bullet points or numbered lists.
     - Employ <b> tags for emphasizing bold text.
     - Utilize <h3> tags for headings. Use headings sensibly - only with related subtext or content.
