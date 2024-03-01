@@ -34,6 +34,7 @@ router.post("/setPrompt", async (req, res) => {
       chat_history: limitedHistory,
       //signal: controller.signal
     });
+    console.log(response);
   } catch (error) {
     if (error.name === "AbortError") {
       console.log("Request was cancelled");

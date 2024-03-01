@@ -34,7 +34,7 @@ async function initialize() {
 async function initVectorStore() {
   const filePath = path.join(
     __dirname,
-    "../data/TrainingData/HexagonDocumentation.txt"
+    "../data/TrainingData/HexagonDocumentationSmallSet.txt"
   );
   const loader = new TextLoader(filePath);
 
@@ -56,8 +56,8 @@ async function initRetrievalChain() {
     openAIApiKey: process.env.OPENAI_API_KEY,
    // modelName: "gpt-3.5-turbo",
     modelName: "gpt-4-1106-preview",
-    temperature: 0.5,
-    maxTokens: 500
+    temperature: 0.9,
+    maxTokens:  750
   });
 
   setModel(chatModel);
@@ -79,17 +79,17 @@ async function initRetrievalChain() {
     - Utilize <h3> tags for headings. Use headings sensibly - only with related subtext or content.
     - Insert <br> tags for line breaks to visually separate items or steps.
     - For links, use the <a> tag w  ith the text "Source" as the anchor text and include the attribute target="_blank" so that links open in a new window. The actual URL should be in the href attribute of the <a> tag.
-  
+
+    
+
     Context:
     <context>
     {context}
     </context>
 
-
-
     Question: {input}
     
-    
+    Your answer needs to be in the language the Input was asked in, but dont translate the system-specific terminology, keep that to the original.  
     Answer in HTML:
       `);
    /*const QA_CHAIN_PROMPT = new PromptTemplate({

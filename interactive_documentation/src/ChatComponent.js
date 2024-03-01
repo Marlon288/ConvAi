@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import DOMPurify from 'dompurify';
 import "./css/ChatComponent.css"; // Make sure to create this CSS file
 import generateRequestId from "./modules/requestId";
+import marked from 'marked';
 
   const initilized = false;
   const requestId = generateRequestId();
@@ -105,10 +106,10 @@ import generateRequestId from "./modules/requestId";
 
           if (aiMessageRef.current) {
             aiMessageRef.current.innerHTML = aiResponseContent; // Directly update the DOM
-            console.log("UPDATE");
           }
      
         }
+        aiMessageRef.current.innerHTML = aiResponseContent.replace('```', '');
 
 
         setMessages(prev => {
