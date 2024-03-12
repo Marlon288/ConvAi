@@ -5,7 +5,12 @@ const {verifyToken} = require('./authRouter'); // Adjust the path as needed if v
 // Example hardcoded data
 const files = [
   { name: "Trainingset1.txt", lastUpdated: "2024-01-01" },
-  { name: "Trainingset2.txt", lastUpdated: "2024-02-01" }
+  { name: "Trainingset2.txt", lastUpdated: "2024-02-01" },
+  { name: "Trainingset3.txt", lastUpdated: "2024-02-01" },
+  { name: "Trainingset4.txt", lastUpdated: "2024-02-01" },
+  { name: "Trainingset5.txt", lastUpdated: "2024-02-01" },
+  { name: "Trainingset6.txt", lastUpdated: "2024-02-01" },
+  { name: "Trainingset7.txt", lastUpdated: "2024-02-01" }
 ];
 
 router.get('/files', verifyToken, (req, res) => {

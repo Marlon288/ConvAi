@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import { useNavigate, Link } from 'react-router-dom'; 
 import './css/LoginPage.css'; 
 
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -20,17 +21,17 @@ function LoginPage() {
       const data = await response.json();
       
       if (data.token) {
-        localStorage.setItem('token', data.token); // Save token to localStorage
-        navigate('/admin'); // Navigate to protected page
+        localStorage.setItem('token', data.token); 
+        navigate('/admin'); 
       } else {
-        alert('Login failed!');
+        setLoginError(true); // Indicate login error
       }
   };
 
   return (
     
     <div className='login-container'>
-    <div className="login-form-container">
+    <div className={`login-form-container ${loginError ? 'shake' : ''}`}>
       <form onSubmit={handleLogin} className="login-form ">
         <div>
           <label htmlFor="username">Username</label>
@@ -50,7 +51,11 @@ function LoginPage() {
              onChange={(e) => setPassword(e.target.value)}
             />
         </div>
+        <div className={`login-error-container ${loginError ? '' : 'hidden'}`}>
+          {loginError && "Username or password is wrong"}
+        </div>
         <button type="submit">Login</button>
+        <Link to="/" className="back-link">&#8592; Back to Main Page</Link>
       </form>
     </div>
     </div>

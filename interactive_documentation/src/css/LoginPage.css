@@ -26,11 +26,18 @@
   .login-form input[type="text"],
   .login-form input[type="password"] {
     padding: 10px;
-    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: calc(100% - 20px); /* Adjust width to account for padding */
     transition: border-color 0.3s;
+  }
+
+  .login-form input[type="password"]{
+    margin-bottom: 0px;
+  }
+
+  .login-form input[type="text"]{
+    margin-bottom: 20px;
   }
 
 .login-form input[type="text"]:focus,
@@ -64,4 +71,41 @@
   
   .login-form div {
     margin-bottom: 20px;
+  }
+
+
+.login-error-container {
+  height: 15px; /* Reserve space for the error message */
+  margin-bottom: 20px; /* Adjust based on your design */
+  color: red;
+  text-align: center;
+  width: 100%; /* Ensure it spans the full container width */
+  transition: opacity 0.3s ease; 
+}
+
+.login-error-container.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+  
+  /* Shake animation */
+  @keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+  }
+  
+  .shake {
+    animation: shake 0.5s; /* Adjust timing as needed */
+  }
+
+  .back-link {
+    display: block; /* Ensure it appears on a new line */
+    margin-top: 20px; /* Space it a bit from the submit button */
+    color: #383c44; /* Match your theme */
+    text-decoration: none; /* Optional: removes the underline */
+    font-family: 'Montserrat', sans-serif; /* Match your form styling */
+    /* Additional styling as needed */
   }
