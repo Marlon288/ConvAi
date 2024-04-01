@@ -19,7 +19,6 @@ router.get('/files', verifyToken, (req, res) => {
 
 // POST method to add a file (simulated)
 router.post('/files', verifyToken, (req, res) => {
-  // Simulate adding a file (this wouldn't actually add a file in this example)
   const { name, lastUpdated } = req.body; // In a real scenario, you would save this information to a database
   files.push({ name, lastUpdated }); // Simulating adding to an array for this example
   res.status(201).send('File added successfully');

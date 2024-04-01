@@ -1,0 +1,12 @@
+Backend
+    Add dowload file
+    Add location to file backend
+    Add entire Dashboard, save request of user and Location
+    Make dashboard - See how many of one request, use OpenAI to accumulate request that sound the same or have the same content
+    Improve History of the AI
+
+Frontend
+    Adjust cancel so it "seems like" cancellling
+        turn request red
+    Add evaluation for the individual request
+    Clean up code into more components, the table one component, the

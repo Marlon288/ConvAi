@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
 
 // Middleware to verify token
 const verifyToken = (req, res, next) => {
-  const token = req.headers["authorization"]?.split(" ")[1]; // Assuming the token is sent as "Bearer <token>"
+  const token = req.headers["authorization"]?.split(" ")[1]; 
 
   if (!token) {
     return res.status(403).json({ message: "A token is required for authentication" });
