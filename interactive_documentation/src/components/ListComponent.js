@@ -1,10 +1,7 @@
 import React from 'react';
-import './css/ListComponent.css'; // Make sure to create this CSS file
+import './../css/ListComponent.css'; // Make sure to create this CSS file
 
 const ListComponent = ({locations, setLocation}) => {
-  
-
-
 
   const handleClick = (location) => {
     setLocation(location);

@@ -7,8 +7,7 @@ var logger = require('morgan');
 var cors = require("cors");
 var indexRouter = require('./routes/index');
 var getLocationsRouter = require("./routes/getLocations");
-var setPromptRouter = require("./routes/setPrompt");
-var setPromptRouter = require("./routes/setPrompt");
+var aiHandler = require("./routes/aiHandler");
 var filesRouter = require("./routes/filesRouter");
 const { router: authRouter } = require('./routes/authRouter');
 var app = express();
@@ -29,7 +28,7 @@ const { initialize } = require('./modules/init');
 
 app.use('/', indexRouter);
 app.use("/api", getLocationsRouter);
-app.use("/api", setPromptRouter);
+app.use("/api", aiHandler);
 app.use("/auth", authRouter);
 app.use("/api/protected", filesRouter);
 // catch 404 and forward to error handler

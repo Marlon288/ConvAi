@@ -2,9 +2,9 @@ import {React, useState, useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import './css/MapComponent.css';
-import ResetZoom from './ResetZoom.js'
-import ExpandMap from './ExpandMap.js';     
+import './../css/MapComponent.css';
+import ResetZoom from './ZoomComponent.js'
+import ExpandMap from './ExpandMapComponent.js';     
 
 const poi_icon = new L.Icon({
     iconUrl: '/Resource/Images/poi.svg',
@@ -24,10 +24,9 @@ const MapEffect = ({ isChatOpen }) => {
     const map = useMap();
   
     useEffect(() => {
-      // This function is triggered when 'isChatOpen' changes
       setTimeout(() => {
         map.invalidateSize();
-      }, 600); // Adjust timeout to match CSS transition
+      }, 600); 
     }, [isChatOpen, map]);
   
     return null;

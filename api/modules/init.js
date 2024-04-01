@@ -56,19 +56,20 @@ async function initRetrievalChain() {
     openAIApiKey: process.env.OPENAI_API_KEY,
    // modelName: "gpt-3.5-turbo",
     modelName: "gpt-4-1106-preview",
-    temperature: 0.9,
+    temperature: 0.85,
     maxTokens:  750
   });
 
   setModel(chatModel);
 
   const prompt = ChatPromptTemplate.fromTemplate(`
-  Chat History:
-  <chat_history>
-  {chat_history}
-  </chat_history>
+    Chat History:
+    <chat_history>
+      {chat_history}
+    </chat_history>
 
-    Answer the following question based on the provided context and refer to the previous conversation, if required. 
+    Answer the following question based on the provided context 
+    and refer to the previous conversation, if required. 
   
     If the context is insufficient, use your general knowledge. 
     Clearly indicate whether your response is based on the provided documentation or general knowledge. 
@@ -78,31 +79,22 @@ async function initRetrievalChain() {
     - Employ <b> tags for emphasizing bold text.
     - Utilize <h3> tags for headings. Use headings sensibly - only with related subtext or content.
     - Insert <br> tags for line breaks to visually separate items or steps.
-    - For links, use the <a> tag w  ith the text "Source" as the anchor text and include the attribute target="_blank" so that links open in a new window. The actual URL should be in the href attribute of the <a> tag.
+    - For links, use the <a> tag w  ith the text "Source" as the anchor text
+      and include the attribute target="_blank" so that links open in a new window. 
+      The actual URL should be in the href attribute of the <a> tag.
 
     
 
     Context:
-    <context>
-    {context}
-    </context>
+      <context>
+        {context}
+      </context>
 
     Question: {input}
     
     Your answer needs to be in the language the Input was asked in, but dont translate the system-specific terminology, keep that to the original.  
     Answer in HTML:
       `);
-   /*const QA_CHAIN_PROMPT = new PromptTemplate({
-        inputVariables: ["context", "question", "chat_history"],
-        template,
-    });
-    const chain = new RetrievalQAChain({
-      combineDocumentsChain: loadQAStuffChain(
-        this.chatModel, {
-        prompt: QA_CHAIN_PROMPT,
-      }),
-      retriever: getVectorStore().asRetriever(),
-    }); */
   const documentChain = await createStuffDocumentsChain({
     llm: chatModel,
     prompt: prompt,
@@ -113,7 +105,6 @@ async function initRetrievalChain() {
     retriever,
     streaming: true
   });
-  console.log("Chains Setup");
   setRetrievalChain(chain);
 }
 

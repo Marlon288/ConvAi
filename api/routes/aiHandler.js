@@ -24,15 +24,15 @@ router.post("/setPrompt", async (req, res) => {
   try {
     const history = req.body.history || [];
     const userInput = req.body.input;
-    console.log(userInput);
+    
     const limitedHistory = history.slice(-6); // Adjust this number as needed
-
+    console.log(limitedHistory);
     setupStreamingForModel(res);
     
     const response = await getRetrievalChain().invoke({
       input: userInput,
       chat_history: limitedHistory,
-      //signal: controller.signal
+      signal: controller.signal
     });
     console.log(response);
   } catch (error) {

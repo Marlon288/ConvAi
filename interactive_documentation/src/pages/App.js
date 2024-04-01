@@ -1,16 +1,12 @@
 import React, { useState, useEffect} from 'react';
-import './css/App.css';
-import MapComponent from './MapComponent';
-import ChatComponent from './ChatComponent';
-import ListComponent from './ListComponent';
+import './../css/App.css';
+import MapComponent from '../components/MapComponent';
+import ChatComponent from '../components/ChatComponent';
+import ListComponent from '../components/ListComponent';
 import LoginPage from './LoginPage';
 import ProtectedRoute from './ProtectedRoute';
 import AdminPage from './AdminPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
-
-
-
 
 const App = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -64,5 +60,3 @@ return (
 
 
 export default App;
-
-//<MapComponent isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen}/>

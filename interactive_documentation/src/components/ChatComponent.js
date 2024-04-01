@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import DOMPurify from 'dompurify';
-import "./css/ChatComponent.css"; // Make sure to create this CSS file
-import generateRequestId from "./modules/requestId";
+import "./../css/ChatComponent.css"; // Make sure to create this CSS file
+import generateRequestId from "./idComponent";
 import marked from 'marked';
 
   const initilized = false;
