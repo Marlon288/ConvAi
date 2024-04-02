@@ -1,5 +1,7 @@
 var express = require("express");
 var router = express.Router();
+const path = require('path');
+const fs = require("fs");
 require("dotenv").config();
 const {
   getRetrievalChain,
@@ -22,19 +24,48 @@ router.post("/setPrompt", async (req, res) => {
   storeController(requestId, controller);
 
   try {
+    const startTime = performance.now(); //Measure how long the request takes
     const history = req.body.history || [];
     const userInput = req.body.input;
     
     const limitedHistory = history.slice(-6); // Adjust this number as needed
     console.log(limitedHistory);
     setupStreamingForModel(res);
+
+    
     
     const response = await getRetrievalChain().invoke({
       input: userInput,
       chat_history: limitedHistory,
       signal: controller.signal
     });
+
+    const endTime = performance.now();
+    const responseTime = (endTime - startTime) / 1000;
+
     console.log(response);
+
+
+    const promptEntry = {
+      Prompt: userInput,
+      Answer: response.answer,
+      Performance: responseTime,
+      //LLM: "gpt-4-1106-preview"
+      LLM: "gpt-3.5-turbo"
+    };  
+
+      // Read the existing JSON file
+      const jsonFilePath = path.join(__dirname, "../data/prompts.json");
+      let prompts = [];
+      if (fs.existsSync(jsonFilePath)) {
+        const jsonData = fs.readFileSync(jsonFilePath, "utf8");
+        prompts = JSON.parse(jsonData);
+      }
+      prompts.push(promptEntry);
+  
+      // Write the updated JSON data back to the file
+      fs.writeFileSync(jsonFilePath, JSON.stringify(prompts, null, 2), "utf8");
+
   } catch (error) {
     if (error.name === "AbortError") {
       console.log("Request was cancelled");

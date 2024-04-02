@@ -1,0 +1,44 @@
+[
+  {
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n    <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n    <li>Provide the following information:\n        <ul>\n            <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By</b> - Choose the scheduling method:\n                <ul>\n                    <li><b>Employee</b> - If selecting to schedule by employee, enter the employee's name in the provided field.</li>\n                    <li><b>Trade/Department</b> - If selecting to schedule by trade/department, provide the trade and department details in the respective fields.</li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n    <li>After specifying the required information, click on the <b>Save Hours</b> button.</li>\n    <li>Repeat the previous steps as needed to allocate any additional hours to the work order activity.</li>\n    <li>Finally, click on the <b>Save Record</b> button to complete the scheduling process.</li>\n</ul>\n\n<br>\n<p>This instruction is based on the documentation provided and uses the system-specific terminology as requested.</p>\n\n</body>\n</html>\n```",
+    "Performance": 29.01547799998522,
+    "LLM": "gpt-4-1106-preview"
+  },
+  {
+    "Prompt": "How do I schedule a Workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Scheduling a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Workorder</h3>\n    <p>To schedule a work order, please follow these steps:</p>\n    <ul>\n        <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n        <li>Specify the required information:\n            <ul>\n                <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><b>Schedule By</b> - Select one of the following options:\n                    <ul>\n                        <li><b>Employee</b> - Select to schedule by employee. Enter the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department</b> - Select to schedule by trade/department. Enter the Trade and Department.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li>Click <b>Save Hours</b>.</li>\n        <li>Repeat the above steps as necessary to book any additional hours against the work order activity.</li>\n        <li>Click <b>Save Record</b>.</li>\n    </ul>\n    <p>For detailed instructions, visit the official documentation site:</p>\n    <p><a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a></p>\n</body>\n</html>\n```\nNote: The provided source URL appears incomplete. Please ensure you use the correct and complete URL in the href attribute of the <a> tag.",
+    "Performance": 33.767993000030515,
+    "LLM": "gpt-4-1106-preview"
+  },
+  {
+    "Prompt": "How do I schedule a Workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Scheduling a Work Order</title>\n</head>\n<body>\n    <h3>Scheduling a Work Order</h3>\n    <ul>\n        <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li>Specify the following information:\n            <ul>\n                <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><b>Schedule By</b> - Select one of the following options:\n                    <ul>\n                        <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which you wish to schedule the work.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li>Click <b>Save Hours</b>.</li>\n        <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li>Click <b>Save Record</b>.</li>\n    </ul>\n    <br>\n    <p>The above instructions are based on the provided documentation.</p>\n</body>\n</html>\n```",
+    "Performance": 26.872499400019645,
+    "LLM": "gpt-4-1106-preview"
+  },
+  {
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "<h3>How to Schedule a Work Order:</h3>\n<ul>\n  <li>Select Work > WO Planning > WO Scheduling.</li>\n  <li>Specify the Organization and choose either Employee or Trade/Department for scheduling.</li>\n  <li>Enter the necessary details such as Employee or Trade/Department.</li>\n  <li>Click Save Hours.</li>\n  <li>Repeat the steps if needed to book additional hours.</li>\n  <li>Click Save Record to finalize the scheduling.</li>\n</ul>\n<br>\n<p><i>This information is based on the provided documentation.</i></p>",
+    "Performance": 3.904512300014496,
+    "LLM": "gpt-3.5-turbo"
+  },
+  {
+    "Prompt": "How do i schedule a Workorder?",
+    "Answer": "<h3>How to Schedule a Work Order:</h3>\n<ul>\n  <li>Select Work > WO Planning > WO Scheduling.</li><br>\n  <li>Specify the Organization and Schedule By (Employee or Trade/Department).</li><br>\n  <li>Click Save Hours.</li><br>\n  <li>Repeat the steps to book additional hours if needed.</li><br>\n  <li>Click Save Record.</li>\n</ul> \n\n<p>Source: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9\" target=\"_blank\">Hexagon Documentation Site</a></p>",
+    "Performance": 3.082816399991512,
+    "LLM": "gpt-3.5-turbo"
+  },
+  {
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "<h3>How to schedule a work order:</h3>\n<ul>\n  <li>Select Work > WO Planning > WO Scheduling.</li>\n  <li>Specify the organization for which to schedule work if you use multi-organization security.</li>\n  <li>Schedule By - Select either Employee or Trade/Department and enter the necessary details.</li>\n  <li>Click Save Hours.</li>\n  <li>Repeat the steps to book additional hours against the work order activity if needed.</li>\n  <li>Click Save Record.</li>\n</ul>",
+    "Performance": 2.8328120000362396,
+    "LLM": "gpt-3.5-turbo"
+  },
+  {
+    "Prompt": "How do I schedule a Workorder?",
+    "Answer": "<h3>How to schedule a Workorder:</h3>\n<ul>\n  <li>Select Work > WO Planning > WO Scheduling.</li>\n  <li>Specify the Organization and Schedule By option (Employee or Trade/Department).</li>\n  <li>Click Save Hours.</li>\n  <li>Repeat the steps to book additional hours if needed.</li>\n  <li>Click Save Record.</li>\n</ul>\n<br>\n<p>This information is based on the provided documentation.</p>",
+    "Performance": 2.4182804999947547,
+    "LLM": "gpt-3.5-turbo"
+  }
+]

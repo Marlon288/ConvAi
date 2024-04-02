@@ -60,10 +60,7 @@ import marked from 'marked';
     }
 
     const handleSubmit = async () => {
-      // Placeholder for handling message submit
-      // This is where you would integrate with the ChatGPT API
       setIsLoading(true);
-
       setMessages(prevMessages => [
         ...prevMessages, 
         { role: "user", content: inputValue, current: false}, 
