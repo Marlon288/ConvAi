@@ -1,6 +1,28 @@
+/**
+ * @file FileTable.js
+ * @description This component renders a table of files with sorting and searching capabilities.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
 import React, { useMemo } from "react";
 
+/**
+ * FileTable component
+ * @param {Object} props - Component props
+ * @param {Array} props.files - Array of file objects
+ * @param {Object} props.sortConfig - Object containing the current sort configuration
+ * @param {Function} props.setSortConfig - Function to set the sort configuration
+ * @param {string} props.searchQuery - The current search query
+ * @param {Function} props.setSearchQuery - Function to set the search query
+ * @param {Function} props.onDelete - Function to handle file deletion
+ * @returns {JSX.Element} The rendered file table component
+ */
 function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQuery, onDelete }) {
+  /**
+   * Requests sorting of files based on the provided key
+   * @param {string} key - The key to sort by
+   */
   const requestSort = (key) => {
     let direction = "ascending";
     if (sortConfig.key === key && sortConfig.direction === "ascending") {
@@ -9,15 +31,17 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
     setSortConfig({ key, direction });
   };
 
+  /**
+   * Sorts and filters the files based on the current sort configuration and search query
+   * @returns {Array} The sorted and filtered files
+   */
   const sortedAndFilteredFiles = useMemo(() => {
     let filteredFiles = [...files];
-
     if (searchQuery) {
       filteredFiles = filteredFiles.filter((file) =>
         file.name.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-
     if (sortConfig.key !== null) {
       filteredFiles.sort((a, b) => {
         if (a[sortConfig.key] < b[sortConfig.key]) {
@@ -29,10 +53,14 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
         return 0;
       });
     }
-
     return filteredFiles;
   }, [files, sortConfig, searchQuery]);
 
+  /**
+   * Gets the sort direction symbol for the provided key
+   * @param {string} key - The key to get the sort direction symbol for
+   * @returns {string} The sort direction symbol
+   */
   const getSortDirectionSymbol = (key) => {
     return sortConfig.key === key
       ? sortConfig.direction === "ascending"
@@ -58,12 +86,10 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
                 onClick={(e) => e.stopPropagation()}
                 style={{ marginLeft: "10px", padding: "2px" }}
                 className="search-input"
+                aria-label="Search by name"
               />
             </th>
-            <th
-              className="date-column"
-              onClick={() => requestSort("lastUpdated")}
-            >
+            <th className="date-column" onClick={() => requestSort("lastUpdated")}>
               Date{getSortDirectionSymbol("lastUpdated")}
             </th>
             <th className="action-column">Actions</th>
@@ -76,7 +102,7 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
               <td>{file.lastUpdated}</td>
               <td>
                 {!file.isDeleted ? (
-                  <button className="delete-btn" onClick={() => onDelete(file.name)}>
+                  <button className="delete-btn" onClick={() => onDelete(file.name)} aria-label={`Delete ${file.name}`}>
                     Delete
                   </button>
                 ) : null}

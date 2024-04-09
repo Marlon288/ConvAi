@@ -1,8 +1,20 @@
+/**
+ * @file getLocations.js
+ * @description Location router module, responsible for handling the available locations.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
+
 var express = require("express");
 var router = express.Router();
 var path = require("path");
 var fs = require('fs');
 
+
+/**
+ * Route for getting the list of locations.
+ */
 router.get('/getLocations', (req, res) => {
     const filePath = path.join(__dirname, '../data/Locations.json');
     fs.readFile(filePath, 'utf8', function(err, data) {

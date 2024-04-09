@@ -1,8 +1,25 @@
+/**
+ * @file ListComponent.js
+ * @description This component renders a list of locations and handles location selection.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
 import React from 'react';
-import './../css/ListComponent.css'; // Make sure to create this CSS file
+import './../css/ListComponent.css';
 
-const ListComponent = ({locations, setLocation}) => {
-
+/**
+ * ListComponent component
+ * @param {Object} props - Component props
+ * @param {Array} props.locations - Array of location objects
+ * @param {Function} props.setLocation - Function to set the selected location
+ * @returns {JSX.Element} The rendered list component
+ */
+const ListComponent = ({ locations, setLocation }) => {
+  /**
+   * Handles the click event on a location item
+   * @param {Object} location - The selected location object
+   */
   const handleClick = (location) => {
     setLocation(location);
   };
@@ -10,8 +27,15 @@ const ListComponent = ({locations, setLocation}) => {
   return (
     <div className="list-container">
       {locations.map((location, index) => (
-        <div key={index} className="list-item" onClick={() => handleClick(location)}>
-          {location.location_label} 
+        <div
+          key={index}
+          className="list-item"
+          onClick={() => handleClick(location)}
+          role="button"
+          tabIndex="0"
+          aria-label={`Select ${location.location_label}`}
+        >
+          {location.location_label}
         </div>
       ))}
     </div>

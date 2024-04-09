@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: pages/AdminPage.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: pages/AdminPage.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file AdminPage.js
+ * @description This component represents the admin page where files can be uploaded, deleted, and sorted.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
+import React, { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
+import "./../css/AdminPage.css";
+import FileUpload from "../components/FileUpload";
+import FileTable from "../components/FileTable";
+
+/**
+ * AdminPage component
+ * @returns {JSX.Element} The rendered admin page component
+ */
+function AdminPage() {
+  const [files, setFiles] = useState([]);
+  const [sortConfig, setSortConfig] = useState({
+    key: null,
+    direction: "ascending",
+  });
+  const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    /**
+     * Fetches the list of files from the backend
+     */
+    const fetchFiles = async () => {
+      const response = await fetch("http://localhost:9000/api/protected/files", {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      if (response.ok) {
+        const data = await response.json();
+        setFiles(data);
+      } else {
+        alert("Failed to fetch files");
+      }
+    };
+    fetchFiles();
+  }, []);
+
+  /**
+   * Handles the logout action
+   */
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
+
+  /**
+   * Handles the deletion of a file
+   * @param {string} fileName - The name of the file to delete
+   */
+  const handleDelete = async (fileName) => {
+    try {
+      const response = await fetch(`http://localhost:9000/api/protected/files/${fileName}`, {
+        method: 'DELETE',
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem("token")}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      if (response.ok) {
+        setFiles(files.map(file => {
+          if (file.name === fileName) {
+            return { ...file, name: '- - - D E L E T E D - - -', lastUpdated: '', isDeleted: true };
+          }
+          return file;
+        }));
+      } else {
+        alert('There was an error deleting the file.');
+      }
+    } catch (error) {
+      console.error('There was an error deleting the file:', error);
+      alert('There was an error deleting the file.');
+    }
+  };
+
+  /**
+   * Handles the file upload
+   * @param {File} file - The file to upload
+   */
+  const handleFileUpload = async (file) => {
+    console.log(`Uploading ${file?.name}...`);
+  };
+
+  return (
+    &lt;div className="admin-container">
+      &lt;div className="admin-content">
+        &lt;div className="admin-header">
+          &lt;h1>Training Data&lt;/h1>
+          &lt;svg
+            onClick={handleLogout}
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            className="logout-icon"
+            role="img"
+            aria-label="Logout"
+          >
+            {/* SVG content for logout icon */}
+          &lt;/svg>
+        &lt;/div>
+        &lt;FileUpload onFileUpload={handleFileUpload} />
+        &lt;FileTable
+          files={files}
+          sortConfig={sortConfig}
+          setSortConfig={setSortConfig}
+          searchQuery={searchQuery}
+          setSearchQuery={setSearchQuery}
+          onDelete={handleDelete}
+        />
+      &lt;/div>
+    &lt;/div>
+  );
+}
+
+export default AdminPage;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AdminPage">AdminPage</a></li><li><a href="global.html#App">App</a></li><li><a href="global.html#ChatComponent">ChatComponent</a></li><li><a href="global.html#ExpandMap">ExpandMap</a></li><li><a href="global.html#FileTable">FileTable</a></li><li><a href="global.html#FileUpload">FileUpload</a></li><li><a href="global.html#ListComponent">ListComponent</a></li><li><a href="global.html#LoginPage">LoginPage</a></li><li><a href="global.html#MapComponent">MapComponent</a></li><li><a href="global.html#MapEffect">MapEffect</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#ResetZoom">ResetZoom</a></li><li><a href="global.html#generateRequestId">generateRequestId</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Apr 09 2024 13:09:10 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

@@ -1,25 +1,25 @@
-.btn-container.visible {
-    display: block;
-}
-  
-.btn-container.hidden {
-    display: none;
-}
+    .btn-container.visible {
+        display: block;
+    }
+    
+    .btn-container.hidden {
+        display: none;
+    }
 
-.btn-container{
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    width: 20px;
-    height: 20px;
-    z-index: 10;
-    border: 2px solid #ccc;
-    background-color: white;
-    border-radius: 3px;
-    padding: 4px;
-    cursor: pointer;
-}
+    .btn-container{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 20px;
+        height: 20px;
+        z-index: 10;
+        border: 2px solid #ccc;
+        background-color: white;
+        border-radius: 3px;
+        padding: 4px;
+        cursor: pointer;
+    }
 
-.btn-container:hover{
-    background-color: #f0efef;
-}
+    .btn-container:hover{
+        background-color: #f0efef;
+    }

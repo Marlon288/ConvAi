@@ -1,6 +1,13 @@
+/**
+ * @file filesRouter.js
+ * @description Files router module for handling file-related routes.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
 const express = require('express');
 const router = express.Router();
-const {verifyToken} = require('./authRouter'); // Adjust the path as needed if verifyToken is moved
+const { verifyToken } = require('./authRouter');
 
 // Example hardcoded data
 const files = [
@@ -13,24 +20,30 @@ const files = [
   { name: "Trainingset7.txt", lastUpdated: "2024-02-01" }
 ];
 
+/**
+ * Route for getting the list of files.
+ */
 router.get('/files', verifyToken, (req, res) => {
   res.json(files);
 });
 
-// POST method to add a file (simulated)
+/**
+ * Route for adding a file (simulated).
+ */
 router.post('/files', verifyToken, (req, res) => {
-  const { name, lastUpdated } = req.body; // In a real scenario, you would save this information to a database
-  files.push({ name, lastUpdated }); // Simulating adding to an array for this example
+  const { name, lastUpdated } = req.body;
+  files.push({ name, lastUpdated });
   res.status(201).send('File added successfully');
 });
 
-// DELETE method to delete a file (simulated)
+/**
+ * Route for deleting a file (simulated).
+ */
 router.delete('/files/:name', verifyToken, (req, res) => {
-  // Simulate deleting a file (this wouldn't actually delete a file in this example)
   const { name } = req.params;
   const index = files.findIndex(file => file.name === name);
   if (index !== -1) {
-    files.splice(index, 1); // Simulating deletion from an array for this example
+    files.splice(index, 1);
     res.send('File deleted successfully');
   } else {
     res.status(404).send('File not found');

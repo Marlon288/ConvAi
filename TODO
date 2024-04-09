@@ -9,4 +9,4 @@ Frontend
     Adjust cancel so it "seems like" cancellling
         turn request red
     Add evaluation for the individual request
-    Clean up code into more components, the table one component, the
+    Clean up code

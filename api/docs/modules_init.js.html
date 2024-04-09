@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: modules/init.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: modules/init.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file init.js
+ * @description Initialization module for the backend application, creates action chain of LangChain.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
+var express = require("express");
+var router = express.Router();
+require("dotenv").config();
+var path = require("path");
+var { TextLoader } = require("langchain/document_loaders/fs/text");
+var { ChatOpenAI, OpenAIEmbeddings } = require("@langchain/openai");
+var { ChatPromptTemplate, PromptTemplate } = require("@langchain/core/prompts");
+var { RecursiveCharacterTextSplitter } = require("langchain/text_splitter");
+var { createStuffDocumentsChain } = require("langchain/chains/combine_documents");
+var { CloseVectorNode } = require("@langchain/community/vectorstores/closevector/node");
+var { ConversationalRetrievalQAChain, loadQAStuffChain, RetrievalQAChain } = require("langchain/chains");
+var { ConversationSummaryMemory } = require("langchain/memory");
+var { createRetrievalChain } = require("langchain/chains/retrieval");
+const { getVectorStore, setVectorStore, setRetrievalChain, setModel } = require("../modules/sharedData");
+
+/**
+ * Initializes the application by setting up the vector store and retrieval chain.
+ */
+async function initialize() {
+  await initVectorStore();
+  await initRetrievalChain();
+  console.log("DONE");
+}
+
+/**
+ * Initializes the vector store by loading and splitting the training data.
+ */
+async function initVectorStore() {
+  const filePath = path.join(__dirname, "../data/TrainingData/HexagonDocumentationSmallSet.txt");
+  const loader = new TextLoader(filePath);
+  const docs = await loader.load();
+  const splitter = new RecursiveCharacterTextSplitter();
+  const splitDocs = await splitter.splitDocuments(docs);
+  var vectorStore = await CloseVectorNode.fromDocuments(splitDocs, new OpenAIEmbeddings({ openAIApiKey: process.env.OPENAI_API_KEY }));
+  setVectorStore(vectorStore);
+}
+
+/**
+ * Initializes the retrieval chain using the vector store and a chat model.
+ */
+async function initRetrievalChain() {
+  const chatModel = new ChatOpenAI({
+    openAIApiKey: process.env.OPENAI_API_KEY,
+    modelName: "gpt-4-1106-preview",
+    temperature: 0.85,
+    maxTokens: 750
+  });
+  setModel(chatModel);
+  const prompt = ChatPromptTemplate.fromTemplate(`
+    Chat History:
+    &lt;chat_history>
+      {chat_history}
+    &lt;/chat_history>
+    Answer the following question based on the provided context
+    and refer to the previous conversation, if required.
+    If the context is insufficient, use your general knowledge.
+    Clearly indicate whether your response is based on the provided documentation or general knowledge.
+    Return your answer in a HTML format, this is really important:
+    - Use &lt;ul> and &lt;li> tags for bullet points or numbered lists.
+    - Employ &lt;b> tags for emphasizing bold text.
+    - Utilize &lt;h3> tags for headings. Use headings sensibly - only with related subtext or content.
+    - Insert &lt;br> tags for line breaks to visually separate items or steps.
+    - For links, use the &lt;a> tag with the text "Source" as the anchor text
+      and include the attribute target="_blank" so that links open in a new window.
+      The actual URL should be in the href attribute of the &lt;a> tag.
+    Context:
+      &lt;context>
+        {context}
+      &lt;/context>
+    Question: {input}
+    Your answer needs to be in the language the Input was asked in, but dont translate the system-specific terminology, keep that to the original.  
+    Answer in HTML:
+      `);
+  const documentChain = await createStuffDocumentsChain({
+    llm: chatModel,
+    prompt: prompt,
+  });
+  const retriever = getVectorStore().asRetriever();
+  const chain = await createRetrievalChain({
+    combineDocsChain: documentChain,
+    retriever,
+    streaming: true
+  });
+  setRetrievalChain(chain);
+}
+
+module.exports = { initialize };</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#getController">getController</a></li><li><a href="global.html#getModel">getModel</a></li><li><a href="global.html#getRetrievalChain">getRetrievalChain</a></li><li><a href="global.html#getVectorStore">getVectorStore</a></li><li><a href="global.html#initRetrievalChain">initRetrievalChain</a></li><li><a href="global.html#initVectorStore">initVectorStore</a></li><li><a href="global.html#initialize">initialize</a></li><li><a href="global.html#readUsers">readUsers</a></li><li><a href="global.html#removeController">removeController</a></li><li><a href="global.html#setModel">setModel</a></li><li><a href="global.html#setRetrievalChain">setRetrievalChain</a></li><li><a href="global.html#setVectorStore">setVectorStore</a></li><li><a href="global.html#setupStreamingForModel">setupStreamingForModel</a></li><li><a href="global.html#storeController">storeController</a></li><li><a href="global.html#verifyToken">verifyToken</a></li><li><a href="global.html#writeUsers">writeUsers</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Tue Apr 09 2024 13:14:59 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
