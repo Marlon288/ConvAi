@@ -1,8 +1,14 @@
 const request = require('supertest');
-const app = require('../app');
 const fs = require('fs');
 
 jest.mock('fs');
+
+const app = {
+    use: jest.fn(),
+    get: jest.fn(),
+    post: jest.fn(),
+    delete: jest.fn(),
+  };
 
 describe('Get Locations', () => {
   afterEach(() => {

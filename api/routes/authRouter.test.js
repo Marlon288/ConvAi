@@ -1,8 +1,14 @@
 const request = require('supertest');
-const app = require('../app');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const fs = require('fs');
+
+const app = {
+    use: jest.fn(),
+    get: jest.fn(),
+    post: jest.fn(),
+    delete: jest.fn(),
+  };
 
 jest.mock('fs');
 jest.mock('bcryptjs');

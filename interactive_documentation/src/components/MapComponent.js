@@ -72,7 +72,7 @@ const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, locations }) => 
   const position = [47.566453725650305, 8.903938751666576]; // Frauenfeld
 
   return (
-    <div className={`map-container ${isChatOpen ? 'minimized' : ''}`}>
+    <div className={`map-container ${isChatOpen ? "minimized" : ""}`}>
       <MapContainer center={position} zoom={4} maxZoom={7} minZoom={3}>
         <TileLayer url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png" />
         {locations.map((location, index) => (
@@ -83,28 +83,39 @@ const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, locations }) => 
             aria-label={location.location_label}
           >
             <Popup>
-              {location.location_label}
-              <br />
-              {location.api_link ? (
-                <span
-                  style={{ cursor: 'pointer' }}
-                  onClick={() => handlePopupClick(location)}
-                  role="button"
-                  tabIndex="0"
-                  aria-label={`Go to AI for ${location.location_label}`}
-                >
-                  Go to AI
-                </span>
-              ) : (
-                "The service is not available at this location yet"
-              )}
+              <div
+                style={{ cursor: "pointer" }}
+                onClick={() => handlePopupClick(location)}
+                role="button"
+                className="popUpButton"
+              >
+                {location.location_label}
+                <br />
+                {location.api_link ? (
+                  <span
+                    tabIndex="0"
+                    aria-label={`Go to AI for ${location.location_label}`}
+                  >
+                    Click here!
+                  </span>
+                ) : (
+                  "The service is not available at this location yet"
+                )}
+              </div>
             </Popup>
           </Marker>
         ))}
         <MapEffect isChatOpen={isChatOpen} />
-        {resetZoomData && <ResetZoom position={resetZoomData.position} zoom={resetZoomData.zoom} />}
+        {resetZoomData && (
+          <ResetZoom
+            position={resetZoomData.position}
+            zoom={resetZoomData.zoom}
+          />
+        )}
       </MapContainer>
-      {isChatOpen && <ExpandMap isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen} />}
+      {isChatOpen && (
+        <ExpandMap isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen} />
+      )}
     </div>
   );
 };

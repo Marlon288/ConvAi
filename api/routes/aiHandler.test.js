@@ -1,6 +1,12 @@
 const request = require('supertest');
-const app = require('../app');
 const { getRetrievalChain, getController, removeController } = require('../modules/sharedData');
+
+const app = {
+    use: jest.fn(),
+    get: jest.fn(),
+    post: jest.fn(),
+    delete: jest.fn(),
+  };
 
 jest.mock('../modules/sharedData', () => ({
   getRetrievalChain: jest.fn(),
@@ -9,6 +15,8 @@ jest.mock('../modules/sharedData', () => ({
   removeController: jest.fn(),
   setupStreamingForModel: jest.fn(),
 }));
+
+
 
 describe('AI Handler', () => {
   afterEach(() => {

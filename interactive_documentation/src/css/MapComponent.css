@@ -16,4 +16,12 @@
     z-index: 5; /* Ensure it's above other content */
   }
 
+.popUpButton{
+  padding: 1px;
+}
+.popUpButton:hover{
+  background-color: #f4f1f1;
+  border-radius: 3px;
+}
+
   

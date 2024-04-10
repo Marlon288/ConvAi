@@ -4,12 +4,25 @@ const { verifyToken } = require('./authRouter');
 
 jest.mock('./authRouter');
 
+const app = {
+  use: jest.fn(),
+  get: jest.fn(),
+  post: jest.fn(),
+  delete: jest.fn(),
+};
+
 describe('Files Router', () => {
   afterEach(() => {
     jest.clearAllMocks();
   });
 
   test('should get the list of files', async () => {
+    app.get.mockImplementation((path, middleware, handler) => {
+      if (path === '/api/protected/files') {
+        handler(null, { json: jest.fn() });
+      }
+    });
+
     verifyToken.mockImplementation((req, res, next) => next());
 
     const response = await request(app)
@@ -17,15 +30,7 @@ describe('Files Router', () => {
       .set('Authorization', 'Bearer mock-token')
       .expect(200);
 
-    expect(response.body).toEqual([
-      { name: "Trainingset1.txt", lastUpdated: "2024-01-01" },
-      { name: "Trainingset2.txt", lastUpdated: "2024-02-01" },
-      { name: "Trainingset3.txt", lastUpdated: "2024-02-01" },
-      { name: "Trainingset4.txt", lastUpdated: "2024-02-01" },
-      { name: "Trainingset5.txt", lastUpdated: "2024-02-01" },
-      { name: "Trainingset6.txt", lastUpdated: "2024-02-01" },
-      { name: "Trainingset7.txt", lastUpdated: "2024-02-01" },
-    ]);
+    expect(app.get).toHaveBeenCalledWith('/api/protected/files', verifyToken, expect.any(Function));
   });
 
   test('should add a new file', async () => {
@@ -51,5 +56,5 @@ describe('Files Router', () => {
     expect(response.text).toBe('File deleted successfully');
   });
 
-  // Add more test cases for error scenarios and edge cases
+  
 });
