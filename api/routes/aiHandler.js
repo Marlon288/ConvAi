@@ -23,32 +23,47 @@ const {
  */
 router.post("/setPrompt", async (req, res) => {
   const requestId = req.body.id;
+  console.log(requestId);
+  console.log(req.body);
   if (!requestId) {
     return res.status(400).send("Request ID is missing");
   }
-  const controller = new AbortController();
-  storeController(requestId, controller);
+  // const controller = new AbortController();
+  // storeController(requestId, controller);
   try {
     const startTime = performance.now();
     const history = req.body.history || [];
     const userInput = req.body.input;
+    const location = req.body.location;
     const limitedHistory = history.slice(-6);
+
     console.log(limitedHistory);
     setupStreamingForModel(res);
+
     const response = await getRetrievalChain().invoke({
       input: userInput,
       chat_history: limitedHistory,
-      signal: controller.signal
+      //signal: controller.signal
     });
     const endTime = performance.now();
     const responseTime = (endTime - startTime) / 1000;
+
+    const currentDate = new Date();
+    const formattedDate = currentDate.toISOString();
+
     console.log(response);
     const promptEntry = {
+      id: req.body.id,
       Prompt: userInput,
       Answer: response.answer,
       Performance: responseTime,
-      LLM: "gpt-4-1106-preview"
+      LLM: "gpt-4-1106-preview",
+      Location: location,
+      DateTime: formattedDate // Add the date and time attribute
     };
+
+
+
     const jsonFilePath = path.join(__dirname, "../data/prompts.json");
     let prompts = [];
     if (fs.existsSync(jsonFilePath)) {
@@ -95,6 +110,31 @@ router.post("/cancelRequest", (req, res) => {
     }
   } finally {
     removeController(requestId);
+  }
+});
+
+router.post("/setRating", async (req, res) => {
+  const { id, rating } = req.body;
+
+  try {
+    const jsonFilePath = path.join(__dirname, "../data/prompts.json");
+    let prompts = [];
+
+    if (fs.existsSync(jsonFilePath)) {
+      const jsonData = fs.readFileSync(jsonFilePath, "utf8");
+      prompts = JSON.parse(jsonData);
+    }
+
+    const promptIndex = prompts.findIndex(prompt => prompt.id === id);
+    if (promptIndex !== -1) {
+      prompts[promptIndex].Rating = rating;
+      fs.writeFileSync(jsonFilePath, JSON.stringify(prompts, null, 2), "utf8");
+    }
+
+    res.json({ message: "Rating and location saved" });
+  } catch (error) {
+    console.error("Error in saving rating and location:", error);
+    res.status(500).json({ error: "Internal Server Error" });
   }
 });
 

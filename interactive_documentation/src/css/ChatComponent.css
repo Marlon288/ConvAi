@@ -162,3 +162,53 @@
     opacity: 0.5;
   }
 }
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.rating .star {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin: 0 1px;
+  font-size: 18px;
+}
+
+.rating .star:hover,
+.rating .star:hover ~ .star,
+.rating .star.selected,
+.rating .star.selected ~ .star {
+  color: #f8db66;
+}
+
+.rating .star.locked {
+  cursor: default;
+  color: #ccc;
+}
+
+.rating .submit-button {
+  margin: 10px;
+  padding: 4px 8px;
+  background-color: #383c44;
+  color: #fff;
+  border: 1px #D3D9DB solid;  
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.rating .submit-button:hover {
+  color: #383c44;
+  background-color: #D3D9DB;
+}
+
+.rating .feedback-message {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #28a745;
+}

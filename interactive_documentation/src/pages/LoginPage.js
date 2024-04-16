@@ -35,6 +35,8 @@ function LoginPage() {
     const data = await response.json();
     if (data.token) {
       localStorage.setItem('token', data.token);
+      localStorage.setItem('username', username);
+      localStorage.setItem('role', data.role);
       navigate('/admin');
     } else {
       setLoginError(true);

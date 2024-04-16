@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 
 /**
  * FileUpload component
@@ -16,6 +16,30 @@ import React, { useState } from "react";
 function FileUpload({ onFileUpload }) {
   const [fileName, setFileName] = useState("No file chosen...");
   const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    fetchLocations();
+  }, []);
+
+  const fetchLocations = async () => {
+    try {
+      const response = await fetch("http://localhost:9000/api/getLocations");
+      if (response.ok) {
+        const data = await response.json();
+        // Sort the locations alphabetically based on the location_label
+        const sortedLocations = data.sort((a, b) =>
+          a.location_label.localeCompare(b.location_label)
+        );
+        setLocations(sortedLocations);
+      } else {
+        console.error("Failed to fetch locations");
+      }
+    } catch (error) {
+      console.error("Error fetching locations:", error);
+    }
+  };
 
   /**
    * Handles the file change event
@@ -35,9 +59,13 @@ function FileUpload({ onFileUpload }) {
    * Handles the upload button click event
    */
   const handleUploadClick = () => {
-    if (selectedFile) {
-      onFileUpload(selectedFile);
+    if (selectedFile && selectedLocation) {
+      onFileUpload(selectedFile, selectedLocation);
     }
+  };
+
+  const handleLocationChange = (event) => {
+    setSelectedLocation(event.target.value);
   };
 
   return (
@@ -64,16 +92,32 @@ function FileUpload({ onFileUpload }) {
           style={{ display: "none" }}
           aria-hidden="true"
         />
-        {selectedFile && (
-          <button
-            type="submit"
-            className="file-upload-button"
-            onClick={handleUploadClick}
-            aria-label="Upload File"
+        <div className="file-select-right">
+          <select
+            value={selectedLocation}
+            onChange={handleLocationChange}
+            className="location-select"
           >
-            Upload
-          </button>
-        )}
+            <option value="">Select Location</option>
+            {locations.map((location) => (
+              <option key={location._id} value={location.location_label}>
+                {location.location_label}
+              </option>
+            ))}
+          </select>
+          <div className={`file-upload-button-container ${selectedLocation ? 'show' : ''}`}>
+            {selectedFile && selectedLocation && (
+              <button
+                type="submit"
+                className="file-upload-button"
+                onClick={handleUploadClick}
+                aria-label="Upload File"
+              >
+                Upload
+              </button>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );

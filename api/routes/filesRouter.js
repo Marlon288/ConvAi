@@ -11,13 +11,14 @@ const { verifyToken } = require('./authRouter');
 
 // Example hardcoded data
 const files = [
-  { name: "Trainingset1.txt", lastUpdated: "2024-01-01" },
-  { name: "Trainingset2.txt", lastUpdated: "2024-02-01" },
-  { name: "Trainingset3.txt", lastUpdated: "2024-02-01" },
-  { name: "Trainingset4.txt", lastUpdated: "2024-02-01" },
-  { name: "Trainingset5.txt", lastUpdated: "2024-02-01" },
-  { name: "Trainingset6.txt", lastUpdated: "2024-02-01" },
-  { name: "Trainingset7.txt", lastUpdated: "2024-02-01" }
+  { name: "Trainingset1.txt", lastUpdated: "2024-01-01",  location: "Glasgow" },
+  { name: "Trainingset2.txt", lastUpdated: "2024-02-01",  location: "Glasgow" },
+  { name: "Trainingset3.txt", lastUpdated: "2024-02-01",  location: "Glasgow" },
+  { name: "Trainingset4.txt", lastUpdated: "2024-02-01",  location: "Glasgow" },
+  { name: "Trainingset5.txt", lastUpdated: "2024-02-01" ,  location: "Glasgow"},
+  { name: "Test Set 3.pdf", lastUpdated: "2024-02-01" ,  location: "Frauenfeld"},
+  { name: "Test Set 1.pdf", lastUpdated: "2024-02-01",  location: "Frauenfeld" },
+  { name: "Test Set 2.pdf", lastUpdated: "2024-02-01", location: "Frauenfeld" }                             
 ];
 
 /**

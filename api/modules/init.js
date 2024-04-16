@@ -49,7 +49,7 @@ async function initRetrievalChain() {
   const chatModel = new ChatOpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
     modelName: "gpt-4-1106-preview",
-    temperature: 0.85,
+    temperature: 0.92,
     maxTokens: 750
   });
   setModel(chatModel);
@@ -75,7 +75,9 @@ async function initRetrievalChain() {
         {context}
       </context>
     Question: {input}
-    Your answer needs to be in the language the Input was asked in, but dont translate the system-specific terminology, keep that to the original.  
+    Your answer needs to be in the language the Input was asked in, but dont translate the system-specific terminology, keep that to the original. 
+    If there is a described way to perform an action which is indicated by <Step 1> > <Step 2>, I want you to return that information in that style. 
+
     Answer in HTML:
       `);
   const documentChain = await createStuffDocumentsChain({

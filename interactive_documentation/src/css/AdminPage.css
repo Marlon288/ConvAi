@@ -7,96 +7,17 @@
 }
 
 .admin-content {
-    width: 50%;
-    max-height: 520px;
+    margin-left: 250px;
+    width: calc(100% - 500px);
+    height: 90%;
+    /* max-height: 520px; */
     overflow-y: hidden;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd;         
     border-radius: 10px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.table-container{
-    overflow-y: auto;
-    max-height: 380px;
-    width: 100%;
-}
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th,
-.table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-}
-
-.table th {
-    background-color: #d3d9db;
-}
-
-.table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
-.name-column {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .search-input {
-    padding: 5px;
-    font-size: 14px;
-    border: 2px solid #d3d9db  ;
-    border-radius: 5px;
-  }
-
-.search-input:hover, 
-.search-input:focus
-{
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-    outline: none; /* Removes the default focus outline */
-    border: 2px solid #383c44; /* Example: changes border to a solid green when focused */
-}
-
-
-.date-column {
-    width: 20%;
-}
-
-.action-column {
-    width: 20%;
-    text-align: right;
-}
-
-
-.delete-btn {
-    padding: 10px;
-    background-color: #383c44;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    letter-spacing: 0.05em;
-    /* Adjust letter spacing as desired */
-    transition: background-color 0.3s;
-}
-
-.delete-btn:hover {
-    background-color: #151618;
-}
-
-.upload-form input{
-    display: none;
 }
 
 .admin-header {
@@ -104,139 +25,15 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-  }
-  
-  .logout-icon {
-    cursor: pointer; /* Changes the cursor to pointer when hovering over the SVG */
-    width: 32px; /* Adjust size as needed */
-    height: 32px; /* Adjust size as needed */
+}
+
+.logout-icon {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
     fill: #383c44;
-  }
+}
 
-  .logout-icon:hover{
+.logout-icon:hover {
     fill: #151618;
-  }
-
-/*File Upload Taken From https://codepen.io/sazzad/pen/ALwwPy and adapted to fit style*/
-
-.file-upload {
-    display: block;
-    text-align: center;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    width: 60%;
-    margin-bottom: 10px;
-}
-
-.file-upload .file-select {
-    display: flex; /* Use Flexbox */
-    justify-content: space-between; /* Distribute space between items */
-    align-items: center; /* Align items vertically */
-    border: 2px solid #dce4ec;
-    color: #383c44;
-    cursor: pointer;
-    height: 40px;
-    line-height: 40px;
-    background: #FFFFFF;
-    overflow: hidden;
-    position: relative;
-}
-
-.file-upload .file-select .file-select-button,
-.file-upload .file-select .file-upload-button {
-    background: #d3d9db;
-    padding: 0 10px;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    color: #383c44;
-    border: none; /* Remove borders */
-    outline: none; /* Remove focus outline */
-}
-
-.file-upload .file-select .file-select-name {
-    line-height: 40px;
-    display: inline-block;
-    padding: 0 10px;
-}
-
-.file-upload .file-select:hover {
-    border-color: #383c44;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload .file-select .file-select-button:hover,
-.file-upload .file-select .file-upload-button:hover {
-    background: #383c44;
-    color: #FFFFFF;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload.active .file-select {
-    border-color: #3fa46a;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload.active .file-select .file-select-button {
-    background: #3fa46a;
-    color: #FFFFFF;
-    transition: all .2s ease-in-out;
-    -moz-transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    -o-transition: all .2s ease-in-out;
-}
-
-.file-upload .file-select input[type=file] {
-    z-index: 100;
-    cursor: pointer;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    filter: alpha(opacity=0);
-}
-
-.file-upload .file-select.file-select-disabled {
-    opacity: 0.65;
-}
-
-.file-upload .file-select.file-select-disabled:hover {
-    cursor: default;
-    display: block;
-    border: 2px solid #dce4ec;
-    color: #383c44;
-    cursor: pointer;
-    height: 40px;
-    line-height: 40px;
-    margin-top: 5px;
-    text-align: left;
-    background: #FFFFFF;
-    overflow: hidden;
-    position: relative;
-}
-
-.file-upload .file-select.file-select-disabled:hover .file-select-button {
-    background: #dce4ec;
-    color: #666666;
-    padding: 0 10px;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-}
-
-.file-upload .file-select.file-select-disabled:hover .file-select-name {
-    line-height: 40px;
-    display: inline-block;
-    padding: 0 10px;
 }

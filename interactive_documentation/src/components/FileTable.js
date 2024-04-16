@@ -31,6 +31,7 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
     setSortConfig({ key, direction });
   };
 
+
   /**
    * Sorts and filters the files based on the current sort configuration and search query
    * @returns {Array} The sorted and filtered files
@@ -66,7 +67,7 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
       ? sortConfig.direction === "ascending"
         ? " ↓"
         : " ↑"
-      : "";
+      : "\u00A0\u00A0\u00A0";
   };
 
   return (
@@ -89,6 +90,21 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
                 aria-label="Search by name"
               />
             </th>
+            <th className="location-column" onClick={() => requestSort("location")}>
+              Location{getSortDirectionSymbol("location")}
+              <input
+                type="text"
+                placeholder="Search by location..."
+                onChange={(e) => {
+                  e.stopPropagation();
+                  setSearchQuery(e.target.value);
+                }}
+                onClick={(e) => e.stopPropagation()}
+                style={{ marginLeft: "10px", padding: "2px" }}
+                className="search-input"
+                aria-label="Search by name"
+              />
+            </th>
             <th className="date-column" onClick={() => requestSort("lastUpdated")}>
               Date{getSortDirectionSymbol("lastUpdated")}
             </th>
@@ -96,16 +112,17 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
           </tr>
         </thead>
         <tbody>
-          {sortedAndFilteredFiles.map((file) => (
-            <tr key={file.name}>
+        {sortedAndFilteredFiles.map((file, index) => (
+            <tr key={index}>
               <td>{file.name}</td>
+              <td>{file.location}</td>
               <td>{file.lastUpdated}</td>
               <td>
-                {!file.isDeleted ? (
-                  <button className="delete-btn" onClick={() => onDelete(file.name)} aria-label={`Delete ${file.name}`}>
+                {!file.isDeleted && (
+                  <button className="delete-btn" onClick={() => onDelete(file.name)}>
                     Delete
                   </button>
-                ) : null}
+                )}
               </td>
             </tr>
           ))}

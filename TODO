@@ -10,3 +10,9 @@ Frontend
         turn request red
     Add evaluation for the individual request
     Clean up code
+
+. I want to introduce a new tab into the section that lewts the user control the locations. So it will be able to create a new location, see all the locations. For that  want to incoperate the map i used in the frontend as information on what are available. Foor that I would like to use google maps completion api which offers me to
+
+
+
+   
