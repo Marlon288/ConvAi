@@ -57,9 +57,10 @@ const App = () => {
               <>
                 <MapComponent
                   locations={locations}
+                  location={location}
                   isChatOpen={isChatOpen}
                   setIsChatOpen={setIsChatOpen}
-                  setLocation={setLocation}
+                  setLocation={setLocation}               
                 />
                 {isChatOpen && (
                   <>

@@ -70,5 +70,585 @@
     "Location": "Glasgow,UK",
     "DateTime": "2024-04-16T12:46:04.273Z",
     "Rating": 3
+  },
+  {
+    "id": "5e06cfad-8a78-4b8e-b724-ee373863206c",
+    "Prompt": "How do I schedule a wororder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Workorder</title>\n</head>\n<body>\n\n<h3>How to Schedule a Workorder</h3>\n\n<ul>\n  <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n  <li>Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work, if multi-organization security is in use.</li>\n      <li><b>Schedule By</b> - Choose one of the following options:\n        <ul>\n          <li><b>Employee</b> - If scheduling by employee, enter the employee for whom to schedule the work.</li>\n          <li><b>Trade/Department</b> - If scheduling by trade or department, enter the respective trade and department.</li>\n          <li><b>Auto Refresh</b> - Select this option for the system to automatically update the Daily Schedule list after adding an activity to the calendar. If not selected, refresh manually.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>\n    <b>Schedule unscheduled work orders:</b> In the Activities section of the form, select <b>Unscheduled WOs for Dataspy</b>, then drag a work order from the list to the appropriate day on the calendar. A new work order schedule record will be created.\n  </li>\n  <li><b>Schedule backlogged work orders:</b> Follow a similar process by selecting <b>Backlogged WOs for Dataspy</b> in the Activities section and dragging a work order to the calendar day you want to schedule it for.</li>\n</ul>\n\n<br>\nNote: This instruction is based on the provided documentation and specific steps in the system's user interface. They must be followed within the context of the system described.\n\n</body>\n</html>\n```",
+    "Performance": 19.667196799993516,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-16T19:52:08.146Z"
+  },
+  {
+    "id": "71d7892b-4357-44e9-a97c-10c6791adbe3",
+    "Prompt": "How do I schedule a workrorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Schedule a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <ul>\n        <li><b>Step 1:</b> Select <i>Work > WO Planning > WO Scheduling</i>.</li>\n        <li><b>Step 2:</b> Specify this information: <br>\n            <ul>\n                <li><i>Organization</i> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><i>Schedule By</i> - Select one of the following options:\n                    <ul>\n                        <li><i>Employee</i> - Select to schedule by employee. The system displays <i>Employee</i>. Enter, for <i>Employee</i>, the Employee for whom you wish to schedule the work.</li>\n                        <li><i>Trade/Department</i> - Select to schedule by trade/department. The system displays <i>Trade</i> and <i>Department</i>. Enter, for <i>Trade</i> and <i>Department</i>, the trade and department to which to assign the work order.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n    </ul>\n    <p>Note: You can select Work Orders for scheduling in the <i>Daily Schedule</i> list, and then drag them to the appropriate day on the calendar to schedule.</p>\n    <br>\n    <p>The instructions above are based on the context provided and indicate the steps to follow for scheduling a work order using the Hexagon documentation site.</p>\n</body>\n</html>\n```",
+    "Performance": 30.156425500035287,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T12:36:08.859Z"
+  },
+  {
+    "id": "852b15a6-4df5-4a49-8d7a-dc253b402107",
+    "Prompt": "How I schedule A workorder? ",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Work Order Scheduling Instructions</title>\n</head>\n<body>\n  <h3>Work Order Scheduling Instructions</h3>\n  <p>Follow the steps below to schedule a work order:</p>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n    <li><b>Step 2:</b> Specify the following information:\n      <ul>\n        <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n        <li><b>Schedule By:</b> Select one of the following options:\n          <ul>\n            <li><b>Employee:</b> Select to schedule by employee. The system displays <b>Employee</b>. Enter the Employee for whom you wish to schedule the work.</li>\n            <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter the trade and department for which to schedule the work.</li>\n          </ul>\n        </li>\n      </ul>\n    </li>\n  </ul>\n  <p>To schedule backlogged work orders:</p>\n  <ul>\n    <li>Select <b>Backlogged WOs</b> for <b>Dataspy</b> in the <b>Activities</b> section of the form.</li>\n    <li>Select a work order from the list and drag it to the day on the calendar for which to schedule it. The system creates a new work order schedule record.</li>\n  </ul>\n\n  <br>\n\n  <h3>Note:</h3>\n  <p>The steps provided are based on the documentation provided and may be specific to a particular work order management system or software.</p>\n</body>\n</html>\n```",
+    "Performance": 26.703588400006293,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T12:37:28.238Z",
+    "Rating": 4
+  },
+  {
+    "id": "bb43d18d-a245-4421-8ea7-dbb86bc59904",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Schedule a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <ul>\n        <li><b>Step 1:</b> Select <i>Work > WO Planning > WO Scheduling</i>.</li>\n        <li><b>Step 2:</b> Specify the following information:</li>\n        <ul>\n            <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By:</b> Select one of the following options:</li>\n            <ul>\n                <li><b>Employee:</b> Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n                <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for which the scheduling is done.</li>\n            </ul>\n        </ul>\n        <li><b>Step 3:</b> Click <i>Save Hours</i>.</li>\n        <li><b>Step 4:</b> Repeat the above steps as necessary to book any additional hours against the work order activity.</li>\n        <li><b>Step 5:</b> Click <i>Save Record</i>.</li>\n    </ul>\n    <br>\n    Note: The instructions above are based on the system-specific process described in the provided documentation.\n</body>\n</html>\n```",
+    "Performance": 25.91848979997635,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Stockholm,Sweden",
+    "DateTime": "2024-04-17T13:53:10.192Z",
+    "Rating": 4
+  },
+  {
+    "id": "c0e3c2a7-ffbd-4906-bd99-e3e68017aea5",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n<h3>Scheduling a Work Order</h3>\n<p>To schedule a work order, follow these steps:</p>\n<ul>\n  <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li><b>Step 2:</b> Specify this information:</li>\n  <ul>\n    <li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n    <li>Schedule By - Select one of the following options:</li>\n    <ul>\n      <li>Employee - If scheduling by employee, the system will display Employee. Enter the Employee for whom you wish to schedule the work.</li>\n      <li>Trade/Department - If scheduling by trade/department, the system will display Trade and Department. Enter the respective Trade and Department for whom the work is to be scheduled.</li>\n    </ul>\n  </ul>\n  <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n  <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n<br>\n<p>Note that for scheduling backlogged work orders, you need to select Backlogged WOs for Dataspy in the Activities section and then drag the desired work order to the appropriate day on the calendar to create a new work order schedule record.</p>\n\n</body>\n</html>\n```",
+    "Performance": 24.645713199973105,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Stockholm,Sweden",
+    "DateTime": "2024-04-17T13:53:54.400Z",
+    "Rating": 5
+  },
+  {
+    "id": "3699a3ed-487e-49dd-ab82-4283d0b60a74",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <title>Schedule a Work Order</title>\n</head>\n<body>\n  <h3>How to Schedule a Work Order</h3>\n  <p>Follow these steps to schedule a work order:</p>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n    <li><b>Step 2:</b> Specify the following information:</li>\n    <ul>\n      <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By:</b> Select one of the following options:\n        <ul>\n          <li><b>Employee:</b> Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for which to schedule the work.</li>\n        </ul>\n      </li>\n      <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n      <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n      <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n    </ul>\n  </ul>\n  <p>Refer to the documentation for additional details or any updates on the procedure.</p>\n  <p><a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a></p>\n</body>\n</html>\n```",
+    "Performance": 30.333988900005817,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Liverpool,UK",
+    "DateTime": "2024-04-17T15:08:25.926Z"
+  },
+  {
+    "id": "61d83798-68b1-4ff0-b3d2-b97c4cc2239a",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Schedule a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <p>To schedule a work order, follow the steps below:</p>\n    <ul>\n        <li><b>Step 1:</b> Select <b>Work</b> &gt; <b>WO Planning</b> &gt; <b>WO Scheduling</b>.</li>\n        <li><b>Step 2:</b> Specify this information:\n            <ul>\n                <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><b>Schedule By:</b> Select one of the following options:\n                    <ul>\n                        <li><b>Employee:</b> Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department respectively.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n        <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n    </ul>\n    <br>\n</body>\n</html>\n```\n",
+    "Performance": 24.10094420003891,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Liverpool,UK",
+    "DateTime": "2024-04-17T15:08:27.632Z"
+  },
+  {
+    "id": "ac994f77-70e4-4e05-89e0-af7788207276",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>How to Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>Steps to Schedule Backlogged Work Orders</h3>\n<ul>\n  <li><b>Step 1:</b> Select <i>Backlogged WOs</i> for Dataspy in the <i>Activities</i> section of the form.</li>\n  <li><b>Step 2:</b> Select a work order from the list.</li>\n  <li><b>Step 3:</b> Drag the selected work order to the day on the calendar for which to schedule it.</li>\n  <li>The system then creates a new work order schedule record.</li>\n</ul>\n\n<br>\n\n<h3>Steps to Schedule or Reschedule Work Orders</h3>\n<ul>\n  <li><b>Step 1:</b> Select <i>Work > WO Planning > WO Scheduling</i>.</li>\n  <li><b>Step 2:</b> Specify the following information:</li>\n  <ul>\n    <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n    <li><b>Schedule By:</b> Select one of the following options:</li>\n    <ul>\n      <li><i>Employee:</i> Select to schedule by employee. Then enter the Employee for whom you wish to schedule the work.</li>\n      <li><i>Trade/Department:</i> Select to schedule by trade/department. Then enter the Trade and Department for which to schedule the work.</li>\n    </ul>\n  </ul>\n  <li><b>Step 3:</b> Click <i>Save Hours</i>.</li>\n  <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li><b>Step 5:</b> Click <i>Save Record</i>.</li>\n</ul>\n\n<br>\n\n<p>Note: This procedure is based on the provided documentation and may require access to the specific system or application mentioned to be performed effectively.</p>\n\n</body>\n</html>\n```\nThis HTML answer incorporates the information provided in the context following your formatting guidelines.",
+    "Performance": 28.67021899998188,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Liverpool,UK",
+    "DateTime": "2024-04-17T15:08:55.172Z"
+  },
+  {
+    "id": "3d5e437a-c2e1-475e-96c2-024ea9dc58ba",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>Scheduling a Work Order</h3>\n<p>To schedule a work order, follow the steps below:</p>\n\n<ul>\n  <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>\n    <b>Step 2:</b> Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By</b> - Select one of the following options:\n        <ul>\n          <li><b>Employee</b> - Select to schedule by employee. The system displays Employee. Then, enter the Employee for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays Trade and Department. Enter the trade and department for which to schedule the work.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n  <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n\n<p><b>Note:</b> These instructions are based on the provided documentation from the Hexagon Documentation Site. For further details, you might refer to the original documentation.</p>\n\n<br>\n\n<p>Source: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Hexagon Documentation Site</a></p>\n\n</body>\n</html>\n```",
+    "Performance": 29.26722920000553,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Liverpool,UK",
+    "DateTime": "2024-04-17T15:09:46.052Z"
+  },
+  {
+    "id": "954d84dc-38fc-4a7e-87fe-fc4c99fc00f0",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>Steps to Schedule a Work Order</h3>\n<ul>\n<li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n<li><b>Step 2:</b> Specify the following information:\n    <ul>\n        <li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n        <li>Schedule By - Select one of the following options:\n            <ul>\n                <li>Employee - If scheduling by employee, enter the Employee for whom you wish to schedule the work.</li>\n                <li>Trade/Department - If scheduling by trade/department, enter the Trade and Department for which you wish to schedule the work.</li>\n            </ul>\n        </li>\n    </ul>\n</li>\n<li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n<li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n<li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p>This process is based on the provided documentation and should be followed in the system you are using to schedule work orders. Ensure that you keep the system-specific terminology unchanged while following these instructions.</p>\n\n</body>\n</html>\n```",
+    "Performance": 20.637341099977494,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Liverpool,UK",
+    "DateTime": "2024-04-17T15:10:10.717Z"
+  },
+  {
+    "id": "1671f863-cbeb-4382-af1c-0ba1e3facd65",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<p>To schedule a work order, follow these steps:</p>\n<ul>\n  <li>Go to <b>Work > WO Planning > WO Scheduling</b>.</li>\n  <li>Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you are using a multi-organization security model.</li>\n      <li><b>Schedule By</b> - Select one of the following options:\n        <ul>\n          <li><b>Employee</b> - If scheduling by employee, enter the employee's name for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department</b> - If scheduling by trade/department, enter the respective trade and department.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p><b>Note:</b> This procedure is based on the system-specific documentation provided and retains the original system-specific terminology.</p>\n\n\n</body>\n</html>\n```",
+    "Performance": 20.60827739995718,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T15:11:03.397Z"
+  },
+  {
+    "id": "cd3ade93-1db8-47a3-85fb-c12d8491c27b",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n\n<ul>\n  <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li><b>Step 2:</b> Specify this information:</li>\n    <ul>\n        <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n        <li><b>Schedule By:</b> Select one of the following options:</li>\n        <ul>\n            <li><i>Employee:</i> Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n            <li><i>Trade/Department:</i> Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which you wish to schedule work.</li>\n        </ul>\n    </ul>\n  <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n  <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p>The steps provided are in accordance with the Hexagon Documentation process. For more details, please consult their official documentation.</p>\n<a href=\"https://docs.hexagonppm.com\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```\nThe response utilizes the HTML format as requested, and the information is based on the provided context. The system-specific terminology is kept original, as per instruction.",
+    "Performance": 34.545045100033285,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T15:11:54.736Z"
+  },
+  {
+    "id": "b4a6e25c-85c8-4ca3-bdcb-ad6ee669f1b3",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n  <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By</b> - Select one of the following options:\n        <ul>\n          <li><b>Employee</b> - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p><b>Note:</b> The above steps are based on the provided system-specific documentation and context.</p>\n\n</body>\n</html>\n```\n",
+    "Performance": 21.22485819995403,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T15:13:03.368Z"
+  },
+  {
+    "id": "baa2080f-781b-46c9-8905-3d7208d3bdec",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n<h3>Steps to Schedule a Work Order</h3>\n<ul>\n    <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n    <li>Specify the following information:\n        <ul>\n            <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By</b> - Select one of the following options:\n                <ul>\n                    <li><b>Employee</b> - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n                    <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for which to schedule work.</li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n    <li>Click <b>Save Hours</b>.</li>\n    <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n    <li>Click <b>Save Record</b>.</li>\n</ul>\n</body>\n</html>\n```",
+    "Performance": 14.901303800046444,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-17T15:14:08.858Z"
+  },
+  {
+    "id": "2f3987b4-1d40-4b36-aaa3-2edf62a69e3d",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Work Order</title>\n</head>\n<body>\n<h3>How to Schedule a Workorder</h3>\n<ul>\n    <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n    <li>Specify the following information:\n        <ul>\n            <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By</b> - Select one of the following options:\n                <ul>\n                    <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                    <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department.</li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n    <li>Click <b>Save Hours</b>.</li>\n    <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n    <li>Click <b>Save Record</b>.</li>\n</ul>\n</body>\n</html>\n```",
+    "Performance": 18.363763000011446,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-17T15:14:37.449Z"
+  },
+  {
+    "id": "b47a627f-50fa-4083-9480-9db1061405b3",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Workorder</title>\n</head>\n<body>\n<h3>How to Schedule a Workorder</h3>\n<ul>\n<li><b>Step 1:</b> Select <i>Work > WO Planning > WO Scheduling</i>.</li>\n<li><b>Step 2:</b> Specify the following information:\n  <ul>\n    <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n    <li><b>Schedule By:</b> Select one of the following options:\n      <ul>\n        <li><i>Employee</i> - Select to schedule by employee. The system displays <i>Employee</i>. Enter, for <i>Employee</i>, the Employee for whom you wish to schedule the work.</li>\n        <li><i>Trade/Department</i> - Select to schedule by trade/department. The system displays <i>Trade</i> and <i>Department</i>. Enter, for <i>Trade</i> and <i>Department</i>, the trade and department.</li>\n      </ul>\n    </li>\n  </ul>\n</li>\n<li><b>Step 3:</b> Click <i>Save Hours</i>.</li>\n<li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n<li><b>Step 5:</b> Click <i>Save Record</i>.</li>\n</ul>\n<p><b>Note:</b> This process is based on the provided documentation and no additional context was required from previous conversation.</p>\n<br>\n<p>Source for the provided steps can be found on the Hexagon Documentation Site:</p>\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n</body>\n</html>\n```",
+    "Performance": 27.536242299973964,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:05:30.269Z"
+  },
+  {
+    "id": "c71e0191-9b54-40ac-9bf5-6686e26cbb22",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>How to Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>Scheduling Backlogged Work Orders</h3>\n<ul>\n    <li>Select <b>Backlogged WOs for Dataspy</b> in the <b>Activities</b> section of the form.</li>\n    <li>Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n    <li>The system creates a new work order schedule record.</li>\n</ul>\n\n<h3>Scheduling or Rescheduling Work Orders</h3>\n<ol>\n    <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n    <li>Specify this information:</li>\n    <ul>\n        <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n        <li><b>Schedule By</b> - Select one of the following options:</li>\n        <ul>\n            <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>.</li>\n            <li>Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n            <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>.</li>\n            <li>Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which you wish to schedule the work.</li>\n        </ul>\n    </ul>\n    <li>Click <b>Save Hours</b>.</li>\n    <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n    <li>Click <b>Save Record</b>.</li>\n</ol>\n\n<br>\n\nSource: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Hexagon Documentation Site Export</a>\n\n</body>\n</html>\n```\nYour response is based on the provided documentation.",
+    "Performance": 35.4626793000102,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:06:09.371Z"
+  },
+  {
+    "id": "4ccb7bc7-b63f-4de8-a5de-96015075942f",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>How to Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>Scheduling a Work Order</h3>\nTo schedule a work order, follow these steps:\n<ul>\n  <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li><b>Step 2:</b> Specify the following information:\n    <ul>\n      <li>Organization - Specify the organization for which to schedule work if you use multiorganization security.</li>\n      <li>Schedule By - Select one of the following options:\n        <ul>\n          <li>Employee - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n          <li>Trade/Department - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department you wish to schedule the work for.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n  <li><b>Step 4:</b> Repeat the above steps as necessary to book any additional hours against the work order activity.</li>\n  <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n<br>\n<p>The provided steps are based on the documentation and system-specific terminology has been kept original as per the request.</p>\n\n</body>\n</html>\n```\n",
+    "Performance": 25.00489819997549,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:09:04.215Z"
+  },
+  {
+    "id": "cfbafc8a-9332-4b73-9750-831bbf394853",
+    "Prompt": "How do I schedule a workorder",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n\n<ul>\n  <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>Specify the following information:</li>\n  <ul>\n    <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n    <li><b>Schedule By</b> - Select one of the following options:</li>\n    <ul>\n      <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n      <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which to schedule the work.</li>\n    </ul>\n  </ul>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```\n\nNote: This response is constructed based on the provided context. The steps listed follow the format <Step 1> > <Step 2> as requested. The system-specific terminology has been kept in its original form as per instruction.",
+    "Performance": 27.143612500011923,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:09:17.513Z"
+  },
+  {
+    "id": "e5e0c9b1-a01e-4d24-9b84-5f4625365af1",
+    "Prompt": "How do I Schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Scheduling a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Workorder</h3>\n    <ul>\n        <li>\n            <b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.\n        </li>\n        <li>\n            <b>Step 2:</b> Specify the following information:\n            <ul>\n                <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><b>Schedule By:</b> Select one of the following options:\n                    <ul>\n                        <li><b>Employee:</b> Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which the work is to be scheduled.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li>\n            <b>Step 3:</b> Click <b>Save Hours</b>.\n        </li>\n        <li>\n            <b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.\n        </li>\n        <li>\n            <b>Step 5:</b> Click <b>Save Record</b>.\n        </li>\n    </ul>\n    <br>\n    <h3>Additional Information</h3>\n    <p>For further details, visit the Hexagon Documentation Site:</p>\n    <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n</body>\n</html>\n```",
+    "Performance": 25.119253800034524,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:18:22.675Z"
+  },
+  {
+    "id": "c9442ae9-fa15-426b-993e-e4de70dab65e",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Scheduling a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <p>To schedule a work order, please follow the steps provided below:</p>\n    <ul>\n        <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li><b>Step 2:</b> Specify the following information:\n            <ul>\n                <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><b>Schedule By:</b> Select one of the following options:\n                    <ul>\n                        <li><b>Employee:</b> Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n        <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n    </ul>\n    <p><i>Note:</i> These instructions are based on the provided documentation context.</p>\n</body>\n</html>\n```",
+    "Performance": 26.342957599997522,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:23:16.035Z"
+  },
+  {
+    "id": "fe90c862-c091-497b-b9ee-5b6b90d993d7",
+    "Prompt": "asd",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Response to Inquiry</title>\n</head>\n<body>\n<h3>Instructions Based on Provided Documentation</h3>\n<ul>\n  <li>To view labor utilization for a specific date:\n    <ol>\n      <li>Select the date on the calendar.</li>\n      <li>Enter the department in the 'Department' field to filter the trade records.</li>\n    </ol>\n  </li>\n  <li>Understanding labor utilization colors:\n    <ul>\n      <li><b>Gray</b>: Non-working day or no labor scheduled.</li>\n      <li><b>Green</b>: Scheduled hours < 80% of available hours.</li>\n      <li><b>Yellow</b>: Scheduled hours are 80-100% of available hours.</li>\n      <li><b>Red</b>: Scheduled hours exceed available hours.</li>\n    </ul>\n  </li>\n  <li>Hover the cursor over a calendar day to view detailed labor utilization for employees or trades/departments.</li>\n</ul>\n<br>\n<p>Note: The response is based on the provided documentation from the Hexagon Documentation Site Export.</p>\n</body>\n</html>\n```",
+    "Performance": 13.272645400047303,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:25:52.916Z"
+  },
+  {
+    "id": "5285f661-54e8-4fa8-9743-8c964d1762f2",
+    "Prompt": "This is a test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Response to Test</title>\n</head>\n<body>\n  <h3>Color Significance in Labor Utilization Calendar</h3>\n  <ul>\n    <li><b>Gray</b>: Non-working day for the organization or no labor scheduled for this day.</li>\n    <li><b>Green</b>: Total scheduled hours are less than total available hours, and labor utilization is less than 80%.</li>\n    <li><b>Yellow</b>: Total scheduled hours are between 80% and 100% of total available hours.</li>\n    <li><b>Red</b>: Total scheduled hours exceed the total available hours.</li>\n  </ul>\n  <br>\n  <p>For more detailed information, please refer to the Hexagon Documentation Site:</p>\n  <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9\" target=\"_blank\">Source</a>\n</body>\n</html>\n```\nPlease note that the actual URL provided in the anchor tag is a placeholder and should be replaced with the actual URL, if needed.",
+    "Performance": 22.358322400033472,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:27:10.270Z"
+  },
+  {
+    "id": "cb763915-1774-4fe7-9751-a2a3112363db",
+    "Prompt": "Test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Test Response</title>\n</head>\n<body>\n    <h3>Instructions for Viewing Labor Utilization and Booking Hours</h3>\n    <ul>\n        <li><b>Viewing Labor Utilization:</b>\n            <ul>\n                <li>Calculate labor availability to see colors indicating labor utilization on the calendar.</li>\n                <li>Colors and their meanings:</li>\n                <ul>\n                    <li><b>Gray</b> - Non-working day or no labor scheduled.</li>\n                    <li><b>Green</b> - Scheduled hours < 80% of available hours.</li>\n                    <li><b>Yellow</b> - Scheduled hours are 80%-100% of available hours.</li>\n                    <li><b>Red</b> - Scheduled hours exceed available hours.</li>\n                </ul>\n                <li>To filter records, enter the department in the Department field.</li>\n                <li>Place the cursor over a calendar day to view details.</li>\n            </ul>\n        </li>\n        <br>\n        <li><b>Booking Additional Hours:</b>\n            <ul>\n                <li>Step 1: Click <b>Save Hours</b>.</li>\n                <li>Step 2: Repeat the steps for additional hours.</li>\n                <li>Step 3: Click <b>Save Record</b>.</li>\n            </ul>\n        </li>\n    </ul>\n    <p>Note: The provided steps are based on the context documentation provided.</p>\n    <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n</body>\n</html>\n```",
+    "Performance": 27.717994099974632,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:28:25.999Z"
+  },
+  {
+    "id": "d983bdb4-60e6-4140-9503-c0d7c8cdad21",
+    "Prompt": "This is a test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Test Response</title>\n</head>\n<body>\n\n<h3>Interpreting Labor Utilization Colors</h3>\n<ul>\n<li><b>Gray</b>: Non-working day for the organization or no labor scheduled for this day.</li>\n<li><b>Green</b>: Total scheduled hours are less than total available hours, and labor utilization is less than 80%.</li>\n<li><b>Yellow</b>: Total scheduled hours are between 80% and 100% of total available hours.</li>\n<li><b>Red</b>: Total scheduled hours exceed the total available hours.</li>\n</ul>\n\n<br>\n\n<p>To view the labor utilization:</p>\n<ol>\n<li><b>Step 1</b>: Calculate labor availability.</li>\n<li><b>Step 2</b>: View the labor utilization on the calendar, where colors will be displayed as per the above significance.</li>\n</ol>\n\n<br>\n\n<p>Please note that the steps provided are based on general understanding and may not reflect the exact steps from the provided Hexagon Documentation. For detailed instructions, please refer to the Hexagon Documentation Site.</p>\n\n<p>For more information, visit the <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9\" target=\"_blank\">Source</a>.</p>\n\n</body>\n</html>\n```",
+    "Performance": 18.616249400019647,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:29:43.494Z"
+  },
+  {
+    "id": "2b2d7c53-1cfd-47f4-a39b-439d51019f64",
+    "Prompt": "This is a test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Test Response</title>\n</head>\n<body>\n\n<h3>Understanding Labor Utilization Indicators</h3>\n\n<p>Based on the provided context from the Hexagon Documentation Site Export, you can determine the labor utilization for a specific day by observing the color-coded system. Below is a summary of what each color signifies:</p>\n\n<ul>\n  <li><b>Gray</b>: Non-working day for the organization or no labor scheduled for this day.</li>\n  <li><b>Green</b>: Total scheduled hours are less than total available hours, and labor utilization is less than 80%.</li>\n  <li><b>Yellow</b>: Total scheduled hours are between 80% and 100% of total available hours.</li>\n  <li><b>Red</b>: Total scheduled hours exceed the total available hours.</li>\n</ul>\n\n<br>\n\n<h3>Steps to Perform an Action</h3>\n<p>If there were steps provided in the documentation to perform a specific action, they would typically be formatted in a sequential manner. For example:</p>\n\n<p><b>Step 1</b> > <b>Step 2</b> > ... and so on.</p>\n\n<br>\n\n<p><b>Note:</b> The specific steps to perform an action were not provided in the context given.</p>\n\n<br>\n\n<p>Documentation source: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a></p>\n\n</body>\n</html>\n```",
+    "Performance": 22.12343720000982,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:30:45.384Z"
+  },
+  {
+    "id": "52019ea4-0281-45c1-9ce2-bc79f4b36cc4",
+    "Prompt": "test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Test Response</title>\n</head>\n<body>\n    <h3>Labor Utilization Color Codes</h3>\n    <ul>\n        <li><b>Gray</b>: Non-working day for the organization or no labor scheduled for this day.</li>\n        <li><b>Green</b>: Total scheduled hours are less than total available hours, and labor utilization is less than 80%.</li>\n        <li><b>Yellow</b>: Total scheduled hours are between 80% and 100% of total available hours.</li>\n        <li><b>Red</b>: Total scheduled hours exceed the total available hours.</li>\n    </ul>\n    <br>\n    <h3>Viewing Labor Utilization</h3>\n    <ol>\n        <li>Place the cursor over a calendar day to view the employee or trade/department utilization percentage for that day.</li>\n    </ol>\n    <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n</body>\n</html>\n```\n\nNote: My response is based on the provided documentation.",
+    "Performance": 16.116528299987316,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:30:46.698Z"
+  },
+  {
+    "id": "991b1f46-db54-424e-a2e3-75bcdd95c161",
+    "Prompt": "How do I schedule a workroder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>Scheduling a Work Order</h3>\n\n<ul>\n  <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li><b>Step 2:</b> Specify the following information:\n    <ul>\n      <li>Organization - Specify the organization for which to schedule work if using multi-organization security.</li>\n      <li>Schedule By - Choose one of the options:\n        <ul>\n          <li>Employee - Schedule by employee. Enter the Employee for whom to schedule the work.</li>\n          <li>Trade/Department - Schedule by trade/department. Enter the Trade and Department for which to schedule the work.</li>\n        </ul>\n      </li>\n      <li>Auto Refresh - Select this option if you want the system to automatically refresh the Daily Schedule list after scheduling an activity. If not selected, refresh manually.</li>\n    </ul>\n  </li>\n  <li><b>Step 3:</b> To schedule unscheduled work orders:\n    <ul>\n      <li>Select <b>Unscheduled WOs</b> for Dataspy in the Activities section, then drag a work order from the list to the calendar day you wish to schedule it for.</li>\n    </ul>\n  </li>\n  <li>Or, to schedule backlogged work orders:\n    <ul>\n      <li><b>Step 4:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Load Balancing</b>.</li>\n      <li><b>Step 5:</b> Specify the <b>Work Order Org.</b> if using multi-organization security.</li>\n      <li><b>Step 6:</b> Enter selection criteria in the Selection Parameters section, using wild cards as needed, then click <b>Process</b>.</li>\n      <li><b>Step 7:</b> Specify:\n        <ul>\n          <li>Schedule Window (Days) - The number of days into the future for calculating labor availability.</li>\n          <li>Sort By - Choose to sort by Reported Date or Scheduled Start Date.</li>\n        </ul>\n      </li>\n      <li><b>Step 8:</b> Click <b>Process</b>.</li>\n    </ul>\n  </li>\n</ul>\n\n<br>\nSource: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Documentation Site Export</a>\n\n</body>\n</html>\n```",
+    "Performance": 35.26592329996824,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:31:23.133Z"
+  },
+  {
+    "id": "e66bbf79-92bd-4e8c-8d8a-e0be66dac9da",
+    "Prompt": "Thest",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Response</title>\n</head>\n<body>\n    <h3>Work Order Dispatching Procedure</h3>\n    <p>To dispatch labor for a work order activity, the following steps should be taken:</p>\n    <ul>\n        <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n        <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n        <li><b>Step 3:</b> Click Create Crew. The Create Crew pop up window is opened.</li>\n        <li><b>Step 4:</b> Optionally, if this crew is being created for a temporary period of time, select the\n            Temporary check box, and then specify the date the \"temporary\" crew will expire in\n            Expiration Date.</li>\n        <li><b>Step 5:</b> Optionally, select the Show Available Only check box to only display available\n            employees and crews that have enough remaining available hours to perform the\n            selected WO activities.</li>\n    </ul>\n    <br>\n    <h3>Labor Utilization Significance</h3>\n    <p>The following color codes are used to indicate labor utilization on the calendar:</p>\n    <ul>\n        <li><b>Gray:</b> Non-working day for the organization or no labor scheduled for this day.</li>\n        <li><b>Green:</b> Total scheduled hours are less than total available hours, and labor utilization is less than 80%.</li>\n        <li><b>Yellow:</b> Total scheduled hours are between 80% and 100% of total available hours.</li>\n        <li><b>Red:</b> Total scheduled hours exceed the total available hours.</li>\n    </ul>\n    <br>\n    <p>Note: Balancing the workload for work orders of Type ST (standing work order) or MEC (multiple equipment child) is not supported.</p>\n    <p>For more information, visit the <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>.</p>\n</body>\n</html>\n```",
+    "Performance": 31.97494319999218,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:31:33.981Z"
+  },
+  {
+    "id": "3031d44f-e913-4350-891b-1d46ab08a109",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>How to Schedule a Workorder</title>\n</head>\n<body>\n\n<h3>Steps to Schedule a Workorder</h3>\n<ul>\n  <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By</b> - Select one of the following options:\n        <ul>\n          <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department accordingly.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p>For additional information or assistance, refer to the company's internal documentation or support resources.</p>\n\n</body>\n</html>\n```",
+    "Performance": 19.387618700027467,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:31:43.076Z"
+  },
+  {
+    "id": "f475d2f1-981e-4cec-9ca5-a81a010dab94",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n<h3>How to Schedule a Work Order</h3>\n<ul>\n    <li><b>Step 1</b>: Select <b>Work &gt; WO Planning &gt; WO Scheduling</b>.</li>\n    <li><b>Step 2</b>: Specify the following information:\n        <ul>\n            <li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li>Schedule By - Select one of the following options:\n                <ul>\n                    <li>Employee - Select to schedule by employee. The system displays Employee.</li>\n                    <li>Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n                    <li>Trade/Department - Select to schedule by trade/department. The system displays Trade and Department.</li>\n                    <li>Enter, for Trade and Department, the trade and department for which work is to be assigned.</li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n    <li><b>Step 3</b>: Click <b>Save Hours</b>.</li>\n    <li><b>Step 4</b>: Repeat <b>Step 2</b> and <b>Step 3</b> as necessary to book any additional hours against the work order activity.</li>\n    <li><b>Step 5</b>: Click <b>Save Record</b>.</li>\n</ul>\n<br>\n<i>Note: The information provided is based on the specific system terminology and process described in the provided documentation.</i>\n<br>\n</body>\n</html>\n```",
+    "Performance": 25.50759209996462,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:32:24.829Z"
+  },
+  {
+    "id": "a5640dc1-bb3e-4b3e-b611-eda7c1c59495",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<p>To schedule a work order, please follow these steps:</p>\n<ul>\n<li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n<li><b>Step 2:</b> Specify the following information:</li>\n<ul>\n<li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n<li>Schedule By - Select one of the following options:</li>\n<ul>\n<li>Employee - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n<li>Trade/Department - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for which you wish to schedule the work.</li>\n</ul>\n</ul>\n<li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n<li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n<li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n\n<p><i>Note: This instruction is based on the provided documentation context and system terminology has been kept as per the original.</i></p>\n\n<br><br>\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```",
+    "Performance": 24.974397100031375,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:32:32.177Z"
+  },
+  {
+    "id": "6f20bf9d-931d-4d67-992b-ba5cadcaaca4",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n  <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By</b> - Select one of the following options:\n        <ul>\n          <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the employee for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```",
+    "Performance": 16.652584199965,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:33:21.397Z"
+  },
+  {
+    "id": "e5928b43-4452-46d0-9753-4a50ccca76e9",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <br>\n    <p>Follow the steps below to schedule a work order:</p>\n    <ul>\n        <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li>Specify this information:</li>\n        <ul>\n            <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By</b> - Select one of the following options:</li>\n            <ul>\n                <li><b>Employee</b> - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n                <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department respectively.</li>\n            </ul>\n        </ul>\n        <li>Click <b>Save Hours</b>.</li>\n        <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li>Click <b>Save Record</b>.</li>\n    </ul>\n    <p>Note: The above instructions are based on the provided documentation context.</p>\n</body>\n</html>\n```",
+    "Performance": 21.107722500026227,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:34:04.542Z"
+  },
+  {
+    "id": "f899b781-6cd6-4875-8063-83b546778862",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Scheduling a Work Order</title>\n</head>\n\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <ul>\n        <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li><b>Step 2:</b> Specify the following information:\n            <ul>\n                <li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li>Schedule By - Select one of the following options:\n                    <ul>\n                        <li>Employee - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n                        <li>Trade/Department - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for whom you wish to schedule the work.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n        <li><b>Step 4:</b> Repeat the previous steps as necessary to book any additional hours against the work order activity.</li>\n        <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n    </ul>\n    <br>\n    <h3>Additional Information:</h3>\n    <p>To schedule backlogged work orders, select Backlogged WOs for Dataspy in the Activities section of the form, then select a work order from the list and drag it to the day on the calendar for which to schedule it. The system creates a new work order schedule record.</p>\n    <br>\n    <p>To reschedule work orders, select the work order to reschedule in the Daily Schedule list, and then drag it to the day on the calendar for which to reschedule it. You must select either today’s date or a future date as the reschedule date on the calendar.</p>\n\n    <p><b>Source:</b> <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Hexagon Documentation Site Export</a></p>\n</body>\n\n</html>\n```",
+    "Performance": 30.168132099986078,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:34:52.607Z"
+  },
+  {
+    "id": "3afce1ca-380f-4b34-a7e0-97ca99a1110d",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n<li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n<li><b>Step 2:</b> Specify the following information:\n    <ul>\n        <li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n        <li>Schedule By - Select one of the following options:\n            <ul>\n                <li>Employee - Select to schedule by employee. The system will display Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n                <li>Trade/Department - Select to schedule by trade/department. The system will display Trade and Department. Enter, for Trade and Department, the trade and department for which you are scheduling work.</li>\n            </ul>\n        </li>\n    </ul>\n</li>\n<li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n<li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n<li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p>The information provided is based on the context documentation you provided and follows the formatting style of system-specific steps as requested.</p>\n\n</body>\n</html>\n```",
+    "Performance": 21.11196549999714,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:35:28.098Z"
+  },
+  {
+    "id": "3b11e8e4-06da-4a1e-bcea-4c6912d89c21",
+    "Prompt": "How do I schedu;e a wpkrorderd?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>How to Schedule a Work Order</title>\n</head>\n<body>\n  <h3>Steps to Schedule a Work Order</h3>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Load Balancing</b>.</li>\n    <li><b>Step 2:</b> In the <b>WO Planning</b> form, specify the <b>Organization</b> for which to schedule work if you use multi-organization security.</li>\n    <li><b>Step 3:</b> Specify selection criteria in the <b>Selection Parameters</b> section of the form as necessary.</li>\n    <li><b>Step 4:</b> Click <b>Process</b>.</li>\n    <li><b>Step 5:</b> For backlogged work orders, select <b>Backlogged WOs</b> for Dataspy in the <b>Activities</b> section of the form, select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n    <li>The system will create a new work order schedule record.</li>\n  </ul>\n  <p>For scheduling unscheduled work orders, follow a similar process by selecting <b>Unscheduled WOs</b> in the <b>Activities</b> section.</p>\n  <h3>Understanding Work Order Scheduling Indicators</h3>\n  <ul>\n    <li><b>Yellow:</b> Total scheduled hours are between 80% and 100% of total available hours.</li>\n    <li><b>Red:</b> Total scheduled hours exceed the total available hours.</li>\n  </ul>\n  <br>\n  <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n</body>\n</html>\n```",
+    "Performance": 23.164037999987602,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:40:31.424Z"
+  },
+  {
+    "id": "99f054fe-19b7-43e5-b525-aa51133e0092",
+    "Prompt": "How do I schedule a workorder/",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n    <li>Select <b>Work &gt; WO Planning &gt; WO Scheduling</b>.</li>\n    <li>Specify the following information:\n        <ul>\n            <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By</b> - Select one of the following options:\n                <ul>\n                    <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                    <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which you wish to schedule the work.</li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n</ul>\n<br>\n<p>Note: If you need to schedule backlogged work orders for Dataspy, go to the Activities section and select <b>Backlogged WOs</b>, then drag the chosen work order to the desired day on the calendar.</p>\n\n<p><b>Color Indicators:</b></p>\n<ul>\n    <li><b>Yellow</b> - Total scheduled hours are between 80% and 100% of total available hours.</li>\n    <li><b>Red</b> - Total scheduled hours exceed the total available hours.</li>\n</ul>\n\n</body>\n</html>\n```\nThe response is based on the provided document.",
+    "Performance": 26.916707800030707,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:45:44.876Z"
+  },
+  {
+    "id": "abe9ce93-1251-450f-9c49-0f994c5f2a37",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>How to Schedule a Work Order</title>\n</head>\n<body>\n\n<h3>Steps to Schedule a Work Order</h3>\n<ul>\n  <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>Specify this information:<br>\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By</b> - Select one of the following options:<br>\n        <ul>\n          <li>Employee - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n          <li>Trade/Department - Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for Trade and Department, the trade and department for which you wish to schedule the work.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n</body>\n</html>\n```",
+    "Performance": 24.672404899954795,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:46:21.689Z"
+  },
+  {
+    "id": "73d01c6d-0058-40e8-858d-428b75e29b7d",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Workorder Scheduling Instructions</title>\n</head>\n<body>\n\n<h3>Schedule Backlogged Work Orders</h3>\n<ul>\n  <li>Select <b>Backlogged WOs</b> for Dataspy in the <b>Activities</b> section of the form.</li>\n  <li>Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n  <li>The system creates a new work order schedule record.</li>\n</ul>\n\n<h3>Reschedule Work Orders</h3>\n<ul>\n  <li>Select the work order to reschedule in the <b>Daily Schedule</b> list.</li>\n  <li>Drag it to the day on the calendar for which to reschedule it.</li>\n  <li>You must select either today’s date or a future date as the reschedule date on the calendar.</li>\n</ul>\n\n<h3>Scheduling or Rescheduling Work Orders</h3>\n<ul>\n  <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n  <li>Specify the following information:</li>\n  <ul>\n    <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n    <li><b>Schedule By</b> - Select one of the following options:</li>\n    <ul>\n      <li><b>Employee</b> - Select to schedule by employee. The system displays <b>Employee</b>. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n      <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <b>Trade and Department</b>. Enter, for Trade and Department, the trade and department for which to schedule the work.</li>\n    </ul>\n  </ul>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n<p>This answer is based on the provided documentation.</p>\n</body>\n</html>\n```",
+    "Performance": 30.82498519998789,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:49:26.948Z",
+    "Rating": 4
+  },
+  {
+    "id": "a85862fe-901a-441d-81a6-3bbfc97eac1e",
+    "Prompt": "How do I schedule a wokroder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Work Order Scheduling Instructions</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n  <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n  <li><b>Step 2:</b> Specify the following information:\n    <ul>\n      <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By:</b> Select one of the following options:\n        <ul>\n          <li>Employee - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n          <li>Trade/Department - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for which you wish to schedule the work.</li>\n          <li>Auto Refresh - Select for the system to automatically refresh the Daily Schedule list after scheduling an activity on the calendar. If you do not select Auto Refresh, the activity will not automatically appear in the Daily Schedule list until you manually click Refresh.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li><b>Step 3:</b> Schedule unscheduled work orders by selecting <b>Unscheduled WOs for Dataspy</b> in the Activities section of the form, and then select a work order from the list and drag it to the day on the calendar for which to schedule it. The system creates a new work order schedule record.</li>\n</ul>\n\n<p>For more details on the process, refer to the <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>.</p>\n\n</body>\n</html>\n```",
+    "Performance": 21.30428320002556,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:50:35.251Z"
+  },
+  {
+    "id": "4dcbde7f-4d5f-4043-8f8d-555ceb45b920",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>Steps to Schedule a Work Order</h3>\n<ul>\n    <li>Navigate to <b>Work > WO Planning > WO Scheduling</b>.</li>\n    <li>Specify the following information:\n        <ul>\n            <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n            <li><b>Schedule By</b> - Select one of the following options:\n                <ul>\n                    <li><b>Employee</b> - If you wish to schedule by employee, the system will display <b>Employee</b>. Enter the employee for whom you want to schedule the work.</li>\n                    <li><b>Trade/Department</b> - If selecting to schedule by trade/department, the system will display <b>Trade</b> and <b>Department</b>. Enter the relevant trade and department.</li>\n                </ul>\n            </li>\n        </ul>\n    </li>\n    <li>Click <b>Save Hours</b> to book the time against the work order activity.</li>\n    <li>Repeat the previous steps as necessary to schedule any additional hours against the work order activity.</li>\n    <li>Click <b>Save Record</b> to finalize the scheduling.</li>\n</ul>\n<br>\nPlease note that the above steps are based on the provided context and may require adjustments if the actual system or process differs.\n\n</body>\n</html>\n```",
+    "Performance": 20.445061999976634,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-17T16:51:26.785Z"
+  },
+  {
+    "id": "e84683da-ae28-4555-9ad9-373df9cda999",
+    "Prompt": "How do I schedule a workorder?#",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Scheduling a Work Order</title>\n</head>\n<body>\n  <h3>Instructions for Scheduling a Work Order</h3>\n  <p>To schedule a work order, follow these steps:</p>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n    <li><b>Step 2:</b> Specify the following information:</li>\n    <ul>\n      <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By:</b> Select one of the following options:</li>\n      <ul>\n        <li><b>Employee:</b> Select to schedule by employee. Enter the Employee for whom you wish to schedule the work.</li>\n        <li><b>Trade/Department:</b> Select to schedule by trade/department. Enter the Trade and Department for which you are scheduling.</li>\n      </ul>\n    </ul>\n    <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n    <li><b>Step 4:</b> Repeat the above steps as necessary to book any additional hours against the work order activity.</li>\n    <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n  </ul>\n  <br>\n  <p>This information is provided based on the documentation provided in the question context.</p>\n</body>\n</html>\n```",
+    "Performance": 22.729264900028706,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-17T16:51:46.582Z"
+  },
+  {
+    "id": "976d3e16-9b8c-43d4-8a70-b540a2882f7c",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Scheduling a Work Order</title>\n</head>\n<body>\n    <h3>How to Schedule a Work Order</h3>\n    <ul>\n        <li><b>Step 1:</b> Select <i>Work</i> > <i>WO Planning</i> > <i>WO Scheduling</i>.</li>\n        <li><b>Step 2:</b> Specify the following information:</li>\n            <ul>\n                <li><i>Organization</i> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><i>Schedule By</i> - Select one of the following options:\n                    <ul>\n                        <li><b>Employee</b> - Select to schedule by employee. The system will display <i>Employee</i>. Enter the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department</b> - Select to schedule by trade/department. The system will display <i>Trade</i> and <i>Department</i>. Enter the trade and department for which you are scheduling.</li>\n                    </ul>\n                </li>\n            </ul>\n        <li><b>Step 3:</b> Click <i>Save Hours</i>.</li>\n        <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li><b>Step 5:</b> Click <i>Save Record</i>.</li>\n    </ul>\n    <br>\n    <h3>Note:</h3>\n    <p>If scheduling backlogged work orders, follow these additional steps:</p>\n    <ul>\n        <li>Select <i>Backlogged WOs</i> for Dataspy in the Activities section of the form, and select a work order from the list and drag it to the day on the calendar for which to schedule it. The system creates a new work order schedule record.</li>\n    </ul>\n    <br>\n    <p>For more details, refer to the Hexagon Documentation Site: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>.</p>\n</body>\n</html>\n```",
+    "Performance": 38.505147599995134,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-17T16:52:28.800Z"
+  },
+  {
+    "id": "ed1c77f7-f1fa-461e-b012-61bd7567f5ff",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Scheduling a Work Order</title>\n</head>\n<body>\n    <h3>Instructions for Scheduling a Work Order</h3>\n    <p>To schedule a work order, please follow the steps below:</p>\n    <ul>\n        <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li><b>Step 2:</b> Specify this information:\n            <ul>\n                <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n                <li><b>Schedule By:</b> Select one of the following options:\n                    <ul>\n                        <li><b>Employee:</b> Select to schedule by employee. The system displays <b>Employee</b>. Enter, for <b>Employee</b>, the Employee for whom you wish to schedule the work.</li>\n                        <li><b>Trade/Department:</b> Select to schedule by trade/department. The system displays <b>Trade</b> and <b>Department</b>. Enter, for <b>Trade</b> and <b>Department</b>, the trade and department for which you are scheduling work.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n        <li><b>Step 3:</b> Click <b>Save Hours</b>.</li>\n        <li><b>Step 4:</b> Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li><b>Step 5:</b> Click <b>Save Record</b>.</li>\n    </ul>\n    <p>Note: These steps are based on the system-specific instructions provided in the context.</p>\n    <br>\n    <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n</body>\n</html>\n```\nPlease note that the instructions provided are based on the specific context from the documentation provided and might refer to a particular software interface or process that might not make complete sense outside that context.",
+    "Performance": 33.235052799999714,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:54:27.094Z"
+  },
+  {
+    "id": "c4053cc8-e50b-4f58-bb87-6216573c7a7a",
+    "Prompt": "How do I cancel a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Cancel a Work Order</title>\n</head>\n<body>\n    <h3>Cancel a Work Order</h3>\n    <p>The provided documentation does not explicitly describe the process for canceling a work order. It does provide details on changing a work order's status, completing work, and closing work orders. However, if canceling a work order is akin to changing its status to a canceled state, you may follow the steps below based on general knowledge:</p>\n    <ul>\n        <li>Select <b>Work</b> > <b>WO Planning</b> > <b>WO Scheduling</b>.</li>\n        <li>Select the work order you wish to cancel.</li>\n        <li>Click <b>Actions</b> > <b>Change WO Status</b>.</li>\n        <li>Specify <b>New Status</b> - Select a status that represents cancelation, based on your system's configuration.</li>\n        <li>Click <b>Submit</b>.</li>\n    </ul>\n    <p><b>Note:</b> The exact status to select for cancelation and whether the status change is permissible may vary depending on your organization's system setup and the parameters configured by your system administrator. If the correct status is not available or if you do not have the authorization, please contact your system administrator for further assistance.</p>\n    <br>\n    <p>This response is based on general knowledge and the assumption that canceling a work order involves changing its status. For specific instructions tailored to your system, please consult the system's user manual or your system administrator.</p>\n</body>\n</html>\n```",
+    "Performance": 22.5823927000165,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T16:54:48.411Z"
+  },
+  {
+    "id": "2284f36a-3e51-48b7-ab2a-ee6f00368c41",
+    "Prompt": "How do I cancle one?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Canceling a Dispatch Labor Record</title>\n</head>\n<body>\n<h3>Steps to Cancel a Dispatch Labor Record</h3>\n<ul>\n  <li>Select <b>Work > Work Orders > GIS Map WO Dispatching</b>.</li>\n  <li>On the map, select the employee or the crew whose labor record you want to delete, right-click, and then select <b>View/Delete Dispatch Labor</b>.<br>Alternatively, you can select the labor records in the <b>Available Crews</b> or <b>Available Employees</b> panels below the map. Right-click the record in the panel and select <b>View/Delete Dispatch Labor</b>.</li>\n  <li>Select the checkbox of the dispatched labor record(s) you want to delete.</li>\n  <li>Click <b>Delete Selected Records</b>. The <b>Total Dispatched Hrs</b> will be recalculated based on the remaining labor records in the grid.</li>\n  <li>Click <b>Close</b>.</li>\n</ul>\n<br>\n<p>Note: This process is based on the provided context from the Hexagon Documentation Site Export. If the given instructions do not align with the current system interface or if the system behavior has changed, it may be necessary to reference updated documentation or seek further assistance.</p>\n</body>\n</html>\n```",
+    "Performance": 22.838860899984837,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:00:43.250Z"
+  },
+  {
+    "id": "70efd862-dfe5-4880-9f5b-ccf0815cdf29",
+    "Prompt": "Does this work?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Work Order Processing Instructions</title>\n</head>\n<body>\n    <!-- Response is based on the context provided, using system-specific terminology as per instruction -->\n    <h3>Work Order Load Balancing Instructions</h3>\n    <p>To balance the workload for work orders, please follow these steps:</p>\n    <ul>\n        <li><b>1. Navigate to the work order planning section:</b> <br>Select <b>Work > WO Planning > WO Load Balancing.</b></li>\n        <li><b>2. Enter relevant organization information:</b> <br>Specify the <b>Work Order Org.</b> if using multi-organization security.</li>\n        <li><b>3. Define selection criteria:</b> <br>In the <b>Selection Parameters</b> section, enter wild cards as needed (e.g., <i>E% for Trade</i>).</li>\n        <li><b>4. Provide scheduling details:</b> <br>\n            Specify details such as <b>Schedule Window (Days)</b> and <b>Sort By</b> preference (Reported Date or Scheduled Start Date).\n        </li>\n        <li><b>5. Initiate the process:</b> <br>Click <b>Process</b> to retrieve the preview of work orders.</li>\n    </ul>\n    \n    <h3>Booking Labor Hours</h3>\n    <p>Follow these steps to book labor hours against work order activity:</p>\n    <ul>\n        <li><b>1. Adjust labor hours:</b> <br>Distribute labor hours appropriately across work orders, keeping in mind <b>Completed</b> status.</li>\n        <li><b>2. Save labor allocation:</b> <br>After distribution, click <b>Save Hours</b>.</li>\n        <li><b>3. Repeat booking:</b> <br>Perform the steps again if there are more hours to book.</li>\n        <li><b>4. Finalize record:</b> <br>Once all hours are booked, click <b>Save Record</b>.</li>\n    </ul>\n    \n    <h3>Balancing Work Orders</h3>\n    <p>To balance the workload for ST or MEC work orders, follow these general guidelines:</p>\n    <ul>\n        <li><b>Parameters Page:</b> Define the selection criteria.</li>\n        <li><b>Preview Page:</b> Preview selected work orders and select or clear them for balancing.</li>\n        <li><b>Balance Load Page:</b> Execute the balancing of the work order load.</li>\n    </ul>\n    \n    <!-- Note to user -->\n    <p><b>Note:</b> The specific sequences such as <b><Step 1> > <Step 2></b> are not applicable in this context as the instructions are based on the documentation provided. Detailed steps have been given instead.</p>\n</body>\n</html>\n```\nThis response is based on the provided documentation (context). Please note that specifics such as \"<Step 1> > <Step 2>\" formatting requested are not directly applicable because the instructions within the context do not follow this exact formatting. Instead, the provided steps are formatted as HTML list items, which encapsulate the process described in the provided context.",
+    "Performance": 47.322664200007914,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:01:15.054Z"
+  },
+  {
+    "id": "773a30b1-070b-4341-97c4-6a9d36d1e8f4",
+    "Prompt": "Does it work?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Response</title>\n</head>\n<body>\n\n<h3>Does it work?</h3>\n<p>Based on the provided context, the steps to perform certain actions within a work order system are outlined. However, without specific feedback or results from executing these steps, we cannot ascertain the effectiveness or outcome. To determine if the system works as intended, one would need to follow the steps and observe the system's behavior.</p>\n\n<h3>System-Specific Action Steps</h3>\n<p>To book additional hours against a work order activity, follow this sequence:</p>\n<ul>\n    <li><b>Step 1:</b> Select <i>Work</i> > <i>WO Planning</i> > <i>WO Load Balancing</i></li>\n    <li><b>Step 2:</b> Specify the information in the <i>Work Order Org.</i> and <i>Selection Parameters</i> sections</li>\n    <li><b>Step 3:</b> Click <i>Process</i></li>\n    <li><b>Step 4:</b> Select or clear work orders for balance as necessary. Use <i>Select</i> to choose all at once</li>\n    <li><b>Step 5:</b> Click <i>Lock Selected Work Orders</i></li>\n    <li><b>Step 6:</b> Use the next or previous arrows to adjust work order dates or click a specific date cell</li>\n    <li><b>Step 7:</b> Observe color indicators for labor availability</li>\n    <li><b>Step 8:</b> Click <i>Save Record</i> after making adjustments</li>\n</ul>\n\n<br>\n<p>The validity of these steps based on the system's actual functioning cannot be determined from the given context alone. For a practical assessment, these actions would need to be carried out within the system.</p>\n\n</body>\n</html>\n```",
+    "Performance": 32.96687099999189,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:02:40.703Z"
+  },
+  {
+    "id": "2267dac5-b108-443b-8964-bc887422dec5",
+    "Prompt": "Does it work",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Workload Balancing Process</title>\n</head>\n<body>\n\n<h3>Workload Balancing Overview</h3>\n<p>Based on the provided context, the process for balancing the workload involves several steps on different pages within the system. Please note that the capability to balance workload for work orders of Type ST or MEC is not supported.</p>\n\n<ul>\n<li><b>Access the WO Load Balancing form:</b> <br>\n<Step 1> > Work > WO Planning > WO Load Balancing</li>\n<li><b>Define Selection Criteria:</b>\n  <ul>\n    <li>Specify the <b>Work Order Org.</b> for multi-organization security.</li>\n    <li>Enter wild cards in the <b>Selection Parameters</b> for various fields, using a percentage sign as the wildcard symbol.</li>\n  </ul>\n</li>\n<li><b>Preview and Selection:</b><br>\nYou can preview and select or clear the work orders to balance on the <b>Preview</b> page.</li>\n<li><b>Specify Additional Parameters:</b>\n  <ul>\n    <li>Schedule Window (Days) - Define the timeframe for labor availability calculation.</li>\n    <li>Sort By - Select the sorting method for work orders.</li>\n  </ul>\n</li>\n<li><b>Process the Work Orders:</b><br>\n<Step 5> > Click Process</li>\n<li><b>Reschedule Work and Save:</b><br>\nOn the <b>Balance Load</b> page, you can adjust labor resources and reschedule work accordingly. Click <b>Save Hours</b> and <b>Save Record</b> after making changes.</li>\n</ul>\n\n<p><b>Note:</b> The above steps are based on the provided documentation.</p>\n\n</body>\n</html>\n```",
+    "Performance": 26.158003199994564,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:03:08.640Z"
+  },
+  {
+    "id": "9fa93f8e-e51b-47f9-bf92-802edfb4d2a2",
+    "Prompt": "Another one",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Response to Query</title>\n</head>\n<body>\n<h3>Instructions Based on Provided Documentation</h3>\n<ul>\n  <li><b>Step 1:</b> Enter the <b>Department</b> to view the labor utilization and filter the trade records for the selected date on the calendar.</li>\n  <li><b>Step 2:</b> Place the cursor over a calendar day to view the employee or trade/department information.</li>\n</ul>\n<br>\n<h3>Reference Links</h3>\n<ul>\n  <li><a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a></li>\n</ul>\n</body>\n</html>\n```\nPlease note that the URLs provided are not clickable links due to fictional nature, and for a functional link the href attribute should contain a valid URL.",
+    "Performance": 12.130514999985694,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:05:19.837Z"
+  },
+  {
+    "id": "7f8213f7-d574-4425-a00e-93cbf1943651",
+    "Prompt": "There was an error with the request",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Hexagon Documentation Inquiry Response</title>\n</head>\n<body>\n\n<h3>Correction of Work Order Records</h3>\n<ul>\n<li>Select <b>Work</b> &gt; <b>Work Orders</b>.</li>\n<li>Click the <b>Book Labor</b> tab.</li>\n<li>Select the record for which to create a correction, and then click <b>Create Correction</b>.</li>\n<li>In the <b>Book Labor Correction</b> pop-up window, specify the desired corrections.</li>\n<li>Click <b>Submit</b>.</li>\n</ul>\n\n<h3>Calculation of Labor Availability</h3>\n<ul>\n<li>Select <b>Work</b> &gt; <b>WO Planning</b> &gt; <b>WO Load Balancing</b>.</li>\n<li>Specify the organization in <b>Work Order Org.</b> if using multi-organization security.</li>\n<li>Set the selection criteria in the <b>Selection Parameters</b> section using wild cards as necessary for parameters like Department, PM Schedule, Project Budget, etc.</li>\n<li>Choose the number of days for the <b>Schedule Window (Days)</b> and how to <b>Sort By</b>.</li>\n<li>Click <b>Process</b>.</li>\n</ul>\n\n<h3>Labor Utilization Filtering</h3>\n<p>For filtering by Department to view labor utilization, no specific steps are outlined in the given context. The context hints at the selection of a department for a date on the calendar and placing the cursor over a calendar day to view details.</p>\n\n<br>\n\n<p><b>Note</b>: The responses above are structured based on the given context and documentation. Specific system-related steps have been maintained as provided.</p>\n\n</body>\n</html>\n```",
+    "Performance": 26.855182000041008,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:05:29.587Z"
+  },
+  {
+    "id": "b9994f03-00d5-4bd2-8a6d-3e9db373cc1b",
+    "Prompt": "How do I cancel?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <title>Cancellation Instructions</title>\n</head>\n<body>\n    <h3>Instructions for Canceling Work Order Activities</h3>\n    <p>To cancel dispatched labor records associated with a work order, please follow the steps below:</p>\n    <ul>\n        <li>Select <b>Work</b> > <b>Work Orders</b> > <b>GIS Map WO Dispatching</b>.</li>\n        <li>On the map, select the employees or the crew you wish to cancel the labor records for, right-click, and then select <b>View/Delete Dispatch Labor</b>. Alternatively, you can select from the <b>Available Crews</b> or <b>Available Employees</b> panels below the map.</li>\n        <li>Select the check box next to the dispatched labor record(s) you wish to delete.</li>\n        <li>Click <b>Delete Selected Records</b>. This will update the <b>Total Dispatched Hrs</b>.</li>\n        <li>Click <b>Close</b> to finish.</li>\n    </ul>\n    <p>If you are looking to reopen closed work orders, the provided documentation does not offer specific steps to perform this action.</p>\n\n    <p>Note: This process is based on the system-specific instructions provided and has not been translated from the original terminology.</p>\n</body>\n</html>\n```",
+    "Performance": 20.62988419997692,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:08:33.125Z"
+  },
+  {
+    "id": "0466300c-fc8c-4b2c-9200-14897a0fc2d8",
+    "Prompt": "Does this work?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Work Order Load Balancing Instructions</title>\n</head>\n<body>\n  <h3>Work Order Load Balancing</h3>\n  <p>To balance the workload for work orders, please follow the steps below based on the provided documentation:</p>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Load Balancing</b>.</li>\n    <li><b>Step 2:</b> Specify the <b>Work Order Org.</b> for the work order's organization.</li>\n    <li><b>Step 3:</b> Specify selection criteria in the <b>Selection Parameters</b> section using wild cards as necessary.</li>\n    <li><b>Step 4:</b> Specify the <b>Schedule Window (Days)</b> and <b>Sort By</b> preference.</li>\n    <li><b>Step 5:</b> Click <b>Process</b> to retrieve work orders on the <b>Preview</b> tab.</li>\n    <li><b>Step 6:</b> Click <b>Save Hours</b> after booking labor hours against work order activity.</li>\n    <li><b>Step 7:</b> Repeat <b>Step 6</b> as necessary for additional hours.</li>\n    <li><b>Step 8:</b> Click <b>Save Record</b>.</li>\n  </ul>\n  <p>Remember to adjust the schedule by selecting or clearing work orders on the <b>Balance Load</b> page.</p>\n  <br>\n  <p><b>Note:</b> This response is based on the provided context.</p>\n</body>\n</html>\n```",
+    "Performance": 22.343949200034142,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:09:17.002Z"
+  },
+  {
+    "id": "375bdbd4-fb4f-4419-9dc0-702ad0a7d770",
+    "Prompt": "Can I cancel this request",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Cancelation of Work Order Request</title>\n</head>\n<body>\n<h3>Cancelation of Work Order Request</h3>\n<p>Based on the provided documentation, there is no specific mention of a process to cancel a work order. However, you can change the status of a work order or close it, and reopen it if necessary. Below are the steps you can take based on your needs:</p>\n\n<ul>\n  <li><b>Close a Work Order:</b> Follow this path if you need to close a work order:\n    <ul>\n      <li><Step 1> > <Step 2> > <Closing page>/<Work Order Quick Close form></li>\n    </ul>\n  </li>\n  <br>\n  <li><b>Change Work Order Status:</b> To change the status of a work order to something other than \"Completed\" (if allowed by your system's configuration), the following steps should be taken:\n    <ul>\n      <li><Step 1> > WO Planning > WO Scheduling</li>\n      <li><Step 2> > Select a work order and a daily schedule record > Actions > Change WO Status</li>\n      <li><Step 3> > Specify New Status</li>\n      <li><Step 4> > Submit</li>\n    </ul>\n  </li>\n  <br>\n  <li><b>Reopen a Closed Work Order:</b> If the <code>REOPENPM</code> installation parameter is set to <code>YES</code> and you have the proper status authorization, you can reopen a closed work order. The steps to reopen are not provided in the given documentation.</li>\n</ul>\n\n<p><b>Note:</b> The exact process for canceling a work order may vary based on your system's configuration, and you may need to contact your system administrator for more detailed instructions.</p>\n\n<p>For more information, please refer to the provided documentation: <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>.</p>\n</body>\n</html>\n```",
+    "Performance": 28.75693819999695,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:09:52.534Z"
+  },
+  {
+    "id": "a83a822c-d18e-42f7-be41-75c2c3041264",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n  <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n  <li>Specify the following information:\n    <ul>\n      <li><b>Organization</b> - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By</b> - Select one of the following options:\n        <ul>\n          <li><b>Employee</b> - Select to schedule by employee. The system displays <i>Employee</i>. Enter, for <i>Employee</i>, the Employee for whom you wish to schedule the work.</li>\n          <li><b>Trade/Department</b> - Select to schedule by trade/department. The system displays <i>Trade</i> and <i>Department</i>. Enter, for <i>Trade</i> and <i>Department</i>, the trade and department for which you are scheduling the work.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <li>Click <b>Save Hours</b>.</li>\n  <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n  <li>Click <b>Save Record</b>.</li>\n</ul>\n\n<br>\n\nSource:\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```",
+    "Performance": 24.56068660002947,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:11:41.585Z"
+  },
+  {
+    "id": "7d37ed8c-0753-4f21-910b-c9bb4f318215",
+    "Prompt": "Test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Test Answer</title>\n</head>\n<body>\n    <h3>Labor Utilization Color Significance</h3>\n    <ul>\n        <li><b>Gray:</b> Non-working day for the organization or no labor scheduled for this day.</li>\n        <li><b>Green:</b> Total scheduled hours are less than total available hours, and labor utilization is less than 80%.</li>\n        <li><b>Yellow:</b> Total scheduled hours are between 80% and 100% of total available hours.</li>\n        <li><b>Red:</b> Total scheduled hours exceed the total available hours.</li>\n    </ul>\n\n    <h3>Steps to View Labor Utilization and Save Hours</h3>\n    <ol>\n        <li>Place the cursor over a calendar day to view the employee or trade/department activity.</li>\n        <li>Click Save Hours.</li>\n        <li>Repeat these steps as necessary to book any additional hours against the work order activity.</li>\n        <li>Click Save Record.</li>\n    </ol>\n    <br>\n    <p>This information is based on the provided documentation, and the system-specific terminology has been kept in its original form as per the instructions.</p>\n\n    <p><b>Source:</b> <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a></p>\n</body>\n</html>\n```",
+    "Performance": 33.89648790001869,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:14:00.191Z"
+  },
+  {
+    "id": "f330a0f3-a8c3-4923-94e8-8a1f91a7c320",
+    "Prompt": "This is another test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Test Answer</title>\n</head>\n<body>\n\n<h3>Instructions for Entering Meter Readings</h3>\n<ul>\n  <li><b>Step 1:</b> Ensure you are on the Meters tab of the Assets, Positions, Systems, or Locations page.</li>\n  <li><b>Step 2:</b> Verify that the meter is selected as an Up/Down Meter.</li>\n  <li><b>Step 3:</b> Enter the following information:\n    <ul>\n      <li>Difference - Select to enter the difference between the last reading and the current reading.</li>\n      <li>Date/Time - Specify the date and time of the meter reading.</li>\n      <li>New Value - Specify the meter reading value.</li>\n    </ul>\n  </li>\n  <li><b>Step 4:</b> Click Submit.</li>\n</ul>\n<br>\n<h3>Labor Utilization Indicators</h3>\n<p>Labor utilization percentage is indicated by colors on the calendar:</p>\n<ul>\n  <li><b>Gray</b> - Non-working day or no labor scheduled.</li>\n  <li><b>Green</b> - Scheduled hours < 80% of total available hours.</li>\n  <li><b>Yellow</b> - Scheduled hours between 80% - 100% of total available hours.</li>\n  <li><b>Red</b> - Scheduled hours exceed total available hours.</li>\n</ul>\n<br>\n<p>For a more detailed documentation, refer to the Hexagon Documentation Site:</p>\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```\n\nThe response contains information based on assuming that the \"test\" refers to querying the instructions available in the provided documentation context. If this assumption is incorrect, please provide additional clarification or context.",
+    "Performance": 24.67140950000286,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:14:02.452Z"
+  },
+  {
+    "id": "c2d3e89f-3eac-4569-b809-9e4fe4c6e3fa",
+    "Prompt": "Another test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Test Response</title>\n</head>\n<body>\n    <h3>Instructions for Viewing Labor Utilization</h3>\n    <ul>\n        <li>For Department, enter the department to filter trade records for the selected date on the calendar.</li>\n        <li>Place the cursor over a calendar day to view the labor utilization percentage for that day.</li>\n    </ul>\n    <br>\n    <h3>Understanding Labor Utilization Indicators</h3>\n    <ul>\n        <li><b>Gray</b>: Non-working day or no labor scheduled.</li>\n        <li><b>Green</b>: Scheduled hours are less than availability and labor utilization is under 80%.</li>\n        <li><b>Yellow</b>: Scheduled hours are 80% to 100% of available hours.</li>\n        <li><b>Red</b>: Scheduled hours exceed available hours.</li>\n    </ul>\n    <br>\n    <h3>Steps to Book Hours Against Work Order Activity</h3>\n    <ul>\n        <li><b>Step 1:</b> Click Save Hours.</li>\n        <li><b>Step 2:</b> Repeat these steps to book additional hours.</li>\n        <li><b>Step 3:</b> Click Save Record.</li>\n    </ul>\n    <br>\n    <h3>Recording Meter Readings</h3>\n    <ul>\n        <li>Enter Reading for Up/Down Meter on the Meters tab.</li>\n        <li>Select Difference to enter the reading difference.</li>\n        <li>Specify Date/Time and New Value for the meter reading.</li>\n        <li><b>Step 4:</b> Click Submit.</li>\n    </ul>\n    <br>\n    <h3>Understanding Updates to Meter Readings List</h3>\n    <ul>\n        <li><b>Last Value</b>: Indicates previous meter reading or zero for first entry.</li>\n        <li><b>Meter</b>: Identifies the meter.</li>\n        <li><b>Meter Rollover Point</b>: Shows the roll-over value for the meter.</li>\n    </ul>\n    <br>\n    <p>This information is based on the context provided and general knowledge. Source documentation can be found <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">here</a>.</p>\n</body>\n</html>\n```",
+    "Performance": 37.90421109998226,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:14:43.990Z"
+  },
+  {
+    "id": "f329f002-637e-49d0-b65b-30c271eda7eb",
+    "Prompt": "Another test",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Response to Test Question</title>\n</head>\n<body>\n<h3>Instructions for Viewing Labor Utilization on Calendar</h3>\n<ul>\n  <li><b>Step 1:</b> Enter the Department if you wish to view the labor utilization for a specific trade or department.</li>\n  <li><b>Step 2:</b> Place the cursor over a calendar day to view the labor utilization percentage for that day.</li>\n</ul>\n\n<h3>Understanding Labor Utilization Colors</h3>\n<ul>\n  <li><b>Gray:</b> Non-working day or no labor scheduled.</li>\n  <li><b>Green:</b> Scheduled hours are less than 80% of available hours.</li>\n  <li><b>Yellow:</b> Scheduled hours are between 80% and 100% of available hours.</li>\n  <li><b>Red:</b> Scheduled hours exceed available hours.</li>\n</ul>\n\n<h3>Logging Scheduled Hours</h3>\n<ul>\n  <li><b>Step 1:</b> Click <i>Save Hours</i>.</li>\n  <li><b>Step 2:</b> Repeat the steps to book any additional hours against the work order activity.</li>\n  <li><b>Step 3:</b> Click <i>Save Record</i>.</li>\n</ul>\n\n<h3>Entering Meter Readings</h3>\n<ul>\n  <li><b>Step 1:</b> Enter Reading only if the meter is selected as Up/Down Meter.</li>\n  <li><b>Step 2:</b> Select <i>Difference</i> to enter the difference between the last and current readings.</li>\n  <li><b>Step 3:</b> Specify the <i>Date/Time</i> of the meter reading.</li>\n  <li><b>Step 4:</b> Specify the <i>New Value</i> of the meter reading.</li>\n  <li><b>Step 5:</b> Click <i>Submit</i>.</li>\n</ul>\n\n<h3>Meter Reading List Update</h3>\n<ul>\n  <li>The system updates the <i>Meter Readings</i> list with the Last Value, Meter, and Meter Rollover Point.</li>\n</ul>\n<br>\n<p><b>Note:</b> The detailed procedural content is based on the provided documentation.</p>\n\n</body>\n</html>\n```",
+    "Performance": 36.84908269995451,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:15:00.437Z"
+  },
+  {
+    "id": "13b9d995-c17b-473e-b8bc-9d8853a47e82",
+    "Prompt": "Another one",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Response</title>\n</head>\n<body>\n\n<h3>Instructions Based on Provided Documentation</h3>\n<p>If you wish to view labor utilization for a specific department on a selected date:</p>\n<ul>\n  <li>Enter, for <b>Department</b>, the department you wish to view the labor utilization for.</li>\n  <li>This will further filter the trade records for the date you have selected on the calendar.</li>\n</ul>\n\n<h3>Viewing Employee or Trade/Department Details</h3>\n<p>To view details for a specific calendar day:</p>\n<ul>\n  <li><b>Step 1:</b> Place the cursor over a calendar day.</li>\n  <li><b>Step 2:</b> This will allow you to view the employee or trade/department information.</li>\n</ul>\n\n<p>The above information is based on the context provided in your message and <b>not from general knowledge</b>. The steps described are specific to the documentation context provided. </p>\n\n<br>\n<p>For more detailed information, refer to the Hexagon Documentation Site:</p>\n<a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>\n\n</body>\n</html>\n```",
+    "Performance": 17.73154280000925,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:15:07.495Z"
+  },
+  {
+    "id": "bbe98069-6060-4cf2-8d69-0eeee29ee035",
+    "Prompt": "Can I cancel this",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Canceling Work Orders</title>\n</head>\n<body>\n  <h3>Canceling Work Orders</h3>\n  <p>The provided documentation does not explicitly describe the process for canceling work orders. Based on the given context from the Hexagon Documentation Site Export, here are the instructions related to completing and scheduling work:</p>\n  <ul>\n    <li><b>Closing Work Orders</b>: You may close work orders on the <b>Closing page</b> or on the <b>Work Order Quick Close form</b>. After closure, the ability to complete transactions may vary according to system settings. Additionally, closing may be restricted if there are outstanding purchases.</li>\n    <li><b>Reopening Closed Work Orders</b>: If necessary, you can reopen closed work orders using the system's provided functionality.</li>\n    <li><b>Scheduling Work Orders</b>: To schedule unscheduled or backlogged work orders, the process is as follows:\n      <br><b><Step 1></b> > <b><Step 2></b>.\n    </li>\n    <li><b>Freezing Activity Schedules</b>: For freezing or unfreezing activity schedules, the steps are:\n      <br><b>Select Work > WO Planning > WO Scheduling</b> > Right-click on the form and choose <b>Freeze/Unfreeze</b> > Provide the necessary details (Freeze/Unfreeze, From Date/To Date, Department) > Click <b>Submit</b>.\n    </li>\n  </ul>\n  <p>If you need to cancel a work order and the provided context does not contain such information, you may refer to the detailed user guidelines or contact the system administrator for specific instructions based on your system configuration.</p>\n</body>\n</html>\n```",
+    "Performance": 23.841245799958706,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:15:08.497Z"
+  },
+  {
+    "id": "175eeaa9-9fd9-4e1d-acad-b0ef8d878b81",
+    "Prompt": "How do I schedule workroder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<title>Schedule Work Order Instructions</title>\n</head>\n<body>\n  <h3>How to Schedule a Work Order</h3>\n  <p>To schedule work orders, follow these steps:</p>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n    <li><b>Step 2:</b> Specify the following information:</li>\n    <ul>\n      <li><b>Organization:</b> Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li><b>Schedule By:</b> Select one of the following options:</li>\n      <ul>\n        <li>Employee - Select to schedule by employee. The system displays Employee. Enter, for Employee, the Employee for whom you wish to schedule the work.</li>\n        <li>Trade/Department - Select to schedule by trade/department. The system displays Trade and Department. Enter, for Trade and Department, the trade and department for which you wish to schedule the work.</li>\n      </ul>\n      <li><b>Auto Refresh:</b> Select for the system to automatically refresh the Daily Schedule list after scheduling an activity on the calendar. If you do not select Auto Refresh, the activity will not automatically appear in the Daily Schedule list until you manually click Refresh.</li>\n    </ul>\n    <li><b>Step 3:</b> To schedule unscheduled work orders, select <b>Unscheduled WOs for Dataspy</b> in the Activities section of the form, then select a work order from the list and drag it to the day on the calendar for which to schedule it. The system creates a new work order schedule record.</li>\n  </ul>\n  <br>\n  <p>For backlogged work orders, use the following approach:</p>\n  <ul>\n    <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Load Balancing</b>.</li>\n    <li><b>Step 2:</b> Input the necessary information, including:</li>\n    <ul>\n      <li>Work Order Org. - Specify the organization to which the work order belongs if you use multi-organization security.</li>\n      <li>Selection Parameters - Enter wild cards for parameters as necessary. For example, enter E% for Trade to retrieve all work orders with trades beginning with \"E\".</li>\n      <li>Schedule Window (Days) - Specify the number of days into the future for which to calculate labor availability.</li>\n      <li>Sort By - Select whether to sort by Reported Date or by Scheduled Start Date.</li>\n    </ul>\n    <li><b>Step 3:</b> Click <b>Process</b>.</li>\n  </ul>\n  <br>\n  <p>Note the color indicators when viewing work order comments:</p>\n  <ul>\n    <li><b>Yellow:</b> Total scheduled hours are between 80% and 100% of total available hours.</li>\n    <li><b>Red:</b> Total scheduled hours exceed the total available hours.</li>\n  </ul>\n  <br>\n  <p>Scheduling unscheduled or backlogged work orders and rescheduling work orders should be performed as necessary while adhering to the steps outlined above for optimal system operation.</p>\n</body>\n</html>\n```",
+    "Performance": 41.25229940003157,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:20:18.219Z"
+  },
+  {
+    "id": "acf81cf1-0caf-4630-b1ad-0ed1875f6ed7",
+    "Prompt": "Is this how I cancel?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Cancellation Process</title>\n</head>\n<body>\n    <h3>Cancellation of Dispatched Labor Records</h3>\n    <p>To cancel dispatched labor records, follow the steps below:</p>\n    <ul>\n        <li>Select <b>Work > Work Orders > GIS Map WO Dispatching</b>.</li>\n        <br>\n        <li>On the map, select the employees or the crew whose labor records you want to cancel, right-click, and then select <b>View/Delete Dispatch Labor</b>. The Dispatch Labor pop-up window will open.</li>\n        <br>\n        <li>Select the checkbox next to the dispatched labor record(s) you wish to delete.</li>\n        <br>\n        <li>Click <b>Delete Selected Records</b>. The Total Dispatched Hrs will be recalculated based on the remaining labor records in the grid.</li>\n        <br>\n        <li>Click <b>Close</b>.</li>\n    </ul>\n    <p><b>Note:</b> If you're looking to cancel something other than dispatched labor records, please provide additional context or specify the item you wish to cancel for further instructions.</p>\n</body>\n</html>\n```",
+    "Performance": 17.776088800013067,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-17T17:21:47.679Z"
   }
 ]

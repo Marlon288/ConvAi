@@ -63,22 +63,22 @@ const ChatComponent = ({ location }) => {
   /**
    * Cancels the ongoing request
    */
-  const cancelRequest = async () => {
+  const cancelRequest = async () => { 
     try {
-      // const response = await fetch('http://localhost:9000/api/cancelRequest', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({ requestId }),
-      // });
+      const response = await fetch('http://localhost:9000/api/cancelRequest', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ requestId: currentPromptId}),
+      });
 
-      // if (!response.ok) {
-      //   throw new Error('Network response was not ok');
-      // }
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
 
-      // const data = await response.json();
-      // console.log('Cancellation response:', data);
+      const data = await response.json();
+      console.log('Cancellation response:', data);
       setIsLoading(false);
       setMessages(prevMessages => {
         const lastMessage = prevMessages[prevMessages.length - 1];
@@ -100,17 +100,18 @@ const ChatComponent = ({ location }) => {
   const handleSubmit = async () => {
     setFeedbackSubmitted(false);
     setIsLoading(true);
-    setCurrentPromptId();
     const tempCurrentPromptId = generateRequestId();
+    setCurrentPromptId(tempCurrentPromptId);
+  
     setMessages(prevMessages => [
       ...prevMessages,
       { role: "user", content: inputValue, current: false, cancelled: false },
       { role: "AI", content: "", ref: aiMessageRef, current: true, cancelled: false }
     ]);
-
+  
     setInputValue("");
     aiResponseContent = "";
-
+  
     try {
       const filteredMessages = messages.filter(message => !message.cancelled);
       console.log(currentPromptId);
@@ -126,44 +127,42 @@ const ChatComponent = ({ location }) => {
           location: location.location_label + "," + location.location_country
         }),
       });
-
+  
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-
+  
       const reader = response.body.getReader();
 
-
-      while (true) {
-
+      while (!isCancelled) {
+        console.log("IsCancelled mid Loop" + isCancelled);
         const { done, value } = await reader.read();
         if (done || isCancelled) {
           break;
         }
-
-
+  
         let newChunk = new TextDecoder().decode(value);
         newChunk = newChunk.replace('html', '').replace("markdown", "").replace('```', '');
         aiResponseContent += newChunk;
-
+  
         if (aiMessageRef.current) {
           aiMessageRef.current.innerHTML = aiResponseContent;
         }
+  
       }
 
       setMessages(prevMessages => {
         const lastMessage = prevMessages[prevMessages.length - 1];
         if (lastMessage.role === "AI" && lastMessage.current) {
-          return prevMessages.map((message, index) =>
-            index === prevMessages.length - 1
-              ? { ...message, content: aiResponseContent, ref: null, current: false, cancelled: isCancelled}
-              : message
+          return prevMessages.map((message, index) => {
+            if(index === prevMessages.length - 1) return { ...message, content: aiResponseContent, ref: null, current: false, cancelled: isCancelled }
+            else if (index === prevMessages.length - 2) return { ...message, cancelled: isCancelled } //Change User cancelled status
+            else return message;
+          }
           );
         }
         return prevMessages;
       });
-
-      setCurrentPromptId(tempCurrentPromptId);
     } catch (error) {
       console.error('Error:', error);
       setMessages(prevMessages => {
@@ -171,13 +170,14 @@ const ChatComponent = ({ location }) => {
         if (lastMessage.role === "AI" && lastMessage.current) {
           return prevMessages.map((message, index) =>
             index === prevMessages.length - 1
-              ? { ...message, content: "There was an error with the Request", ref: null, current: false }
+              ? { ...message, content: '<div className="cancelMessage">There was an error with the Request', ref: null, current: false, cancelled: true }
               : message
           );
         }
         return prevMessages;
       });
     } finally {
+      setIsCancelled(false);
       setIsLoading(false);
     }
   };
@@ -276,7 +276,7 @@ const ChatComponent = ({ location }) => {
                     <div className="pulsating-ball"></div>
                   </div>
                 )}
-                {message.cancelled && (
+                {message.cancelled && message.role === "AI" &&(
                   <div style={{ textAlign: 'center', color: 'red', fontStyle: 'italic' }}>This message was cancelled.</div>
                 )}
                 {message.role === "AI" && !message.cancelled && !isLoading && index === messages.length - 1 && (

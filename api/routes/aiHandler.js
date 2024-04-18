@@ -23,13 +23,11 @@ const {
  */
 router.post("/setPrompt", async (req, res) => {
   const requestId = req.body.id;
-  console.log(requestId);
-  console.log(req.body);
   if (!requestId) {
     return res.status(400).send("Request ID is missing");
   }
-  // const controller = new AbortController();
-  // storeController(requestId, controller);
+  const controller = new AbortController();
+  storeController(requestId, controller);
   try {
     const startTime = performance.now();
     const history = req.body.history || [];
@@ -37,21 +35,21 @@ router.post("/setPrompt", async (req, res) => {
     const location = req.body.location;
     const limitedHistory = history.slice(-6);
 
-    console.log(limitedHistory);
-    setupStreamingForModel(res);
+    setupStreamingForModel(res, controller.signal);
 
     const response = await getRetrievalChain().invoke({
       input: userInput,
       chat_history: limitedHistory,
-      //signal: controller.signal
+      signal: controller.signal
     });
+
+
     const endTime = performance.now();
     const responseTime = (endTime - startTime) / 1000;
 
     const currentDate = new Date();
     const formattedDate = currentDate.toISOString();
-
-    console.log(response);
+    console.log("Response sent");
     const promptEntry = {
       id: req.body.id,
       Prompt: userInput,
@@ -61,8 +59,6 @@ router.post("/setPrompt", async (req, res) => {
       Location: location,
       DateTime: formattedDate // Add the date and time attribute
     };
-
-
 
     const jsonFilePath = path.join(__dirname, "../data/prompts.json");
     let prompts = [];

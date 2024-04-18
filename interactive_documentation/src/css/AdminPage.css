@@ -20,6 +20,13 @@
     text-align: center;
 }
 
+@media screen and (max-width: 1300px) {
+    .admin-content {
+        margin-left: 200px;
+        width: calc(100% - 440px);
+    }
+}
+
 .admin-header {
     display: flex;
     justify-content: space-between;

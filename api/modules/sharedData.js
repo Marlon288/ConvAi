@@ -92,13 +92,18 @@ function getModel() {
 /**
  * Sets up streaming for the model.
  * @param {Object} res - The response object.
+ * @param {AbortSignal} signal - The abort signal for cancellation.
  */
-function setupStreamingForModel(res) {
+function setupStreamingForModel(res, signal) {
   model.streaming = true;
   model.callbacks = [
     {
       handleLLMNewToken(token) {
-        res.write(token);
+        if (!signal.aborted) {
+          res.write(token);
+        } else {
+          res.end();
+        }
       },
     },
   ];

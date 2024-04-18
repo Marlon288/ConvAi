@@ -5,11 +5,6 @@ import FileTable from "../components/FileTable";
 
 const TrainingData = () => {
   const [files, setFiles] = useState([]);
-  const [sortConfig, setSortConfig] = useState({
-    key: null,
-    direction: "ascending",
-  });
-  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     /**
@@ -74,10 +69,6 @@ const TrainingData = () => {
       <h1>Training Data</h1>
       <FileTable
         files={files}
-        sortConfig={sortConfig}
-        setSortConfig={setSortConfig}
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
         onDelete={handleDelete}
       />
       <FileUpload onFileUpload={handleFileUpload} />

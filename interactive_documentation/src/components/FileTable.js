@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 
 /**
  * FileTable component
@@ -18,7 +18,15 @@ import React, { useMemo } from "react";
  * @param {Function} props.onDelete - Function to handle file deletion
  * @returns {JSX.Element} The rendered file table component
  */
-function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQuery, onDelete }) {
+function FileTable({ files, onDelete }) {
+  const [nameSearchQuery, setNameSearchQuery] = useState("");
+  const [locationSearchQuery, setLocationSearchQuery] = useState("");
+  const [sortConfig, setSortConfig] = useState({
+    key: null,
+    direction: "ascending",
+  });
+  const [searchQuery, setSearchQuery] = useState("");
+
   /**
    * Requests sorting of files based on the provided key
    * @param {string} key - The key to sort by
@@ -31,16 +39,22 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
     setSortConfig({ key, direction });
   };
 
-
   /**
    * Sorts and filters the files based on the current sort configuration and search query
    * @returns {Array} The sorted and filtered files
    */
   const sortedAndFilteredFiles = useMemo(() => {
     let filteredFiles = [...files];
-    if (searchQuery) {
+    if (nameSearchQuery) {
+      const lowerCaseNameSearchQuery = nameSearchQuery.toLowerCase();
       filteredFiles = filteredFiles.filter((file) =>
-        file.name.toLowerCase().includes(searchQuery.toLowerCase())
+        file.name.toLowerCase().includes(lowerCaseNameSearchQuery)
+      );
+    }
+    if (locationSearchQuery) {
+      const lowerCaseLocationSearchQuery = locationSearchQuery.toLowerCase();
+      filteredFiles = filteredFiles.filter((file) =>
+        file.location.toLowerCase().includes(lowerCaseLocationSearchQuery)
       );
     }
     if (sortConfig.key !== null) {
@@ -55,7 +69,7 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
       });
     }
     return filteredFiles;
-  }, [files, sortConfig, searchQuery]);
+  }, [files, sortConfig, nameSearchQuery, locationSearchQuery]);
 
   /**
    * Gets the sort direction symbol for the provided key
@@ -75,17 +89,17 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
       <table className="table">
         <thead>
           <tr>
-            <th className="name-column" onClick={() => requestSort("name")}>
+          <th className="name-column" onClick={() => requestSort("name")}>
               Name{getSortDirectionSymbol("name")}
               <input
                 type="text"
-                placeholder="Search by name..."
+                placeholder="name"
                 onChange={(e) => {
                   e.stopPropagation();
-                  setSearchQuery(e.target.value);
+                  setNameSearchQuery(e.target.value);
                 }}
                 onClick={(e) => e.stopPropagation()}
-                style={{ marginLeft: "10px", padding: "2px" }}
+                style={{ padding: "2px" }}
                 className="search-input"
                 aria-label="Search by name"
               />
@@ -94,32 +108,38 @@ function FileTable({ files, sortConfig, setSortConfig, searchQuery, setSearchQue
               Location{getSortDirectionSymbol("location")}
               <input
                 type="text"
-                placeholder="Search by location..."
+                placeholder="location"
                 onChange={(e) => {
                   e.stopPropagation();
-                  setSearchQuery(e.target.value);
+                  setLocationSearchQuery(e.target.value);
                 }}
                 onClick={(e) => e.stopPropagation()}
-                style={{ marginLeft: "10px", padding: "2px" }}
+                style={{ padding: "2px" }}
                 className="search-input"
-                aria-label="Search by name"
+                aria-label="Search by location"
               />
             </th>
-            <th className="date-column" onClick={() => requestSort("lastUpdated")}>
+            <th
+              className="date-column"
+              onClick={() => requestSort("lastUpdated")}
+            >
               Date{getSortDirectionSymbol("lastUpdated")}
             </th>
             <th className="action-column">Actions</th>
           </tr>
         </thead>
         <tbody>
-        {sortedAndFilteredFiles.map((file, index) => (
+          {sortedAndFilteredFiles.map((file, index) => (
             <tr key={index}>
               <td>{file.name}</td>
               <td>{file.location}</td>
               <td>{file.lastUpdated}</td>
               <td>
                 {!file.isDeleted && (
-                  <button className="delete-btn" onClick={() => onDelete(file.name)}>
+                  <button
+                    className="delete-btn"
+                    onClick={() => onDelete(file.name)}
+                  >
                     Delete
                   </button>
                 )}

@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
@@ -35,7 +35,7 @@ const poi_icon_disable = new L.Icon({
  */
 const MapEffect = ({ isChatOpen }) => {
   const map = useMap();
-
+  
   useEffect(() => {
     setTimeout(() => {
       map.invalidateSize();
@@ -54,22 +54,31 @@ const MapEffect = ({ isChatOpen }) => {
  * @param {Array} props.locations - Array of location objects
  * @returns {JSX.Element} The rendered map component
  */
-const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, locations }) => {
+const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, location, locations, selectedLocation  }) => {
   const [resetZoomData, setResetZoomData] = useState(null);
   const defaultZoom = 3;
+  const position = [47.566453725650305, 8.903938751666576]; // Frauenfeld
+
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    if (location) {
+      setResetZoomData({ position: location.coordinates, zoom: defaultZoom });
+    }
+  }, [location]);
 
   /**
    * Handles the click event on a popup
    * @param {Object} location - The selected location object
    */
   const handlePopupClick = (location) => {
-    setResetZoomData({ position: location.coordinates, zoom: defaultZoom });
     setIsChatOpen(true);
-    console.log(location);
     setLocation(location);
+    if (popupRef.current) {
+      popupRef.current._closeButton.click()
+    }
   };
 
-  const position = [47.566453725650305, 8.903938751666576]; // Frauenfeld
 
   return (
     <div className={`map-container ${isChatOpen ? "minimized" : ""}`}>
@@ -82,7 +91,7 @@ const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, locations }) => 
             icon={location.api_link ? poi_icon : poi_icon_disable}
             aria-label={location.location_label}
           >
-            <Popup>
+            <Popup ref={popupRef}>
               <div
                 style={{ cursor: "pointer" }}
                 onClick={() => handlePopupClick(location)}
