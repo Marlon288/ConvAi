@@ -63,9 +63,9 @@ const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, location, locati
 
   useEffect(() => {
     if (hoveredLocation) {
-      setResetZoomData({ position: hoveredLocation.coordinates, zoom: defaultZoom });
+      setResetZoomData({ position: hoveredLocation.coordinates, zoom: defaultZoom, duration: 1 });
     } else if (location) {
-      setResetZoomData({ location: location.coordinates, zoom: defaultZoom });
+      setResetZoomData({ location: location.coordinates, zoom: defaultZoom, duration: 1 });
     }
   }, [hoveredLocation, location]);
 

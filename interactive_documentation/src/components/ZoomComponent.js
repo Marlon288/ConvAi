@@ -15,13 +15,14 @@ import { useMap } from 'react-leaflet';
  * @param {number} props.zoom - The zoom level to set
  * @returns {null} This component does not render anything
  */
-const ResetZoom = ({ position, zoom }) => {
+const ResetZoom = ({ position, zoom, duration }) => {
   const map = useMap();
 
   useEffect(() => {
     if (position && zoom !== undefined) {
-      console.log("Position " + position);
-      map.flyTo(position, zoom);
+      map.flyTo(position, zoom, {
+        duration: duration
+      });
     }
   }, [position, zoom, map]);
 
