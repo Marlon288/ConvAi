@@ -23,6 +23,7 @@ const App = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
   const [location, setLocation] = useState([]);
   const [locations, setLocations] = useState([]);
+  const [hoveredLocation, setHoveredLocation] = useState(null);
 
   /**
    * Fetches the list of locations from the backend
@@ -60,11 +61,12 @@ const App = () => {
                   location={location}
                   isChatOpen={isChatOpen}
                   setIsChatOpen={setIsChatOpen}
-                  setLocation={setLocation}               
+                  setLocation={setLocation}
+                  hoveredLocation={hoveredLocation}            
                 />
                 {isChatOpen && (
                   <>
-                    <ListComponent locations={locations} setLocation={setLocation} />
+                    <ListComponent locations={locations} setLocation={setLocation} setHoveredLocation={setHoveredLocation}/>
                     <div className="chat-wrapper">
                       <ChatComponent location={location} />
                     </div>

@@ -23,7 +23,7 @@ router.get('/prompts', verifyToken, (req, res) => {
 });
 
 // Route to get prompts by country
-router.get('/prompts/country/:country', verifyToken, (req, res) => {
+router.get('/country/:country', verifyToken, (req, res) => {
   try {
     const { country } = req.params;
     const prompts = readPromptsData();
@@ -36,7 +36,7 @@ router.get('/prompts/country/:country', verifyToken, (req, res) => {
 });
 
 // Route to get prompts by location
-router.get('/prompts/location/:location', verifyToken, (req, res) => {
+router.get('/location/:location', verifyToken, (req, res) => {
   try {
     const { location } = req.params;
     const prompts = readPromptsData();
@@ -49,7 +49,7 @@ router.get('/prompts/location/:location', verifyToken, (req, res) => {
 });
 
 // Route to get prompts with performance worse than a certain number
-router.get('/prompts/performance/worse/:threshold', (req, res) => {
+router.get('/performance/worse/:threshold', (req, res) => {
     try {
       const { threshold } = req.params;
       const prompts = readPromptsData();
@@ -62,7 +62,7 @@ router.get('/prompts/performance/worse/:threshold', (req, res) => {
   });
   
   // Route to get prompts with performance better than a certain number
-  router.get('/prompts/performance/better/:threshold', (req, res) => {
+  router.get('/performance/better/:threshold', (req, res) => {
     try {
       const { threshold } = req.params;
       const prompts = readPromptsData();
@@ -75,7 +75,7 @@ router.get('/prompts/performance/worse/:threshold', (req, res) => {
   });
   
   // Route to get prompts with a specific rating
-  router.get('/prompts/rating/:rating', (req, res) => {
+  router.get('/rating/:rating', (req, res) => {
     try {
       const { rating } = req.params;
       const prompts = readPromptsData();
@@ -88,7 +88,7 @@ router.get('/prompts/performance/worse/:threshold', (req, res) => {
   });
   
   // Route to get prompts with a rating equal to or higher than a certain number
-  router.get('/prompts/rating/equalOrHigher/:rating', (req, res) => {
+  router.get('/rating/equalOrHigher/:rating', (req, res) => {
     try {
       const { rating } = req.params;
       const prompts = readPromptsData();
@@ -113,16 +113,6 @@ router.get('/prompts/performance/worse/:threshold', (req, res) => {
     }
   });
 
-  router.get("/locations", verifyToken, (req, res) => {
-    try {
-      const prompts = readPromptsData();
-      const locations = [...new Set(prompts.map((prompt) => prompt.Location))];
-      res.json(locations);
-    } catch (error) {
-      console.error("Error reading prompts data:", error);
-      res.status(500).json({ error: "Internal Server Error" });
-    }
-  });
   
   // Route to get prompts for download based on selected location and date range
   router.get("/prompts/download", verifyToken, (req, res) => {
@@ -148,10 +138,9 @@ router.get('/prompts/performance/worse/:threshold', (req, res) => {
     }
   });
   
-  // Route to get usage data based on selected location
-  router.get("/usage", verifyToken, (req, res) => {
+  router.post("/usage", verifyToken, (req, res) => {
     try {
-      const { location } = req.query;
+      const { location } = req.body;
       const prompts = readPromptsData();
       let filteredPrompts = prompts;
       if (location && location !== "global") {

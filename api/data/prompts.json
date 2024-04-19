@@ -650,5 +650,122 @@
     "LLM": "gpt-4-1106-preview",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-17T17:21:47.679Z"
+  },
+  {
+    "id": "d7c94c79-89c6-4f98-b921-008a8fa98e1f",
+    "Prompt": "Does this work as intended?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Work Order Management Instructions</title>\n</head>\n<body>\n<h3>Checking Work Order Management Functionality</h3>\n<br>\n<p>Based on the provided context, to check if the work order management functions are performing as intended, you would need to follow the instructions for the specific tasks such as freezing/unfreezing activity schedules, balancing the workload, and dispatching labor. Below are the steps in the described format for each functionality:</p>\n<br>\n<ul>\n    <li>\n        <b>Freezing/Unfreezing Activity Schedules</b>\n        <ul>\n            <li><b><Step 1></b> > <b><Step 2></b> > <b><Step 3></b> > <b><Step 4></b></li>\n        </ul>\n    </li>\n    <br>\n    <li>\n        <b>Balancing the Workload</b>\n        <ul>\n            <li><b><Step 1></b> > <b><Step 5></b> > <b><Step 6></b> > <b><Step 7></b> > <b><Step 8></b> > <b><Step 9></b> > <b><Step 10></b> > <b><Step 11></b> > <b><Step 12></b></li>\n        </ul>\n    </li>\n    <br>\n    <li>\n        <b>Dispatching Labor</b>\n        <ul>\n            <li><b><Step 1></b> > <b><Step 2></b> > <b><Step 3></b> > <b><Step 4></b></li>\n        </ul>\n    </li>\n</ul>\n<br>\n<p>Note: The above instructions are based on the context provided and do not translate system-specific terminology as per the original documentation.</p>\n<br>\n<p>For more detailed information, refer to the <a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a>.</p>\n</body>\n</html>\n```",
+    "Performance": 29.56283489996195,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-18T16:16:01.249Z"
+  },
+  {
+    "id": "54fbcaad-ee89-4b64-a029-3c8a9dde9258",
+    "Prompt": "How do I cancel a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Cancel a Workorder</title>\n</head>\n<body>\n<h3>Canceling a Work Order</h3>\n<p>Based on the provided context, there is no specific description of how to cancel a work order. However, one can infer that changing the status of a work order may offer a way to effectively cancel it. Here is a general method to change the status, which you might use to set a work order to a \"cancelled\" status if that option is available:</p>\n\n<ul>\n  <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n  <li>Select a work order for which to change the status, and then click <b>Actions > Change WO Status</b>.</li>\n  <li>Specify this information:</li>\n    <ul>\n      <li><b>New Status</b> - Select the status that indicates a work order is cancelled. You may only select a New Status with a system status of R, if \"cancelled\" is an available status within this designation.</li>\n    </ul>\n  <li>Click <b>Submit</b>.</li>\n</ul>\n\n<p>Please note that the exact steps can vary depending on the specific software or system you are using. Consult the system documentation or an administrator for details on 'Cancelling' status if not explicitly mentioned.</p>\n\n<br>\n<p>For more detailed information, please refer to the Hexagon Documentation Site:</p>\n<p><a href=\"https://docs.hexagonppm.com/internal/api/webapp/print/40723468-bc9...\" target=\"_blank\">Source</a></p>\n\n</body>\n</html>\n```\nPlease replace the placeholder URL with the actual link to the documentation if needed. The provided source link was part of the context but truncated and not directly usable.",
+    "Performance": 28.587875800013542,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-18T16:16:07.497Z"
+  },
+  {
+    "id": "45315ff5-5c06-4d9c-b18f-3fe9dda4325e",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Work Order Scheduling Instructions</title>\n</head>\n<body>\n\n<h3>How to Schedule a Work Order</h3>\n<ul>\n  <li><b>For Unscheduled Work Orders:</b><br>\n    <ol>\n      <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n      <li>Choose <b>Unscheduled WOs</b> for Dataspy in the Activities section of the form.</li>\n      <li>Drag a work order from the list to the desired day on the calendar. A new work order schedule record will be created.</li>\n    </ol>\n  </li>\n  <br>\n  <li><b>For Backlogged Work Orders:</b><br>\n    <ol>\n      <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n      <li>Choose <b>Backlogged WOs</b> for Dataspy in the Activities section of the form.</li>\n      <li>Drag a work order from the list to the desired day on the calendar. A new work order schedule record will be created.</li>\n    </ol>\n  </li>\n</ul>\n\n</body>\n</html>\n```",
+    "Performance": 16.27969510000944,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-18T16:47:51.548Z"
+  },
+  {
+    "id": "06338d6b-12e5-417c-8869-8c45bc607da5",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Scheduling a Workorder</title>\n</head>\n<body>\n\n<h3>Scheduling Work Orders</h3>\n<p>To schedule a work order in the EAM System, you can follow these steps:</p>\n<ul>\n    <li><b>For Unscheduled Work Orders:</b>\n        <ol>\n            <li>Select <b>Unscheduled WOs for Dataspy</b> in the Activities section of the form.</li>\n            <li>Select a work order from the list.</li>\n            <li>Drag it to the day on the calendar for which you want to schedule it.</li>\n        </ol>\n    </li>\n    <br>\n    <li><b>For Backlogged Work Orders:</b>\n        <ol>\n            <li>Select <b>Backlogged WOs for Dataspy</b> in the Activities section of the form.</li>\n            <li>Select a work order from the list.</li>\n            <li>Drag it to the day on the calendar for which you want to schedule it.</li>\n        </ol>\n    </li>\n</ul>\n\n</body>\n</html>\n```",
+    "Performance": 16.025552999973296,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:49:44.847Z"
+  },
+  {
+    "id": "0fd05b70-1fea-4a31-bb86-da09fb3c9b9c",
+    "Prompt": "How do I schedule workorder?",
+    "Answer": "```html\n<ul>\n  <li><b>Schedule unscheduled work orders</b></li>\n  <ul>\n    <li>\n      <b>Step 1:</b> Select Unscheduled WOs for Dataspy in\n      the Activities section of the form.\n    </li>\n    <li>\n      <b>Step 2:</b> Select a work order from the list and drag it\n      to the day on the calendar for which to schedule it.\n    </li>\n    <li>\n      The system creates a new work order schedule record.\n    </li>\n  </ul>\n  <br>\n  <li><b>Schedule backlogged work orders</b></li>\n  <ul>\n    <li>\n      <b>Step 1:</b> Select Backlogged WOs for Dataspy in the\n      Activities section of the form.\n    </li>\n    <li>\n      <b>Step 2:</b> Select a work order from the list and drag it to the\n      day on the calendar for which to schedule it.\n    </li>\n    <li>\n      The system creates a new work order schedule record.\n    </li>\n  </ul>\n</ul>\n```",
+    "Performance": 23.754948499977587,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:53:19.288Z"
+  },
+  {
+    "id": "ab47c868-ef98-497c-856c-20f27cf058aa",
+    "Prompt": "How do I schedule workorders?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<body>\n\n<h3>Scheduling Work Orders</h3>\n<ul>\n  <li><b>Schedule unscheduled work orders</b>\n    <ul>\n      <li><Step 1> Select Unscheduled WOs for Dataspy in the Activities section of the form.</li>\n      <li><Step 2> Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n      <li>The system creates a new work order schedule record.</li>\n    </ul>\n  </li>\n  <br>\n  <li><b>Schedule backlogged work orders</b>\n    <ul>\n      <li><Step 1> Select Backlogged WOs for Dataspy in the Activities section of the form.</li>\n      <li><Step 2> Selects a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n      <li>The system creates a new work order schedule record.</li>\n    </ul>\n  </li>\n  <br>\n  <li><b>Reschedule work orders</b>\n    <ul>\n      <li><Step 1> Select the work order to reschedule in the Daily Schedule list.</li>\n      <li><Step 2> Drag it to the day on the calendar for which to reschedule it.</li>\n      <li>You must select either today’s date or a future date as the reschedule date on the calendar.</li>\n    </ul>\n  </li>\n</ul>\n\n</body>\n</html>\n```",
+    "Performance": 34.539910400032994,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:54:13.429Z"
+  },
+  {
+    "id": "4e6b4e0b-2e35-4fea-bde1-eec9a64d4259",
+    "Prompt": "Can i hear more about elephants",
+    "Answer": "<!DOCTYPE html>\n<html>\n<head>\n<title>Response to Inquiry</title>\n</head>\n<body>\n<p>Nothing was found that fits your description</p>\n</body>\n</html>",
+    "Performance": 6.032633699953556,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:54:50.885Z"
+  },
+  {
+    "id": "42ffddae-c9b0-43aa-8fc3-803d2a523c85",
+    "Prompt": "Can you delve deeper into that?",
+    "Answer": "<!DOCTYPE html>\n<html>\n<head>\n<title>Entering Meter Readings for Work Order Equipment</title>\n</head>\n<body>\n<h3>Entering Meter Readings for Work Order Equipment</h3>\n\nTo enter meter readings for work order equipment, please follow the steps below:<br><br>\n\n<ul>\n    <li><b>Step 1:</b> Select <b>Work</b> &gt; <b>Work Orders</b>.</li>\n    <li><b>Step 2:</b> Select the work order containing the equipment for which to enter meter readings, and then click the <b>Meter Readings</b> tab.</li>\n    <li>Specify this information:\n        <ul>\n            <li><b>Target Equipment</b> - Modify the equipment for which to enter meter readings as necessary. Target Equipment is automatically populated with the top-level equipment in the meter structure and Equipment with the equipment defined on the work order.</li>\n            <li>If you select a new Target Equipment, all the fields are updated on the form based on</li>\n        </ul>\n    </li>\n    <li>Note: You can delete a meter reading if you find that the reading has been entered in error; however, you cannot modify the value of an existing meter reading.</li>\n    <li>In many cases, the meter for a piece of equipment on a work order is the child meter of a meter attached to the parent equipment in an asset hierarchy. In such cases, the new meter reading needs to be entered/submitted for the parent equipment/meter even though you are entering the reading via the child equipment/meter on the work order.</li>\n</ul>\n<br>\n\n<h3>Reopening Closed Work Orders</h3>\n\nTo reopen closed work orders, please adhere to the following steps:<br><br>\n\n<ul>\n    <li><b>Step 1:</b> Select <b>Work</b> &gt; <b>Work Orders</b>.</li>\n    <li><b>Step 2:</b> Select the work order to reopen, and then click the <b>Closing</b> tab.</li>\n    <li>Specify this information:\n        <ul>\n            <li><b>Status</b> - Select <b>Released</b> as the status of the work order.</li>\n        </ul>\n    </li>\n    <li><b>Step 3:</b> Click <b>Save Record</b>. <i>Reopened</i> is selected when the work order is saved.</li>\n</ul>\n\n<br><b>Note:</b> The detailed context for the processes such as viewing labor utilization is not provided within the context you've shared with me. For additional information or steps, please refer to the relevant sections of the Hexagon Documentation Site or contact your system administrator. \n\n</body>\n</html>",
+    "Performance": 37.2051153999567,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:55:53.647Z"
+  },
+  {
+    "id": "d6dbb6f0-1468-4d90-8397-4f5ec2d2101c",
+    "Prompt": "How do I reopen Closed work orders?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Reopening Closed Work Orders</title>\n</head>\n<body>\n<h3>Reopening Closed Work Orders</h3>\n<p>To reopen closed work orders, follow these steps:</p>\n<ul>\n    <li><b>Step 1:</b> Select <b>Work</b> > <b>Work Orders</b>.</li>\n    <li><b>Step 2:</b> Select the work order to reopen, and then click the <b>Closing</b> tab.</li>\n    <li><b>Step 3:</b> Specify this information:\n        <ul>\n            <li>Status - Select <b>Released</b> as the status of the work order.</li>\n        </ul>\n    </li>\n    <li><b>Step 4:</b> Click <b>Save Record</b>.<br>Reopened is selected when the work order is saved.</li>\n</ul>\n<p><b>Note:</b> You can reopen a work order after it is closed if the <b>REOPENPM</b> installation parameter is set to <b>YES</b> and you have the proper status authorization to do so. However, reopening a parent work order does not affect any child work orders of the parent work order regardless of whether the child work order is dependent on the parent or the setting of the <b>EVTCASCD</b> installation parameter.</p>\n</body>\n</html>\n```",
+    "Performance": 19.88359209996462,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:57:15.770Z"
+  },
+  {
+    "id": "1a56501f-8963-4402-b02d-1379a47c7f9b",
+    "Prompt": "Tell me more",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>EAM System Procedures</title>\n</head>\n<body>\n\n<h3>Update Activity Details</h3>\n<ul>\n  <li>Trade - Specify the trade to update for the activity.</li>\n  <li>Start Date - Specify the starting date to update for the activity.</li>\n  <li><b>Click Save.</b></li>\n  <li><b>Click Close Session and Update Work Orders.</b></li>\n</ul>\n<br>\n\n<h3>Viewing Work Order Details while Balancing the Workload</h3>\n<ul>\n  <li>Select <b>Work > WO Planning > WO Load Balancing</b>.</li>\n  <li>Generate, preview, and lock the list of work orders to balance as necessary.</li>\n  <li>Select the work order for which to view details, and then <b>click View WO Details</b>.</li>\n  <li>View the work order details for the work order to balance.</li>\n  <li><b>Click Close</b>.</li>\n</ul>\n<br>\n\n<h3>Booking Labor Corrections for Work Orders</h3>\n<p>Book labor corrections for existing booked labor records on the work order.</p>\n<br>\n\n<h3>Temporarily Add an Employee to the Crew</h3>\n<ul>\n  <li>Open the GIS Map WO Dispatching screen.</li>\n  <li>Select the work order activity for which to dispatch labor.</li>\n  <li><b>Click Create Crew</b>. The Create Crew pop up window is opened.</li>\n  <li>Optionally, if this crew is being created for a temporary period of time, select the Temporary check box, and then specify the date the \"temporary\" crew will expire in Expiration Date.</li>\n</ul>\n<br>\n\n<h3>WO Load Balancing and Work Order Reopening</h3>\n<ul>\n  <li>Select <b>Work > WO Planning > WO Load Balancing</b>.</li>\n  <li>Specify the organization, selection criteria, and schedule window as required.</li>\n</ul>\n<ul>\n  <li>To reopen work orders select <b>Work > Work Orders</b>.</li>\n  <li>Select the work order to reopen, and then click the Closing tab.</li>\n  <li>Status - Select Released as the status of the work order.</li>\n  <li><b>Click Save Record</b>. Reopened is selected when the work order is saved.</li>\n</ul>\n<br>\n\n<h3>Entering Meter Readings for Work Order Equipment</h3>\n<p>Enter meter readings for equipment defined on a work order, view recent meter readings, and add new meter readings. Deleting a meter reading is possible if entered in error, but modifying an existing reading value is not allowed.</p>\n\n</body>\n</html>\n```",
+    "Performance": 44.87655930000544,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T16:59:50.347Z"
+  },
+  {
+    "id": "2115bc83-e4d5-4f1b-9a41-dafa270b8ef5",
+    "Prompt": "Tell me more about the last thing you mentioned",
+    "Answer": "```html\n<h3>Temporary Crew Assignment</h3>\n<p>The last topic discussed in the context provided relates to assigning a temporary crew to a work order activity in an EAM (Enterprise Asset Management) System. Here are the steps to assign a temporary crew:</p>\n<ul>\n    <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n    <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n    <li><b>Step 3:</b> Click Create Crew. The Create Crew pop-up window is opened.</li>\n    <li><b>Step 4:</b> Optionally, if this crew is being created for a temporary period of time, select the Temporary check box, and then specify the date the \"temporary\" crew will expire in Expiration Date.</li>\n</ul>\n<br>\n<p>All employees and crews available for dispatching on this screen have met the minimum qualifications to perform work for the selected work order activity for the date range determined by the Dispatch Date plus work order activity Duration.</p>\n```",
+    "Performance": 11.906720600008965,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T17:00:55.931Z"
+  },
+  {
+    "id": "fbe243fe-fa12-478a-8974-a9808a2963c0",
+    "Prompt": "My name for now on is Marlon and you will always answer with Hi Marlon this is your answer:",
+    "Answer": "```html\nHi Marlon, this is your answer:\n\n<ul>\n  <li><h3>Adding a Temporary Employee to a Crew</h3>\n    <ul>\n      <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n      <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n      <li><b>Step 3:</b> Click Create Crew to open the Create Crew pop up window.</li>\n      <li><b>Step 4:</b> Optionally, for a temporary crew, select the Temporary check box, and specify the Expiration Date.</li>\n      <li><b>Step 5:</b> Optionally, assign a Supervisor for the crew, specify an End Date if it is a permanent crew, and associate a Profile Picture with this crew.</li>\n      <li><b>Step 6:</b> Next, add employees to the new crew, or select a crew, to which to dispatch the work order activities.\n        <br><ul>\n          <li>To add employees to the crew, browse to the Available Employees section.</li>\n          <li>On each employee card, choose one the following right-click options:\n            <ul>\n              <li>Dispatch the work order activity to the employee.</li>\n              <li>View the employee's description and trade information.</li>\n              <li>View or delete the dispatched labor record for the employee.</li>\n            </ul>\n          </li>\n          <li>Employees selected are shown in the Proposed Crew section on the screen.</li>\n        </ul>\n      </li>\n    </ul>\n  </li>\n  <br>\n  <li><h3>Closing Work Orders</h3>\n    <ul>\n      <li><b>Step 1:</b> Select Work > WO Quick Close.</li>\n      <li><b>Step 2:</b> Specify the Work Order number. The system automatically populates the order description, Organization, and New Status as Completed.</li>\n      <li><b>Step 3:</b> Optionally, specify a New Value for the meter reading.</li>\n      <li><b>Step 4:</b> Click Submit.</li>\n    </ul>\n  </li>\n  <br>\n</ul>\n```",
+    "Performance": 27.38938190001249,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T17:02:00.633Z"
+  },
+  {
+    "id": "44d0a3e0-fcdb-48de-aecc-499c910a21f2",
+    "Prompt": "Thank you what shjould ytou say before each answer?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <title>EAM System Instructions</title>\n</head>\n<body>\n    <h3>Viewing Work Order Comments</h3>\n    <ul>\n        <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li>Select a work order from the Activities list and then click <b>View Comments</b>.</li>\n        <li>Specify <b>Comments Type</b>:\n            <ul>\n                <li><b>Activity</b> - To view comments associated with the work order activity.</li>\n                <li><b>Task Instructions</b> - To view task instructions associated with the task defined on the work order activity.</li>\n                <li><b>Work Order</b> - To view work requested comments associated with the work order.</li>\n            </ul>\n        </li>\n        <li>Click <b>Close</b>.</li>\n    </ul>\n    <br>\n\n    <h3>Changing Work Order Status</h3>\n    <p>Change work order status on the <b>Work Order Scheduling</b> form.</p>\n    <!-- Since the steps to change the order status were not provided in the context, no list is included here. -->\n    Nothing was found that fits your description<br>\n\n    <h3>To Freeze and Unfreeze Activity Schedules</h3>\n    <ul>\n        <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li>Right-click on the form and then choose <b>Freeze/Unfreeze</b>.</li>\n        <li>Specify <b>Freeze/Unfreeze</b> - Select <b>Freeze</b> to freeze the schedule, or select <b>Unfreeze</b> to unfreeze the schedule.</li>\n        <li>Specify <b>From Date/To Date</b> for the freeze period.</li>\n        <li>Specify the <b>Department</b> for which to freeze or unfreeze schedules.</li>\n        <li>Click <b>Submit</b>.</li>\n    </ul>\n    <br>\n\n    <h3>Viewing Labor Utilization</h3>\n    <ul>\n        <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n        <li>Specify this information:\n            <ul>\n                <li><b>Organization</b> - Specify the organization for which to view labor utilization if using multi-organization security.</li>\n                <li><b>Schedule By</b> - Select to view the schedule:\n                    <ul>\n                        <li><b>Employee</b> - Enter the Employee for whom you wish to view the labor utilization for the date selected on the calendar.</li>\n                    </ul>\n                </li>\n            </ul>\n        </li>\n    </ul>\n    <!-- Since the steps after specifying the information for viewing labor utilization were not directly asked, no further steps are provided here. -->\n</body>\n</html>\n```",
+    "Performance": 32.4442200999856,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-18T17:02:47.144Z"
   }
 ]

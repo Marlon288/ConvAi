@@ -54,7 +54,7 @@ const MapEffect = ({ isChatOpen }) => {
  * @param {Array} props.locations - Array of location objects
  * @returns {JSX.Element} The rendered map component
  */
-const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, location, locations, selectedLocation  }) => {
+const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, location, locations, selectedLocation,  hoveredLocation }) => {
   const [resetZoomData, setResetZoomData] = useState(null);
   const defaultZoom = 3;
   const position = [47.566453725650305, 8.903938751666576]; // Frauenfeld
@@ -62,10 +62,12 @@ const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, location, locati
   const popupRef = useRef(null);
 
   useEffect(() => {
-    if (location) {
-      setResetZoomData({ position: location.coordinates, zoom: defaultZoom });
+    if (hoveredLocation) {
+      setResetZoomData({ position: hoveredLocation.coordinates, zoom: defaultZoom });
+    } else if (location) {
+      setResetZoomData({ location: location.coordinates, zoom: defaultZoom });
     }
-  }, [location]);
+  }, [hoveredLocation, location]);
 
   /**
    * Handles the click event on a popup

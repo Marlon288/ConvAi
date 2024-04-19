@@ -15,7 +15,7 @@ import './../css/ListComponent.css';
  * @param {Function} props.setLocation - Function to set the selected location
  * @returns {JSX.Element} The rendered list component
  */
-const ListComponent = ({ locations, setLocation }) => {
+const ListComponent = ({ locations, setLocation, setHoveredLocation  }) => {
   const [expandedCountries, setExpandedCountries] = useState([]);
 
   /**
@@ -24,6 +24,14 @@ const ListComponent = ({ locations, setLocation }) => {
    */
   const handleLocationClick = (location) => {
     setLocation(location);
+  };
+
+  const handleMouseEnter = (location) => {
+    setHoveredLocation(location);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredLocation(null);
   };
 
   /**
@@ -76,6 +84,8 @@ const ListComponent = ({ locations, setLocation }) => {
                   className="list-item"
                   onClick={() => handleLocationClick(location)}
                   role="button"
+                  onMouseEnter={() => handleMouseEnter(location)}
+                  onMouseLeave={handleMouseLeave}
                   tabIndex="0"
                   aria-label={`Select ${location.location_label}`}
                 >
