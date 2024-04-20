@@ -767,5 +767,25 @@
     "LLM": "gpt-4-1106-preview",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-18T17:02:47.144Z"
+  },
+  {
+    "id": "14aece88-706b-4f1a-ac74-2717a458132a",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n<h3>Scheduling a Work Order</h3>\n<br>\n<ul>\n  <li><b>For Unscheduled Work Orders:</b></li>\n  <ul>\n    <li><Step 1> Select 'Unscheduled WOs for Dataspy' in the Activities section of the form.</li>\n    <li><Step 2> Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n    <li>The system creates a new work order schedule record.</li>\n  </ul>\n  <br>\n  <li><b>For Backlogged Work Orders:</b></li>\n  <ul>\n    <li><Step 1> Select 'Backlogged WOs for Dataspy' in the Activities section of the form.</li>\n    <li><Step 2> Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n    <li>The system creates a new work order schedule record.</li>\n  </ul>\n  <br>\n</ul>\n</body>\n</html>\n```",
+    "Performance": 16.20557419991493,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Stockholm,Sweden",
+    "DateTime": "2024-04-19T08:46:49.145Z",
+    "Rating": 3
+  },
+  {
+    "id": "d6196167-9a19-4c94-a8e4-6b7399866747",
+    "Prompt": "Tell me abnout elephants",
+    "Answer": "Nothing was found that fits your description",
+    "Performance": 1.9381078000068666,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-19T08:58:41.170Z",
+    "Rating": 5
   }
 ]

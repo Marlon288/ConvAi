@@ -10,7 +10,7 @@ var getLocationsRouter = require("./routes/getLocations");
 var aiHandler = require("./routes/aiHandler");
 var filesRouter = require("./routes/filesRouter");
 const { router: authRouter } = require('./routes/authRouter');
-const analyticsRouter = require('./routes/analyticsRouter');
+var analyticsRouter = require('./routes/analyticsRouter');
 var app = express();
 
 
@@ -32,8 +32,7 @@ app.use("/api", getLocationsRouter);
 app.use("/api", aiHandler);
 app.use("/auth", authRouter);
 app.use("/api/protected", filesRouter);
-
-app.use('/api/protected/analytics', analyticsRouter);
+app.use("/api/protected/analytics", analyticsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

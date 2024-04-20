@@ -91,6 +91,7 @@ async function initRetrievalChain() {
     combineDocsChain: documentChain,
     retriever,
     streaming: true
+    
   });
   setRetrievalChain(chain);
 }

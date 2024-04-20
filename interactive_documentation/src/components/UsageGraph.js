@@ -11,8 +11,9 @@ const UsageGraph = ({ selectedLocation }) => {
   }, [selectedLocation]);
 
   const fetchUsageData = async () => {
+    console.log(selectedLocation);
     try {
-      const response = await fetch('/api/protected/analytics/usage', {
+      const response = await fetch('http://localhost:9000/api/protected/analytics/usage', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

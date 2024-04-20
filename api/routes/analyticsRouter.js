@@ -101,7 +101,7 @@ router.get('/performance/worse/:threshold', (req, res) => {
   });
   
   // Route to get prompts with a rating equal to or lower than a certain number
-  router.get('/prompts/rating/equalOrLower/:rating', (req, res) => {
+  router.get('/rating/equalOrLower/:rating', (req, res) => {
     try {
       const { rating } = req.params;
       const prompts = readPromptsData();

@@ -25,7 +25,7 @@ const Analytics = () => {
   };
 
   const handleLocationChange = (event) => {
-    setSelectedLocation(event.target.value);
+    setSelectedLocation(event.target.value.trim());
   };
 
   return (
