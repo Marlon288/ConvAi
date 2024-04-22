@@ -1,6 +1,6 @@
 // UsageGraph.js
 import React, { useState, useEffect } from "react";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import "./../css/UsageGraph.css";
 
 const UsageGraph = ({ selectedLocation }) => {
@@ -33,16 +33,18 @@ const UsageGraph = ({ selectedLocation }) => {
     }
   };
 
+ 
   return (
     <div className="usage-graph-card">
       <h3>Usage Over Time</h3>
-      <ResponsiveContainer width="100%" height={300}>
-        <LineChart data={usageData}>
-          <XAxis dataKey="date" />
-          <YAxis />
+      <ResponsiveContainer width="100%" height={400}>
+        <LineChart data={usageData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+          <XAxis dataKey="date" tickFormatter={(date) => new Date(date).toLocaleDateString()} />
+          <YAxis tickFormatter={(count) => `${count} users`} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
-          <Line type="monotone" dataKey="count" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Legend verticalAlign="top" height={36} />
+          <Line type="monotone" dataKey="count" stroke="#8884d8" strokeWidth={2} dot={{ r: 6, fill: '#ffffff', stroke: '#8884d8', strokeWidth: 2 }} />
         </LineChart>
       </ResponsiveContainer>
     </div>

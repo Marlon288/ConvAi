@@ -143,16 +143,19 @@ router.get('/performance/worse/:threshold', (req, res) => {
       const { location } = req.body;
       const prompts = readPromptsData();
       let filteredPrompts = prompts;
+  
       if (location && location !== "global") {
         filteredPrompts = filteredPrompts.filter((prompt) =>
-          prompt.Location.includes(location)
+          prompt.Location === location
         );
       }
+  
       const usageData = filteredPrompts.reduce((acc, prompt) => {
         const date = prompt.DateTime.split("T")[0];
         acc[date] = (acc[date] || 0) + 1;
         return acc;
       }, {});
+  
       res.json(usageData);
     } catch (error) {
       console.error("Error reading prompts data:", error);
