@@ -3,6 +3,7 @@ const router = express.Router();
 const fs = require('fs');
 const path = require('path');
 const { verifyToken } = require('./authRouter');
+const { removeStopwords } = require('stopword');
 
 // Helper function to read the JSON file
 function readPromptsData() {
@@ -73,80 +74,19 @@ router.get('/performance/worse/:threshold', (req, res) => {
       res.status(500).json({ error: 'Internal Server Error' });
     }
   });
-  
-  // Route to get prompts with a specific rating
-  router.get('/rating/:rating', (req, res) => {
-    try {
-      const { rating } = req.params;
-      const prompts = readPromptsData();
-      const filteredPrompts = prompts.filter(prompt => prompt.Rating === parseInt(rating));
-      res.json(filteredPrompts);
-    } catch (error) {
-      console.error('Error reading prompts data:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
-  
-  // Route to get prompts with a rating equal to or higher than a certain number
-  router.get('/rating/equalOrHigher/:rating', (req, res) => {
-    try {
-      const { rating } = req.params;
-      const prompts = readPromptsData();
-      const filteredPrompts = prompts.filter(prompt => prompt.Rating >= parseInt(rating));
-      res.json(filteredPrompts);
-    } catch (error) {
-      console.error('Error reading prompts data:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
-  
-  // Route to get prompts with a rating equal to or lower than a certain number
-  router.get('/rating/equalOrLower/:rating', (req, res) => {
-    try {
-      const { rating } = req.params;
-      const prompts = readPromptsData();
-      const filteredPrompts = prompts.filter(prompt => prompt.Rating <= parseInt(rating));
-      res.json(filteredPrompts);
-    } catch (error) {
-      console.error('Error reading prompts data:', error);
-      res.status(500).json({ error: 'Internal Server Error' });
-    }
-  });
 
-  
-  // Route to get prompts for download based on selected location and date range
-  router.get("/prompts/download", verifyToken, (req, res) => {
-    try {
-      const { location, startDate, endDate } = req.query;
-      const prompts = readPromptsData();
-      let filteredPrompts = prompts;
-      if (location && location !== "global") {
-        filteredPrompts = filteredPrompts.filter((prompt) =>
-          prompt.Location.includes(location)
-        );
-      }
-      if (startDate && endDate) {
-        filteredPrompts = filteredPrompts.filter((prompt) => {
-          const promptDate = new Date(prompt.DateTime);
-          return promptDate >= new Date(startDate) && promptDate <= new Date(endDate);
-        });
-      }
-      res.json(filteredPrompts);
-    } catch (error) {
-      console.error("Error reading prompts data:", error);
-      res.status(500).json({ error: "Internal Server Error" });
-    }
-  });
+
   
   router.post("/usage", verifyToken, (req, res) => {
     try {
       const { location } = req.body;
+      console.log("Location" + location);
       const prompts = readPromptsData();
       let filteredPrompts = prompts;
   
       if (location && location !== "global") {
         filteredPrompts = filteredPrompts.filter((prompt) =>
-          prompt.Location === location
+          prompt.Location.includes(location) 
         );
       }
   
@@ -163,24 +103,74 @@ router.get('/performance/worse/:threshold', (req, res) => {
     }
   });
   
-  // Route to get average rating based on selected location
-  router.get("/average-rating", verifyToken, (req, res) => {
+  router.get("/rating-counts", verifyToken, (req, res) => {
     try {
       const { location } = req.query;
       const prompts = readPromptsData();
       let filteredPrompts = prompts;
+  
       if (location && location !== "global") {
         filteredPrompts = filteredPrompts.filter((prompt) =>
           prompt.Location.includes(location)
         );
       }
-      const totalRating = filteredPrompts.reduce((sum, prompt) => sum + prompt.Rating, 0);
-      const averageRating = totalRating / filteredPrompts.length;
-      res.json({ averageRating });
+  
+      const ratingCounts = filteredPrompts.reduce((acc, prompt) => {
+        acc[prompt.Rating] = (acc[prompt.Rating] || 0) + 1;
+        return acc;
+      }, {});
+  
+      const ratingData = [
+        { rating: 1, count: ratingCounts[1] || 0 },
+        { rating: 2, count: ratingCounts[2] || 0 },
+        { rating: 3, count: ratingCounts[3] || 0 },
+        { rating: 4, count: ratingCounts[4] || 0 },
+        { rating: 5, count: ratingCounts[5] || 0 },
+      ];
+  
+      res.json(ratingData);
     } catch (error) {
-      console.error("Error reading prompts data:", error);
+      console.error("Error generating rating data:", error);
       res.status(500).json({ error: "Internal Server Error" });
     }
   });
+
+
+  router.get("/word-frequency", verifyToken, (req, res) => {
+    try {
+      const { location } = req.query;
+      const prompts = readPromptsData();
+      let filteredPrompts = prompts;
+  
+      if (location && location !== "global") {
+        filteredPrompts = filteredPrompts.filter((prompt) =>
+          prompt.Location.includes(location)
+        );
+      }
+  
+      const wordFrequency = filteredPrompts.reduce((acc, prompt) => {
+        const words = removeStopwords(prompt.Prompt.toLowerCase().replace(/[^a-zA-Z ]/g, "").split(/\s+/));
+        const filteredWords = words.filter((word) => word.length > 3);
+  
+        filteredWords.forEach((word) => {
+          acc[word] = (acc[word] || 0) + 1;
+        });
+  
+        return acc;
+      }, {});
+  
+      const frequencyData = Object.entries(wordFrequency).map(([keyword, amount]) => ({
+        keyword,
+        amount,
+      }));
+  
+      res.json(frequencyData);
+    } catch (error) {
+      console.error("Error generating word frequency data:", error);
+      res.status(500).json({ error: "Internal Server Error" });
+    }
+  });
+
+  
 
 module.exports = router;

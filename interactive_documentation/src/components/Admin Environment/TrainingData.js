@@ -1,7 +1,7 @@
 // TrainingData.js
 import React, { useState, useEffect } from "react";
-import FileUpload from "../components/FileUpload";
-import FileTable from "../components/FileTable";
+import FileUpload from "./FileUpload";
+import FileTable from "./FileTable";
 
 const TrainingData = () => {
   const [files, setFiles] = useState([]);

@@ -6,7 +6,7 @@
  */
 
 import React from 'react';
-import './../css/ExpandMap.css';
+import './../../css/ExpandMap.css';
 
 /**
  * ExpandMap component

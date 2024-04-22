@@ -7,8 +7,8 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import DOMPurify from 'dompurify';
-import "./../css/ChatComponent.css";
-import generateRequestId from "./idComponent";
+import "./../../css/ChatComponent.css";
+import generateRequestId from "../idComponent";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';

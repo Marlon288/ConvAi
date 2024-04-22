@@ -6,7 +6,7 @@
  */
 
 import React, { useState } from 'react';
-import './../css/ListComponent.css';
+import './../../css/ListComponent.css';
 
 /**
  * ListComponent component

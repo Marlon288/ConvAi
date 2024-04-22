@@ -1,0 +1,22 @@
+.rating-bar-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .average-rating-container {
+    position: relative;
+    height: 30px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .average-rating {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .average-rating-placeholder {
+    height: 100%;
+  }

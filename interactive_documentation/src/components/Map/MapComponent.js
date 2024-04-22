@@ -9,7 +9,7 @@ import { React, useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import './../css/MapComponent.css';
+import './../../css/MapComponent.css';
 import ResetZoom from './ZoomComponent.js';
 import ExpandMap from './ExpandMapComponent.js';
 

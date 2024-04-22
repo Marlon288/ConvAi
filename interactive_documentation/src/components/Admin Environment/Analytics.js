@@ -1,10 +1,9 @@
 // Analytics.js
 import React, { useState, useEffect } from "react";
-import LocationSelector from "./LocationSelector";
-//import DownloadPromptsCard from "./DownloadPromptsCard";
+import LocationSelector from "./LocationSelectorCard";
 import UsageGraph from "./UsageGraph";
-import ListComponent from "./ListComponent"
-//import AverageRatingCard from "./AverageRatingCard";
+import WordCloudCard from "./WordCloudCard";
+import RatingChartCard from "./RatingChartCard";
 
 const Analytics = () => {
   const [locations, setLocations] = useState([]);
@@ -14,9 +13,6 @@ const Analytics = () => {
     fetchLocations();
   }, []);
 
-  /**
-   * Fetches the list of locations from the backend
-   */
   const fetchLocations = () => {
     fetch("http://localhost:9000/api/getFormattedLocations")
       .then(response => response.json())
@@ -25,30 +21,41 @@ const Analytics = () => {
   };
 
   const handleLocationChange = (event) => {
-    setSelectedLocation(event.target.value.trim());
+    const value = event.target.value.trim();
+    const commaIndex = value.indexOf(',');
+
+    if (commaIndex !== -1) {
+      const split = value.split(',');
+      setSelectedLocation(`${split[1].trim()},${split[0].trim()}`);
+    } else {
+      setSelectedLocation(value);
+    }
   };
 
   return (
     <div className="analytics-container">
-      <div className="card-container">
-        <div className="card">
-            <LocationSelector
+      <div className="location-selector-container">
+        <div className="location-selector-card">
+          <LocationSelector
             locations={locations}
             selectedLocation={selectedLocation}
             onLocationChange={handleLocationChange}
-            />
+          />
+        </div>
+      </div>
+      <div className="card-container">
+        <div className="card">
+        <UsageGraph selectedLocation={selectedLocation} />
         </div>
         <div className="card">
-          {/* <DownloadPromptsCard selectedLocation={selectedLocation} /> */}
+          <WordCloudCard selectedLocation={selectedLocation} />
         </div>
         <div className="card">
-           <UsageGraph selectedLocation={selectedLocation} /> 
-        </div>
-        <div className="card">
-          {/* <AverageRatingCard selectedLocation={selectedLocation} /> */}
+          <RatingChartCard selectedLocation={selectedLocation} />
         </div>
       </div>
     </div>
   );
 };
+
 export default Analytics;

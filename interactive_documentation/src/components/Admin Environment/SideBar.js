@@ -1,7 +1,7 @@
 // SideBar.js
 import React from "react";
 import { Link } from "react-router-dom";
-import "../css/SideBar.css";
+import "../../css/SideBar.css";
 
 const Sidebar = ({ onLogout }) => {
 
@@ -13,8 +13,8 @@ const Sidebar = ({ onLogout }) => {
         <div className="sidebar-title">Dashboard</div>
         <nav className="nav-element">
           <ul className="list">
-          <Link to="/admin/training-data" className="list-element"><li>Training Data</li></Link>
           <Link to="/admin/analytics" className="list-element"><li>Analytics</li></Link>
+          <Link to="/admin/training-data" className="list-element"><li>Training Data</li></Link>
           </ul>
         </nav>
         <div className="user-info">

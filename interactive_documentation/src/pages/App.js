@@ -7,9 +7,9 @@
 
 import React, { useState, useEffect } from 'react';
 import './../css/App.css';
-import MapComponent from '../components/MapComponent';
-import ChatComponent from '../components/ChatComponent';
-import ListComponent from '../components/ListComponent';
+import MapComponent from '../components/Map/MapComponent';
+import ChatComponent from '../components/Chat/ChatComponent';
+import ListComponent from '../components/Map/ListComponent';
 import LoginPage from './LoginPage';
 import ProtectedRoute from './ProtectedRoute';
 import AdminPage from './AdminPage';
