@@ -1,4 +1,9 @@
-// TrainingData.js
+/**
+ * @file TrainingData.js
+ * @description This component represents the training data page with file upload and table.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
 import React, { useState, useEffect } from "react";
 import FileUpload from "./FileUpload";
 import FileTable from "./FileTable";
@@ -16,6 +21,7 @@ const TrainingData = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
+
       if (response.ok) {
         const data = await response.json();
         setFiles(data);
@@ -23,9 +29,9 @@ const TrainingData = () => {
         alert("Failed to fetch files");
       }
     };
+
     fetchFiles();
   }, []);
-
 
   /**
    * Handles the deletion of a file
@@ -40,6 +46,7 @@ const TrainingData = () => {
           'Content-Type': 'application/json',
         },
       });
+
       if (response.ok) {
         setFiles(files.map(file => {
           if (file.name === fileName) {
@@ -59,6 +66,7 @@ const TrainingData = () => {
   /**
    * Handles the file upload
    * @param {File} file - The file to upload
+   * @param {string} location - The location to upload the file to
    */
   const handleFileUpload = async (file, location) => {
     console.log(`Uploading ${file?.name} to ${location}...`);

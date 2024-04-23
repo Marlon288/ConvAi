@@ -1,4 +1,9 @@
-// Analytics.js
+/**
+ * @file Analytics.js
+ * @description This component is the analytics page with location selector, usage graph, word cloud, and rating chart.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
 import React, { useState, useEffect } from "react";
 import LocationSelector from "./LocationSelectorCard";
 import UsageGraph from "./UsageGraph";
@@ -13,6 +18,9 @@ const Analytics = () => {
     fetchLocations();
   }, []);
 
+  /**
+   * Gets the locations from the backend
+   */
   const fetchLocations = () => {
     fetch("http://localhost:9000/api/getFormattedLocations")
       .then(response => response.json())
@@ -20,10 +28,13 @@ const Analytics = () => {
       .catch(error => console.error('Error fetching locations:', error));
   };
 
+  /**
+   * Handles the location change event
+   * @param {Event} event - The location change event
+   */
   const handleLocationChange = (event) => {
     const value = event.target.value.trim();
     const commaIndex = value.indexOf(',');
-
     if (commaIndex !== -1) {
       const split = value.split(',');
       setSelectedLocation(`${split[1].trim()},${split[0].trim()}`);
@@ -45,7 +56,7 @@ const Analytics = () => {
       </div>
       <div className="card-container">
         <div className="card">
-        <UsageGraph selectedLocation={selectedLocation} />
+          <UsageGraph selectedLocation={selectedLocation} />
         </div>
         <div className="card">
           <WordCloudCard selectedLocation={selectedLocation} />

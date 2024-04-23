@@ -1,9 +1,20 @@
-// WordCloudCard.js
+/**
+ * @file WordCloudCard.js
+ * @description This component represents a word cloud card with search functionality.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
 import React, { useState, useEffect } from "react";
 import { TagCloud } from "react-tagcloud";
 import "./../../css/WordCloudCard.css";
 import Tooltip from "../Tooltip";
 
+/**
+ * WordCloudCard component
+ * @param {Object} props - Component props
+ * @param {string} props.selectedLocation - The currently selected location
+ * @returns {JSX.Element} The rendered word cloud card component
+ */
 const WordCloudCard = ({ selectedLocation }) => {
   const [wordFrequencyData, setWordFrequencyData] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,6 +25,9 @@ const WordCloudCard = ({ selectedLocation }) => {
     fetchWordFrequencyData();
   }, [selectedLocation]);
 
+  /**
+   * Fetches the word frequency data from the backend
+   */
   const fetchWordFrequencyData = async () => {
     try {
       const response = await fetch(
@@ -26,11 +40,9 @@ const WordCloudCard = ({ selectedLocation }) => {
           },
         }
       );
-
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-
       const data = await response.json();
       const sortedData = data.sort((a, b) => b.amount - a.amount);
       setWordFrequencyData(
@@ -44,6 +56,10 @@ const WordCloudCard = ({ selectedLocation }) => {
     }
   };
 
+  /**
+   * Handles the search query change
+   * @param {Event} event - The search input change event
+   */
   const handleSearchChange = (event) => {
     setSearchQuery(event.target.value);
   };
@@ -56,19 +72,27 @@ const WordCloudCard = ({ selectedLocation }) => {
     item.value.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-
-  const handleCountMouseEnter = (index) => {
+  /**
+   * Handles the mouse enter event on the count column
+   */
+  const handleCountMouseEnter = () => {
     setHoveredColumn(true);
   };
 
+  /**
+   * Handles the mouse leave event on the count column
+   */
   const handleCountMouseLeave = () => {
     setHoveredColumn(false);
   };
 
+  /**
+   * Handles the mouse move event
+   * @param {Event} event - The mouse move event
+   */
   const handleMouseMove = (event) => {
     setMousePosition({ x: event.clientX, y: event.clientY });
   };
-
 
   return (
     <div className="word-cloud-card">
@@ -87,6 +111,7 @@ const WordCloudCard = ({ selectedLocation }) => {
           placeholder="Search words..."
           value={searchQuery}
           onChange={handleSearchChange}
+          aria-label="Search words"
         />
         <div className="search-results" onMouseMove={handleMouseMove}>
           <table>

@@ -11,7 +11,7 @@ var path = require("path");
 var fs = require('fs');
 
 /**
- * Route for getting the list of locations.
+ * Route for getting the list of locations, formatted for analytic page
  */
 router.get('/getFormattedLocations', (req, res) => {
     const filePath = path.join(__dirname, '../data/Locations.json');

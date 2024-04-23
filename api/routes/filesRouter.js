@@ -1,6 +1,6 @@
 /**
  * @file filesRouter.js
- * @description Files router module for handling file-related routes.
+ * @description Files router module for handling file routes.
  * @author Marlon D'Ambrosio
  * @version 1.0
  */

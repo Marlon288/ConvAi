@@ -1,8 +1,19 @@
-// RatingBarChart.js
+/**
+ * @file RatingBarChart.js
+ * @description This component represents a bar chart for rating distribution.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
 import React, { useState, useEffect } from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine, Label } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import "./../../css/RatingChartCard.css";
 
+/**
+ * RatingChartCard component
+ * @param {Object} props - Component props
+ * @param {string} props.selectedLocation - The currently selected location
+ * @returns {JSX.Element} The rendered rating chart card component
+ */
 const RatingChartCard = ({ selectedLocation }) => {
   const [ratingData, setRatingData] = useState([]);
   const [averageRating, setAverageRating] = useState(null);
@@ -11,6 +22,9 @@ const RatingChartCard = ({ selectedLocation }) => {
     fetchRatingData();
   }, [selectedLocation]);
 
+  /**
+   * Fetches the rating data from the backend
+   */
   const fetchRatingData = async () => {
     try {
       const response = await fetch(
@@ -23,11 +37,9 @@ const RatingChartCard = ({ selectedLocation }) => {
           },
         }
       );
-
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
-
       const data = await response.json();
       setRatingData(data);
       setAverageRating(calculateAverageRating(data));
@@ -36,6 +48,11 @@ const RatingChartCard = ({ selectedLocation }) => {
     }
   };
 
+  /**
+   * Calculates the average rating from the rating data
+   * @param {Array} data - The rating data
+   * @returns {number} The average rating
+   */
   const calculateAverageRating = (data) => {
     const totalRating = data.reduce((sum, entry) => sum + entry.rating * entry.count, 0);
     const totalCount = data.reduce((sum, entry) => sum + entry.count, 0);
@@ -46,7 +63,11 @@ const RatingChartCard = ({ selectedLocation }) => {
     <div>
       <h3>Rating Distribution</h3>
       <ResponsiveContainer width="100%" height={400}>
-        <BarChart data={ratingData} margin={{ top: 15, right: 10, bottom: 10, left: 10 }}>
+        <BarChart
+          data={ratingData}
+          margin={{ top: 15, right: 10, bottom: 10, left: 10 }}
+          aria-label="Rating distribution chart"
+        >
           <XAxis dataKey="rating" />
           <YAxis allowDecimals={false} />
           <Tooltip />

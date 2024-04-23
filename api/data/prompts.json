@@ -634,15 +634,6 @@
     "DateTime": "2024-04-18T16:54:13.429Z"
   },
   {
-    "id": "4e6b4e0b-2e35-4fea-bde1-eec9a64d4259",
-    "Prompt": "Can i hear more about elephants",
-    "Answer": "<!DOCTYPE html>\n<html>\n<head>\n<title>Response to Inquiry</title>\n</head>\n<body>\n<p>Nothing was found that fits your description</p>\n</body>\n</html>",
-    "Performance": 6.032633699953556,
-    "LLM": "gpt-4-1106-preview",
-    "Location": "Frauenfeld,Switzerland",
-    "DateTime": "2024-04-18T16:54:50.885Z"
-  },
-  {
     "id": "42ffddae-c9b0-43aa-8fc3-803d2a523c85",
     "Prompt": "Can you delve deeper into that?",
     "Answer": "<!DOCTYPE html>\n<html>\n<head>\n<title>Entering Meter Readings for Work Order Equipment</title>\n</head>\n<body>\n<h3>Entering Meter Readings for Work Order Equipment</h3>\n\nTo enter meter readings for work order equipment, please follow the steps below:<br><br>\n\n<ul>\n    <li><b>Step 1:</b> Select <b>Work</b> &gt; <b>Work Orders</b>.</li>\n    <li><b>Step 2:</b> Select the work order containing the equipment for which to enter meter readings, and then click the <b>Meter Readings</b> tab.</li>\n    <li>Specify this information:\n        <ul>\n            <li><b>Target Equipment</b> - Modify the equipment for which to enter meter readings as necessary. Target Equipment is automatically populated with the top-level equipment in the meter structure and Equipment with the equipment defined on the work order.</li>\n            <li>If you select a new Target Equipment, all the fields are updated on the form based on</li>\n        </ul>\n    </li>\n    <li>Note: You can delete a meter reading if you find that the reading has been entered in error; however, you cannot modify the value of an existing meter reading.</li>\n    <li>In many cases, the meter for a piece of equipment on a work order is the child meter of a meter attached to the parent equipment in an asset hierarchy. In such cases, the new meter reading needs to be entered/submitted for the parent equipment/meter even though you are entering the reading via the child equipment/meter on the work order.</li>\n</ul>\n<br>\n\n<h3>Reopening Closed Work Orders</h3>\n\nTo reopen closed work orders, please adhere to the following steps:<br><br>\n\n<ul>\n    <li><b>Step 1:</b> Select <b>Work</b> &gt; <b>Work Orders</b>.</li>\n    <li><b>Step 2:</b> Select the work order to reopen, and then click the <b>Closing</b> tab.</li>\n    <li>Specify this information:\n        <ul>\n            <li><b>Status</b> - Select <b>Released</b> as the status of the work order.</li>\n        </ul>\n    </li>\n    <li><b>Step 3:</b> Click <b>Save Record</b>. <i>Reopened</i> is selected when the work order is saved.</li>\n</ul>\n\n<br><b>Note:</b> The detailed context for the processes such as viewing labor utilization is not provided within the context you've shared with me. For additional information or steps, please refer to the relevant sections of the Hexagon Documentation Site or contact your system administrator. \n\n</body>\n</html>",
@@ -708,30 +699,10 @@
   },
   {
     "id": "d6196167-9a19-4c94-a8e4-6b7399866747",
-    "Prompt": "Tell me abnout elephants",
-    "Answer": "Nothing was found that fits your description",
-    "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
-    "Location": "Frauenfeld,Switzerland",
-    "DateTime": "2024-04-19T08:58:41.170Z",
-    "Rating": 5
-  },
-  {
-    "id": "d6196167-9a19-4c94-a8e4-6b7399866747",
     "Prompt": "",
     "Answer": "Demo Purposes",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
-    "Location": "Frauenfeld,Switzerland",
-    "DateTime": "2024-04-14T08:58:41.170Z",
-    "Rating": 1
-  },
-  {
-    "id": "d6196167-9a19-4c94-a8e4-6b7399866747",
-    "Prompt": "",
-    "Answer": "Demo Purposes",
-    "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-13T08:58:41.170Z",
     "Rating": 2
@@ -741,7 +712,7 @@
     "Prompt": "",
     "Answer": "Demo Purposes",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-13T08:58:41.170Z",
     "Rating": 2
@@ -751,7 +722,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-13T08:58:41.170Z",
     "Rating": 2
@@ -761,7 +732,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-13T08:58:41.170Z",
     "Rating": 2
@@ -771,7 +742,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-12T08:58:41.170Z",
     "Rating": 4
@@ -781,7 +752,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-11T08:58:41.170Z",
     "Rating": 2
@@ -791,7 +762,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-09T08:58:41.170Z",
     "Rating": 2
@@ -801,7 +772,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-08T08:58:41.170Z",
     "Rating": 2
@@ -811,7 +782,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-08T08:58:41.170Z",
     "Rating": 4
@@ -821,7 +792,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-05T08:58:41.170Z",
     "Rating": 5
@@ -831,7 +802,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-03T08:58:41.170Z",
     "Rating": 2
@@ -841,7 +812,7 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-02T08:58:41.170Z",
     "Rating": 2
@@ -851,9 +822,395 @@
     "Prompt": "",
     "Answer": "",
     "Performance": 1.9381078000068666,
-    "LLM": "gpt-4-1106-preview",
+    "LLM": "Demo-Entry",
     "Location": "Frauenfeld,Switzerland",
     "DateTime": "2024-04-01T08:58:41.170Z",
     "Rating": 2
+  },
+  {
+    "id": "0e7694d5-b6a1-4bed-b589-36c5df66aba6",
+    "Prompt": "How do I schedule a workorder/",
+    "Answer": "<h3>How to schedule a work order:</h3>\n<ul>\n  <li>Select <b>Work > WO Planning > WO Scheduling</b>.</li><br>\n  <li>Specify the following information:\n    <ul>\n      <li>Organization - Specify the organization for which to schedule work if you use multi-organization security.</li>\n      <li>Schedule By - Select either Employee or Trade/Department.</li>\n      <li>If selecting <b>Employee</b>, enter the Employee for whom you wish to schedule the work.</li>\n      <li>If selecting <b>Trade/Department</b>, enter the trade and department.</li>\n    </ul>\n  </li><br>\n</ul>",
+    "Performance": 5.429019700050354,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-23T11:44:18.221Z",
+    "Rating": 5
+  },
+  {
+    "id": "bf7764f0-b5d0-466a-9f76-6bd2fa1d2a11",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li><b>Definition:</b> An employee register is a list or database containing information about the personnel performing work for a specific task or project.</li>\n</ul>",
+    "Performance": 1.9623988000154495,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-23T11:44:33.588Z",
+    "Rating": 3
+  },
+  {
+    "id": "c03d559a-6d61-483a-a563-5cf42c1725fa",
+    "Prompt": "Can you tell me about target Equipment#",
+    "Answer": "<h3>Target Equipment:</h3>\n<ul>\n    <li>Target Equipment is automatically populated with the top-level equipment in the meter structure and Equipment with the equipment defined on the work order.</li><br>\n    <li>If you select a new Target Equipment, all the fields are updated on the form based on the new combination of the Target Equipment and UOM, with the exception of Equipment, Equipment Org., and Equipment Description.</li><br>\n    <li>The Target Equipment is the Equipment on the work order header only if the equipment meter is a stand-alone meter. However, if the Equipment on the work order header is a child equipment in an asset hierarchy whose parent equipment has the same UOM on the usage definition and the usage definitions are defined as parent-child meters, then the Target Equipment may be the parent of the Equipment on the work order header.</li><br>\n</ul>",
+    "Performance": 4.454184300065041,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:46:08.137Z"
+  },
+  {
+    "id": "1e890cf7-2aed-4b11-96ed-9e234601dbfe",
+    "Prompt": "What about scheduling workorder?",
+    "Answer": "<h3>Scheduling Work Orders:</h3>\n<ul>\n  <li>Select Work > WO Planning > WO Scheduling.</li><br>\n  <li>Specify the following information:</li>\n  <ul>\n    <li><b>Organization</b> - Specify the organization for which to schedule work if you use multiorganization security.</li>\n    <li><b>Schedule By</b> - Select either Employee or Trade/Department.</li>\n    <li>For Employee, enter the Employee for whom you wish to schedule the work. For Trade/Department, enter the trade and department.</li>\n  </ul><br>\n  <li>Select Backlogged WOs for Dataspy in the Activities section of the form. Drag a work order from the list to the day on the calendar to schedule it.</li><br>\n  <li>To reschedule work orders, select the work order from the Daily Schedule list and drag it to the desired date on the calendar.</li><br>\n</ul>",
+    "Performance": 5.20441420006752,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:46:38.055Z",
+    "Rating": 4
+  },
+  {
+    "id": "c8171a40-219e-47ee-907d-3fc469accce6",
+    "Prompt": "On which pages do i find that information?",
+    "Answer": "<h3>Information on balancing the workload can be found on the following pages:</h3>\n<ul>\n  <li><b>Parameters page:</b> Define the selection criteria for locating the work orders to balance.</li><br>\n  <li><b>Preview page:</b> Preview the work orders prior to balancing them and select or clear the work orders to process as necessary.</li><br>\n  <li><b>Balance Load page:</b> Balance the work order load.</li><br>\n</ul>",
+    "Performance": 3.1165415999889374,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:47:03.491Z",
+    "Rating": 0
+  },
+  {
+    "id": "15b70f82-13f6-40fb-ac2c-b6254ae906b7",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An employee register is:</h3>\n<ul>\n  <li>Specifying the personnel performing the work for which to book hours.</li>\n  <li>Choosing the date on which the work was performed.</li>\n</ul>",
+    "Performance": 1.8000915999412537,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:47:30.560Z"
+  },
+  {
+    "id": "3dcd7a63-d659-4f12-98b7-816689130108",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li>An employee register is where you can specify the personnel performing the work for which to book hours.</li>\n  <li>To access the employee register:</li>\n  <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n  <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n  <li><b>Step 3:</b> Click Create Crew to open the Create Crew pop-up window.</li>\n  <li><b>Step 4:</b> Specify the date range for the substitute employee if adding them temporarily to the crew.</li>\n  <li><b>Step 5:</b> Select the Show Available Only checkbox to display only available employees and crews for the selected work order activities.</li>\n</ul>",
+    "Performance": 4.613204699993133,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:47:36.745Z"
+  },
+  {
+    "id": "fca9581b-de20-43da-9880-577b1a1d77fb",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li>\n  <li><b>Equipment</b> - Choose one of the following options if the work order is a multiple equipment work order:<br>\n    - All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders.<br>\n    - The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n</ul>",
+    "Performance": 4.825266800045967,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:47:43.556Z"
+  },
+  {
+    "id": "666834e1-a524-4ffb-8d17-c1c9fe350e49",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li>An employee register is a record of personnel who are assigned to perform work and book hours for a specific task.</li>\n  <li>To view the employee register, follow these steps:\n    <ol>\n      <li>Open the EAM System.</li>\n      <li>Select the work order or activity for which you want to view the assigned employees.</li>\n      <li>Check the Employee section to see a list of personnel allocated for the task.</li>\n    </ol>\n  </li>\n</ul>",
+    "Performance": 2.949091700077057,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:47:49.451Z"
+  },
+  {
+    "id": "f14e0160-77ac-47ad-9c7a-bb5099ce9f1f",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li>\n</ul>\n<br>\nTo view the employee or trade/department Equipment in the details section of the form:\n<ul>\n  <li><b>Step 1:</b> Place the cursor over a calendar day.</li>\n  <li><b>Step 2:</b> View the employee or trade/department Equipment in the details section of the form.</li>\n</ul>",
+    "Performance": 3.2726877999305723,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:47:56.385Z"
+  },
+  {
+    "id": "6c4b6c28-0e38-4f82-9056-852868812224",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li><b>Employee:</b> Specify the personnel performing the work for which to book hours.</li>\n  <li><b>Date:</b> Specify the date on which the work was performed.</li>\n  <li><b>Equipment:</b> Choose one of the following options if the work order is a multiple equipment work order:</li>\n  <ul>\n    <li>All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity.</li>\n    <li>The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n  </ul>\n</ul>",
+    "Performance": 4.215014600038528,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:48:05.048Z"
+  },
+  {
+    "id": "613ce37e-9e2a-4d6c-b0f5-fa41c615c6f5",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li><b>Definition:</b> An employee register is a record or list of personnel who are registered or assigned to perform work within the EAM System.</li>\n  <br>\n  <li><b>Steps to access the Employee Register:</b></li>\n  <li><Step 1> Open the GIS Map WO Dispatching screen.</li>\n  <li><Step 2> Select the work order activity for which to dispatch labor.</li>\n  <li><Step 3> Click Create Crew.</li>\n  <li><Step 4> Optionally, specify the date range for the substitute employee if creating a temporary crew.</li>\n  <li><Step 5> Optionally, select the Show Available Only check box to display only available employees and crews.</li>\n  <br>\n  <li><b>Information in the Employee Register:</b></li>\n  <li>- Personnel information such as name, skillset, qualifications, and availability.</li>\n  <li>- Assigned work orders and activities.</li>\n  <li>- Labor hours booked and availability for specific timeframes.</li>\n</ul>",
+    "Performance": 5.908072299957276,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:48:18.865Z"
+  },
+  {
+    "id": "304f63a5-e4d1-436b-972a-a96e5b487125",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li><b>Definition:</b> The employee register is a record of all personnel who are assigned to perform work within the EAM System.</li>\n  <li><b>Steps to access the employee register:</b><br>\n    <ol>\n      <li>Open the GIS Map WO Dispatching screen.</li>\n      <li>Select the work order activity for which to dispatch labor.</li>\n      <li>Click Create Crew to access the employee register.</li>\n    </ol>\n  </li>\n</ul>",
+    "Performance": 2.8444790999889373,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:48:28.837Z"
+  },
+  {
+    "id": "bf97a30e-9ad0-4241-9dbf-58434df7edee",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n    <li><b>Definition:</b> The employee register is where you can specify the personnel performing the work for which to book hours.</li>\n    <li><b>Steps to access:</b><br>\n        <ul>\n            <li>Open the GIS Map WO Dispatching screen.</li>\n            <li>Select the work order activity for which to dispatch labor.</li>\n            <li>Click Create Crew.</li>\n            <li>A pop-up window will open where you can specify the details for the employee register.</li>\n        </ul>\n    </li>\n</ul>",
+    "Performance": 3.806419000029564,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:48:34.331Z"
+  },
+  {
+    "id": "c2010896-b205-4c11-9016-df836573ff8e",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li><br>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li><br>\n  <li><b>Equipment</b> - Choose one of the following options if the work order is a multiple equipment work order:</li>\n  <ul>\n    <li>All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders. The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n  </ul><br>\n</ul>",
+    "Performance": 4.724740199923516,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:48:40.490Z"
+  },
+  {
+    "id": "9bd75a89-7fdd-4572-a180-cba59335eb7e",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li><br>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li><br>\n  <li><b>Equipment</b> - Choose one of the following options if the work order is a multiple equipment work order:</li>\n  <ul>\n    <li>All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders. The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n  </ul><br>\n</ul>",
+    "Performance": 5.060788900017738,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:49:04.246Z"
+  },
+  {
+    "id": "c36ebe13-5def-497f-bf32-a641c9aa2e33",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li>An employee register is a list of personnel who are assigned to perform work and book hours in the EAM System.</li>\n  <li>It includes information such as the employee's name, department, and qualifications.</li>\n  <li>The register may also show availability for work orders and activities based on labor hours calculation.</li>\n</ul>\n<br> \n<h3>Steps to View Employee Register in EAM System:</h3>\n<ol>\n  <li>Open the EAM System.</li>\n  <li>Navigate to the Employee Register section.</li>\n  <li>Review the list of employees with their respective details and labor availability.</li>\n</ol>",
+    "Performance": 3.9362971999645233,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:49:19.996Z"
+  },
+  {
+    "id": "6a44a46e-2c8d-435c-84e5-c5299e651246",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n    <li>An employee register is a record of personnel who are assigned to perform work within the system.</li>\n    <li>It includes details such as employee name, position, qualifications, and availability for dispatching.</li>\n    <li>To view the employee register:</li>\n    <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n    <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n    <li><b>Step 3:</b> Click Create Crew to access the employee register.</li>\n</ul>",
+    "Performance": 3.7781801000833513,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:49:28.453Z"
+  },
+  {
+    "id": "7b4d4ce6-f61e-4062-9d56-b591b30944b8",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Definition:</b> An employee register is a record of personnel who are assigned to perform work and book hours in the EAM system.</li>\n  <br>\n  <li><b>Steps to view labor utilization for a department:</b>\n    <ol>\n      <li>Enter the department for which you wish to view labor utilization.</li>\n      <li>Place the cursor over a calendar day to view the employee or trade/department equipment in the details section of the form.</li>\n    </ol>\n  </li>\n  <br>\n  <li><b>Steps to temporarily add an employee to a crew:</b>\n    <ol>\n      <li>Open the GIS Map WO Dispatching screen.</li>\n      <li>Select the work order activity for which to dispatch labor.</li>\n      <li>Click Create Crew.</li>\n      <li>If adding a temporary crew, select the Temporary check box and specify the expiration date.</li>\n      <li>Select the Show Available Only check box to display available employees and crews for the selected activities.</li>\n    </ol>\n  </li>\n  <br>\n  <li><b>Steps to calculate labor availability for a department:</b>\n    <ol>\n      <li>Specify the department for which to calculate labor availability.</li>\n      <li>Enter the Start Date and End Date of the period for which to calculate available labor.</li>\n      <li>Click Calculate.</li>\n      <li>Click Close.</li>\n    </ol>\n  </li>\n</ul>",
+    "Performance": 7.619853999972343,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:49:49.440Z"
+  },
+  {
+    "id": "fcbaf395-8bd1-4a9e-b4d5-a6e830a9e852",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An Employee Register</h3>\n<ul>\n  <li>An employee register is where you can specify the personnel performing the work for which to book hours.</li>\n  <li>To access the employee register:</li>\n  <ul>\n    <li>Open the GIS Map WO Dispatching screen.</li>\n    <li>Select the work order activity for which to dispatch labor.</li>\n    <li>Click Create Crew.</li>\n  </ul>\n</ul>\n<br>",
+    "Performance": 2.925558899998665,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:49:54.105Z"
+  },
+  {
+    "id": "d9f7896d-eb9e-4466-aff7-ac18145d35f2",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n    <li>An Employee Register is a record of personnel performing work for which hours are booked.</li>\n    <li><b>Steps to view Employee Register:</b><br>\n        <ul>\n            <li>Specify the Department for filtering trade records for the selected date on the calendar.</li>\n            <li>Hover the cursor over a calendar day to view the employee or trade/department equipment in the details section of the form.</li>\n        </ul>\n    </li>\n</ul>",
+    "Performance": 4.215554399967194,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:50:12.461Z"
+  },
+  {
+    "id": "1528a6e4-5d1b-486b-8c6c-56741b25bf71",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Definition:</b> The employee register is a list of personnel who are assigned to perform work and book hours in the EAM System.</li>\n  <br>\n  <li><b>Steps to access employee register:</b></li>\n  <ul>\n    <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n    <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n    <li><b>Step 3:</b> Click Create Crew.</li>\n    <li><b>Step 4:</b> Optionally, specify the date range for the substitute employee if adding a temporary crew member.</li>\n    <li><b>Step 5:</b> Optionally, select to show available employees only for dispatching.</li>\n  </ul>\n</ul>",
+    "Performance": 4.971825600028038,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:50:27.528Z",
+    "Rating": 3
+  },
+  {
+    "id": "271e6974-04a7-480c-93de-20920288474a",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An employee register:</h3>\n<ul>\n    <li>Specifies the personnel performing the work for which to book hours.</li>\n    <li>Is needed to view the labor utilization for specific dates and departments.</li>\n</ul>\n<br>\n<Step 1>: Specify the personnel performing the work for which to book hours.\n<Step 2>: Enter the department for which you wish to view the labor utilization for the selected date on the calendar.",
+    "Performance": 2.8800564999580383,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:50:34.723Z",
+    "Rating": 5
+  },
+  {
+    "id": "702c9674-97c3-4844-8bb8-031189c39cdc",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n    <ul>\n        <li><b>Definition:</b> The employee register is a list of personnel who are scheduled to perform work or are available for dispatching on a specific work order activity.</li>\n        <li><b>Steps to access the Employee Register:</b><br>\n            <ol>\n                <li>Open the GIS Map WO Dispatching screen.</li>\n                <li>Select the work order activity for which to dispatch labor.</li>\n                <li>Click Create Crew.</li>\n            </ol>\n        </li>\n        <li><b>Information included in the Employee Register:</b><br>\n            <ul>\n                <li>All employees and crews available for dispatching on this screen have met the minimum qualifications to perform work for the selected work order activity.</li>\n                <li>The dispatcher assigns the appropriate date range for the substitute employee to be added to the crew temporarily.</li>\n                <li>The system calculates labor availability based on employee exceptions for Trade and Department.</li>\n            </ul>\n        </li>\n    </ul>",
+    "Performance": 5.111646200060845,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:50:44.418Z",
+    "Rating": 5
+  },
+  {
+    "id": "f872cd59-a332-4893-8ec7-4484b26cb285",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li>An employee register is a record of all personnel performing work within the EAM system.</li>\n  <li>It includes information such as the employee's name, position, qualifications, and availability.</li>\n  <li>To access the employee register in the EAM system:</li>\n  <ul>\n    <li><b>Step 1:</b> Navigate to the Employee Management section of the system.</li>\n    <li><b>Step 2:</b> Select the option for Employee Register.</li>\n  </ul>\n  <li>Within the employee register, you can view and manage all employee information relevant to their work orders and labor utilization.</li>\n</ul>",
+    "Performance": 4.191740000009537,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:50:51.357Z",
+    "Rating": 5
+  },
+  {
+    "id": "83478c5e-a16e-4842-95bc-2d49e241d1be",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li>\n  <li><b>Equipment</b> - Choose one of the following options if the work order is a multiple equipment work order:<br>\n    - <b>All Equipment</b> - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders. The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n</ul>",
+    "Performance": 4.3264199000597,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:50:59.725Z",
+    "Rating": 5
+  },
+  {
+    "id": "6c4ca3b5-aea0-4f16-ad50-1289ba3e03b9",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>What is an employee register?</h3>\n<ul>\n  <li><b>Employee Register:</b> The employee register is where you specify the personnel performing the work for which to book hours.</li>\n</ul>",
+    "Performance": 1.9503513000011443,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:51:05.150Z",
+    "Rating": 5
+  },
+  {
+    "id": "2a5c2cc3-02f1-4f52-8d38-61ac2967e114",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li>An employee register is a record or list of personnel involved in performing work within the EAM system.</li>\n  <li>It includes information such as employee names, job roles, qualifications, and availability for assignments.</li>\n  <li>To view the employee register:</li>\n  <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n  <li><b>Step 2:</b> Select the work order activity for which labor needs to be dispatched.</li>\n  <li><b>Step 3:</b> Click Create Crew to view available employees and crews for dispatching.</li>\n</ul>",
+    "Performance": 4.223447299957275,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:51:19.721Z"
+  },
+  {
+    "id": "07255a3c-6dbc-428e-80ee-f762b03d12a7",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li>An employee register is where you specify the personnel performing the work for which to book hours.</li>\n  <li>The employee register is where you assign the appropriate date range for the substitute employee when temporarily adding an employee to the crew.</li>\n  <br>\n</ul>",
+    "Performance": 2.23515130007267,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:51:23.957Z"
+  },
+  {
+    "id": "8c25b589-5704-4114-93f2-374031453bce",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Definition:</b> An employee register is a list of all personnel performing work within the system.</li>\n  <li><b>Steps to Access:</b><br>\n    <ol>\n      <li>Open the system and navigate to the Employee Register section.</li>\n      <li>View the list of employees along with their relevant details such as department and labor utilization.</li>\n    </ol>\n  </li>\n</ul>",
+    "Performance": 3.099179400086403,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:51:28.461Z"
+  },
+  {
+    "id": "406682ba-7b32-46e8-aa1a-e0d70fd38bfc",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An employee register</h3>\n<ul>\n  <li>An employee register is where you specify the personnel performing the work for which to book hours.</li>\n  <li>The employee register includes information such as the date on which the work was performed and the equipment used.</li>\n</ul>\n<br>",
+    "Performance": 2.9504799000024797,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:51:32.471Z"
+  },
+  {
+    "id": "780d791a-02f1-41cb-95fa-a16bb33dfc28",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n    <li><b>Definition:</b> An employee register is a record or list of employees within the EAM system.</li>\n    <li><b>Steps to view labor utilization for employees:</b><br>\n        <b>1. </b> Navigate to the labor utilization section in the EAM system.<br>\n        <b>2. </b> Enter the department for which you wish to view labor utilization on the calendar.<br>\n        <b>3. </b> Place the cursor over a calendar day to view the employee or trade/department equipment details.</li>\n</ul>",
+    "Performance": 3.9346478999853134,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:51:41.278Z"
+  },
+  {
+    "id": "03254875-71a4-4c08-ac76-a472eda2e846",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An Employee Register:</h3>\n<ul>\n  <li>Specifies the personnel performing the work for which to book hours.</li><br>\n  <li>Is used to temporarily add an employee to a crew when needed.</li><br>\n  <li>Shows all employees and crews available for dispatching.</li><br>\n  <li>Contains information on the date range for the substitute employee.</li><br>\n</ul>",
+    "Performance": 3.7394658000469208,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:05.476Z"
+  },
+  {
+    "id": "025ad202-a979-42fc-9afc-b6fe7ea93d74",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>What is an employee register?</h3>\n<ul>\n    <li>An employee register is a list of all personnel performing work for which to book hours.</li>\n    <li>The employee register includes information such as the employee's name, position, and availability for work orders.</li>\n    <li>To access the employee register:</li>\n    <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n    <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n</ul>",
+    "Performance": 4.85078620004654,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:12.737Z"
+  },
+  {
+    "id": "8b5617d0-8cf3-4771-9efb-8785c84b1e72",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Employee Register:</b> Specify the personnel performing the work for which to book hours.</li><br>\n  <li><b>Date:</b> Specify the date on which the work was performed.</li><br>\n  <li><b>Equipment:</b> Choose one of the following options if the work order is a multiple equipment work order:</li>\n  <ul>\n    <li>All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders. The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n  </ul><br>\n</ul>",
+    "Performance": 4.853914999961853,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:18.930Z",
+    "Rating": 5
+  },
+  {
+    "id": "cbe4381d-0087-4852-a32f-87446046b332",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li><br>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li><br>\n  <li><b>Equipment</b> - Choose one of the following options if the work order is a multiple equipment work order:\n    <ul>\n      <li>All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders. The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n    </ul>\n  </li><br>\n</ul>",
+    "Performance": 4.886752600073814,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:29.613Z",
+    "Rating": 5
+  },
+  {
+    "id": "6d1d0d28-7c76-4ba8-93d7-b67de9bc67f1",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li><b>Definition:</b> An Employee Register is a list of all personnel who are scheduled to perform work for a specific work order activity.</li>\n  <li><b>Steps to Access Employee Register:</b><br>\n    <ol>\n      <li>Open the GIS Map WO Dispatching screen.</li>\n      <li>Select the work order activity for which to dispatch labor.</li>\n      <li>Click Create Crew. The Create Crew pop up window is opened.</li>\n    </ol>\n  </li>\n  <li><b>Important Information:</b> All employees and crews available for dispatching on this screen must meet the minimum qualifications to perform work for the selected work order activity.</li>\n</ul>",
+    "Performance": 4.157424499988556,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:36.879Z",
+    "Rating": 5
+  },
+  {
+    "id": "303ab52c-4369-45ea-8a17-70ce014e85da",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register</h3>\n<ul>\n  <li>The employee register is a record of personnel performing work for which hours are booked.</li>\n</ul>",
+    "Performance": 1.6443018000125884,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:42.564Z",
+    "Rating": 5
+  },
+  {
+    "id": "2a5c8389-6813-48c8-a80d-b5b5a3535420",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>Employee Register:</h3>\n<ul>\n  <li>An employee register is a list or database that contains information about all the employees in a company, including their personal details, work assignments, and schedule.</li>\n  <li>The employee register helps in tracking and managing employee information efficiently.</li>\n</ul>",
+    "Performance": 2.463389699935913,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:49.965Z",
+    "Rating": 5
+  },
+  {
+    "id": "229e2622-6d97-4be8-8057-be12f965bb6a",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An Employee Register</h3>\n<ul>\n  <li>An Employee Register is where you specify the personnel performing the work for which to book hours.</li><br>\n  <li>To access the Employee Register:</li>\n  <ul>\n    <li>Open the GIS Map WO Dispatching screen.</li>\n    <li>Select the work order activity for which to dispatch labor.</li>\n    <li>Click Create Crew to open the Create Crew pop up window.</li>\n  </ul>\n  <li>Specify the date range for the substitute employee if temporarily adding an employee to the crew.</li><br>\n  <li>All employees and crews available for dispatching must meet the minimum qualifications to perform the work order activity for the specified date range.</li><br>\n</ul>",
+    "Performance": 3.589798900008202,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:52:57.355Z",
+    "Rating": 5
+  },
+  {
+    "id": "6c6a51a2-e9cd-4dc1-b332-31909f92ebde",
+    "Prompt": "What is an employee register?",
+    "Answer": "<h3>An Employee Register</h3>\n<ul>\n  <li><b>Employee</b> - Specify the personnel performing the work for which to book hours.</li><br>\n  <li><b>Date</b> - Specify the date on which the work was performed.</li><br>\n  <li><b>Equipment</b> - Choose one of the following options if the work order is a multiple equipment work order:</li>\n  <ul>\n    <li>All Equipment - Enter All Equipment to evenly distribute the booked labor to each equipment record on the work order. Upon saving the transaction, the system creates the labor booking records and applies them to each related work order for each equipment and selected activity. The Rate applicable to the multiple equipment work order will also be applied to all MEC work orders.</li>\n    <li>The system automatically applies any remainder of the Hours Worked to the last equipment record added to the work order.</li>\n  </ul><br>\n  <li><b>Temporary Crew</b> - To temporarily add an employee to the crew, the dispatcher assigns the appropriate date range for the substitute employee.</li>\n  <ul>\n    <li>Open the GIS Map WO Dispatching screen.</li>\n    <li>Select the work order activity for which to dispatch labor.</li>\n    <li>Click Create Crew. The Create Crew pop up window is opened.</li>\n    <li>Optionally, if this crew is being created for a temporary period of time, select the Temporary check box, and then specify the date the \"temporary\" crew will expire in Expiration Date.</li>\n    <li>Optionally, select the Show Available Only check box to only display available employees and crews that have enough remaining available hours to perform the selected WO activities.</li>\n  </ul><br>\n  <li><b>Department</b> - Specify the department for which to calculate labor availability.</li>\n  <ul>\n    <li>The system totals employee exceptions for Trade and Department to calculate the total amount of labor hours available for a specific time-frame.</li>\n    <li>Enter the Start Date and End Date of the period for which to calculate available labor. End Date must be later than or equal to Start Date.</li>\n    <li>Click Calculate.</li>\n    <li>Click Close.</li>\n  </ul>\n</ul>",
+    "Performance": 10.129571099996566,
+    "LLM": "gpt-3.5-turbo",
+    "Location": "Norwich,UK",
+    "DateTime": "2024-04-23T11:53:20.772Z",
+    "Rating": 5
   }
 ]

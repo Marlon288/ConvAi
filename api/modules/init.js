@@ -48,7 +48,7 @@ async function initVectorStore() {
 async function initRetrievalChain() {
   const chatModel = new ChatOpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
-    modelName: "gpt-4-1106-preview",
+    modelName: "gpt-3.5-turbo",
     temperature: 0.92,
     maxTokens: 750
   });

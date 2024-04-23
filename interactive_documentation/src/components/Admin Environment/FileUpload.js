@@ -1,11 +1,10 @@
 /**
  * @file FileUpload.js
- * @description This component renders a file upload interface and handles file selection and upload.
+ * @description This component is a file upload interface and handles file selection and upload.
  * @author Marlon D'Ambrosio
  * @version 1.0
  */
-
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 
 /**
  * FileUpload component
@@ -23,12 +22,14 @@ function FileUpload({ onFileUpload }) {
     fetchLocations();
   }, []);
 
+  /**
+   * Fetches the locations from the backend
+   */
   const fetchLocations = async () => {
     try {
       const response = await fetch("http://localhost:9000/api/getLocations");
       if (response.ok) {
         const data = await response.json();
-        // Sort the locations alphabetically based on the location_label
         const sortedLocations = data.sort((a, b) =>
           a.location_label.localeCompare(b.location_label)
         );
@@ -64,6 +65,10 @@ function FileUpload({ onFileUpload }) {
     }
   };
 
+  /**
+   * Handles the location change event
+   * @param {Object} event - The location change event
+   */
   const handleLocationChange = (event) => {
     setSelectedLocation(event.target.value);
   };
@@ -97,6 +102,7 @@ function FileUpload({ onFileUpload }) {
             value={selectedLocation}
             onChange={handleLocationChange}
             className="location-select"
+            aria-label="Select Location"
           >
             <option value="">Select Location</option>
             {locations.map((location) => (
