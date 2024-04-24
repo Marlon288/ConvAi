@@ -60,12 +60,12 @@ const RatingChartCard = ({ selectedLocation }) => {
   };
 
   return (
-    <div>
+    <div className="chart-container">
       <h3>Rating Distribution</h3>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer width="100%" height="90%">
         <BarChart
           data={ratingData}
-          margin={{ top: 15, right: 10, bottom: 10, left: 10 }}
+          margin={{ top: 10, right: 10, bottom: 0, left: 0}}
           aria-label="Rating distribution chart"
         >
           <XAxis dataKey="rating" />

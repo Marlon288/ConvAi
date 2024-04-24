@@ -11,7 +11,13 @@ var path = require("path");
 var fs = require('fs');
 
 /**
- * Route for getting the list of locations, formatted for analytic page
+ * @api {get} /api/getFormattedLocations Get formatted locations
+ * @apiName GetFormattedLocations
+ * @apiGroup Locations
+ *
+ * @apiSuccess {Array} formattedLocations List of formatted locations.
+ *
+ * @apiError (500) InternalServerError Internal server error.
  */
 router.get('/getFormattedLocations', (req, res) => {
     const filePath = path.join(__dirname, '../data/Locations.json');
@@ -27,7 +33,13 @@ router.get('/getFormattedLocations', (req, res) => {
 });
 
 /**
- * Route for getting the list of locations.
+ * @api {get} /api/getLocations Get locations
+ * @apiName GetLocations
+ * @apiGroup Locations
+ *
+ * @apiSuccess {Array} locations List of locations.
+ *
+ * @apiError (500) InternalServerError Internal server error.
  */
 router.get('/getLocations', (req, res) => {
     const filePath = path.join(__dirname, '../data/Locations.json');

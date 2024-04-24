@@ -1212,5 +1212,134 @@
     "Location": "Norwich,UK",
     "DateTime": "2024-04-23T11:53:20.772Z",
     "Rating": 5
+  },
+  {
+    "id": "c5016de7-77eb-4f5d-be97-4fdd408d46c6",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n<h3>Scheduling Unscheduled or Backlogged Work Orders</h3>\n<ul>\n    <li><b>Step 1:</b> Select <b>Unscheduled WOs for Dataspy</b> or <b>Backlogged WOs for Dataspy</b> in the <b>Activities</b> section of the form.</li>\n    <li><b>Step 2:</b> Select a work order from the list.</li>\n    <li><b>Step 3:</b> Drag the selected work order to the day on the calendar for which to schedule it.</li>\n    <li>The system creates a new work order schedule record.</li>\n</ul>\n\n<h3>Rescheduling Work Orders</h3>\n<ul>\n    <li><b>Step 1:</b> Select the work order to reschedule in the <b>Daily Schedule</b> list.</li>\n    <li><b>Step 2:</b> Drag it to the day on the calendar for which to reschedule it. You must select either today's date or a future date as the reschedule date on the calendar.</li>\n</ul>\n\n<h3>Changing Work Order Status</h3>\n<ul>\n    <li><b>Step 1:</b> Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n    <li><b>Step 2:</b> Select a work order and a daily schedule record for which to change the status, and then click <b>Actions > Change WO Status</b>.</li>\n    <li><b>Step 3:</b> Specify this information:\n        <ul>\n            <li>New Status - Select the status to which to change the work order. You may only select a New Status with a system status of <b>R</b>.</li>\n        </ul>\n    </li>\n    <li><b>Step 4:</b> Click <b>Submit</b>.</li>\n</ul>\n<br>\n</body>\n</html>\n```",
+    "Performance": 19.303583999991417,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-23T23:53:13.173Z"
+  },
+  {
+    "id": "e30f24cc-0233-4840-8490-c4b6fe8452bc",
+    "Prompt": "How do I schedule a Workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Schedule a Workorder</title>\n</head>\n<body>\n<h3>Scheduling Work Orders</h3>\n<ul>\n<li>\n<b>For Unscheduled Work Orders:</b><br>\n<ol>\n<li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n<li>In the Activities section of the form, select <b>Unscheduled WOs for Dataspy</b>.</li>\n<li>Select a work order from the list and drag it to the day on the calendar for which you wish to schedule it.</li>\n<li>The system creates a new work order schedule record.</li>\n</ol>\n</li>\n<br>\n<li>\n<b>For Backlogged Work Orders:</b><br>\n<ol>\n<li>Select <b>Work > WO Planning > WO Scheduling</b>.</li>\n<li>In the Activities section of the form, select <b>Backlogged WOs for Dataspy</b>.</li>\n<li>Select a work order from the list and drag it to the day on the calendar for which you wish to schedule it.</li>\n<li>The system creates a new work order schedule record.</li>\n</ol>\n</li>\n</ul>\n</body>\n</html>\n```",
+    "Performance": 15.571217700004578,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:17:19.575Z",
+    "Rating": 4
+  },
+  {
+    "id": "bf670679-7c93-4552-b99f-af986a30128e",
+    "Prompt": "Wie kann ich einen arbeitsauftrag in auftrag geben?",
+    "Answer": "Nothing was found that fits your description",
+    "Performance": 1.5236691999435426,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:17:40.310Z"
+  },
+  {
+    "id": "19326285-7a83-40ca-b00a-e804640c74b4",
+    "Prompt": "Wie kann ich einen neuen Mitarbeiter einstellen?",
+    "Answer": "Nothing was found that fits your description",
+    "Performance": 1.3721175000667571,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:18:19.984Z"
+  },
+  {
+    "id": "3a9a4b27-970e-449b-aacb-70f274678a8f",
+    "Prompt": "How can I set up a new Employee",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Setting Up a New Employee</title>\n</head>\n<body>\n\n<h3>Setting Up a New Employee in the EAM System</h3>\n<p>No specific process for setting up a new employee is outlined in the provided context. The context focuses on forming and managing crews for work order activities, rather than individual employee setup.</p>\n<p>Here are the related steps for adding employees to a crew:</p>\n<ul>\n    <li><b>Step 1:</b> Browse to the <b>Available Employees</b> section.</li>\n    <li><b>Step 2:</b> On each employee card, right-click to access options:\n        <ul>\n            <li>Dispatch the work order activity to the employee.</li>\n            <li>View the employee's description and trade information.</li>\n            <li>View or delete the dispatched labor record for the employee.</li>\n        </ul>\n    </li>\n    <li><b>Step 3:</b> Employees selected will appear in the <b>Proposed Crew</b> section on the screen.</li>\n</ul>\n<p>Nothing was found that fits your description regarding the specific setup of a new employee.</p>\n\n</body>\n</html>\n```",
+    "Performance": 11.157988199949264,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:18:38.687Z"
+  },
+  {
+    "id": "b8e07944-962d-4b37-a733-dfe9fc4c4d93",
+    "Prompt": "Wie stelle ich einen neuen Benutzer ein?",
+    "Answer": "Nothing was found that fits your description",
+    "Performance": 2.1935918999910355,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-24T01:24:52.875Z"
+  },
+  {
+    "id": "876eaac8-d953-49f6-a4ec-b20dd31ffc5e",
+    "Prompt": "How do I create a new user?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Creating a New User</title>\n</head>\n<body>\n<h3>Steps to Create a New Crew User</h3>\n<ul>\n  <li><b>Step 1:</b> Open the GIS Map WO Dispatching screen.</li>\n  <li><b>Step 2:</b> Select the work order activity for which to dispatch labor.</li>\n  <li><b>Step 3:</b> Click <b>Create Crew</b>. The Create Crew pop up window is opened.</li>\n  <li><b>Step 4:</b> Optionally, if this crew is being created for a temporary period of time, select the <b>Temporary</b> check box, and then specify the date the \"temporary\" crew will expire in <b>Expiration Date</b>.</li>\n  <li><b>Step 5:</b> Optionally, select the <b>Show Available Only</b> check box to only display available employees and crews that have enough remaining available hours to perform the selected WO activities.</li>\n  <li><b>Step 6:</b> In the Crew field, specify a unique code or name to identify this crew, and then specify a description of this crew in the adjacent field.</li>\n  <li><b>Step 7:</b> Specify this Crew Details information:<br>\n    <ul>\n      <li>Organization - Specify the organization of the work order for the work being performed.</li>\n      <li>Supervisor - Optionally, assign a supervisor for the crew.</li>\n      <li>End Date - Optionally, specify an end date for the employees assigned to this crew if it is a permanent crew which will not expire.</li>\n      <li>Profile Picture - Optionally, associate a picture with this crew.</li>\n    </ul>\n  </li>\n  <li><b>Step 8:</b> Add employees to the new crew, or select a crew, to which to dispatch the work order activities.</li>\n  <li><b>Step 9:</b> To add employees to the crew, browse to the Available Employees section, and on each employee card, choose one the following right-click options:<br>\n    <ul>\n      <li>Dispatch the work order activity to the employee.</li>\n      <li>View the employee's description and trade information.</li>\n      <li>View or delete the dispatched labor record for the employee.</li>\n    </ul>\n  </li>\n  <li><b>Step 10:</b> When no further modifications to the crew are necessary, click <b>Create Crew and Dispatch</b>. The new crew is shown in the Dispatched Employees/Crews section on the GIS Map WO Dispatching screen for the selected work order activity.</li>\n</ul>\n</body>\n</html>\n```\n\n**Note**: The above HTML structure assumes the context of the conversation is to create a new crew user in an EAM System based on the provided documentation steps. There's no reference to \"user\" as a separate entity from \"crew\" or \"employee\" in the context, so the creation process is applied to a new crew which might include new users (employees). If \"user\" refers to a system account not related to a crew, the provided documentation does not contain this information, and further clarification would be required.",
+    "Performance": 27.73577899992466,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-24T01:25:50.850Z"
+  },
+  {
+    "id": "59da7ee0-2902-4ece-91cf-8ab8d64bde18",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>How to Schedule a Workorder</title>\n</head>\n<body>\n    <h3>Scheduling Work Orders</h3>\n    <p>To schedule a work order, follow these steps:</p>\n    <ul>\n        <li><b>Step 1:</b> Select <b>Unscheduled WOs</b> for Dataspy in the <b>Activities</b> section of the form.</li>\n        <li><b>Step 2:</b> Select a work order from the list.</li>\n        <li><b>Step 3:</b> Drag the selected work order to the day on the calendar for which to schedule it.</li>\n        <li>The system creates a new work order schedule record.</li>\n    </ul>\n    <br>\n    <p>To schedule backlogged work orders, the steps are similar:</p>\n    <ul>\n        <li><b>Step 1:</b> Select <b>Backlogged WOs</b> for Dataspy in the <b>Activities</b> section of the form.</li>\n        <li><b>Step 2:</b> Select a work order from the list.</li>\n        <li><b>Step 3:</b> Drag the selected work order to the day on the calendar for which to schedule it.</li>\n        <li>The system creates a new work order schedule record.</li>\n    </ul>\n</body>\n</html>\n```",
+    "Performance": 12.974576099991799,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-24T01:27:09.502Z"
+  },
+  {
+    "id": "1e41d03d-86de-4b2e-8835-1ae1895853a5",
+    "Prompt": "Wie plane ich einen Arbeitsauftrag?",
+    "Answer": "```html\n<h3>Planung eines Arbeitsauftrags</h3>\n<ul>\n    <li><b>Schritt 1:</b> Wählen Sie <code>Work > WO Planning > WO Scheduling</code>.</li>\n    <li><b>Schritt 2:</b> Klicken Sie mit der rechten Maustaste auf das Formular und wählen Sie <code>Freeze/Unfreeze</code>.</li>\n    <li><b>Schritt 3:</b> Geben Sie folgende Informationen an:\n        <ul>\n            <li>Freeze/Unfreeze - Wählen Sie <code>Freeze</code>, um den Zeitplan einzufrieren, oder <code>Unfreeze</code>, um ihn aufzutauen.</li>\n            <li>From Date/To Date - Geben Sie das Start- und Enddatum für den Einfrierzeitraum an.</li>\n            <li>Department - Geben Sie die Abteilung an, für die Zeitpläne eingefroren oder aufgetaut werden sollen.</li>\n        </ul>\n    </li>\n    <li><b>Schritt 4:</b> Klicken Sie auf <code>Submit</code>.</li>\n</ul>\n<br>\n<h3>Belastungsausgleich des Arbeitsauftrags</h3>\n<ul>\n    <li><b>Schritt 1:</b> Wählen Sie <code>Work > WO Planning > WO Load Balancing</code>.</li>\n    <li><b>Schritt 2:</b> Definieren Sie auf der Seite <code>Parameters</code> die Auswahlkriterien, um die Arbeitsaufträge zu finden, die ausgeglichen werden sollen.</li>\n    <li><b>Schritt 3:</b> Auf der <code>Preview</code>-Seite können Sie die Arbeitsaufträge vorab ansehen und nach Bedarf auswählen oder abwählen.</li>\n    <li><b>Schritt 4:</b> Auf der Seite <code>Balance Load</code> können Sie die Belastung durch die Arbeitsaufträge ausgleichen.</li>\n    <li><b>Schritt 5:</b> Klicken Sie auf <code>Process</code>.</li>\n    <li><b>Schritt 6:</b> Wählen Sie jeden Arbeitsauftrag aus, den Sie ausgleichen möchten, oder heben Sie die Auswahl bei Arbeitsaufträgen auf, die Sie nicht ausgleichen möchten.</li>\n    <li><b>Schritt 7:</b> Klicken Sie auf <code>Lock Selected Work Orders</code>.</li>\n    <li><b>Schritt 8:</b> Wählen Sie einen Arbeitsauftrag und klicken Sie auf den Pfeil nach rechts, um den aktuellen Arbeitsauftrag zeitlich vorwärts zu bewegen, oder auf den Pfeil nach links, um ihn zurückzuversetzen. Sie können auch ein spezifisches Datumsfeld anklicken, um das Datum des Arbeitsauftrags zu ändern.</li>\n</ul>\n<br>\n<p>Die oben genannten Schritte basieren auf den bereitgestellten Dokumentationen und beinhalten die erforderlichen Aktionen, um einen Arbeitsauftrag zu planen und die Belastung auszugleichen. Systemspezifische Terminologie wurde wie gefordert beibehalten.</p>\n",
+    "Performance": 23.641400200009347,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Frauenfeld,Switzerland",
+    "DateTime": "2024-04-24T01:27:52.065Z"
+  },
+  {
+    "id": "d84dab20-fe8b-4c28-bcc6-d14d0ca3abb5",
+    "Prompt": "How do I schedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>EAM System - Scheduling Work Orders</title>\n</head>\n<body>\n<h3>How to Schedule a Work Order</h3>\n<ul>\n  <li><b>Function:</b> Schedule unscheduled work orders</li>\n  <li><b>Procedure:</b></li>\n  <ol>\n    <li>Select <b>Unscheduled WOs for Dataspy</b> in the Activities section of the form.</li>\n    <li>Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n    <li>The system creates a new work order schedule record.</li>\n  </ol>\n</ul>\n\n<br>\n\n<ul>\n  <li><b>Function:</b> Schedule backlogged work orders</li>\n  <li><b>Procedure:</b></li>\n  <ol>\n    <li>Select <b>Backlogged WOs for Dataspy</b> in the Activities section of the form.</li>\n    <li>Select a work order from the list and drag it to the day on the calendar for which to schedule it.</li>\n    <li>The system creates a new work order schedule record.</li>\n  </ol>\n</ul>\n\n<p>The instructions provided are based on the documentation provided in the provided context and have been formatted as requested.</p>\n</body>\n</html>\n```",
+    "Performance": 12.138093100070954,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:29:09.257Z",
+    "Rating": 4
+  },
+  {
+    "id": "dc8c1f61-d1f3-4dc0-95a4-c15e144d97cb",
+    "Prompt": "wie plane ich einen Arbeitsauftrag?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"de\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Arbeitsauftrag planen</title>\n</head>\n<body>\n\n<h3>Arbeitsauftrag Planung</h3>\n<ul>\n  <li><b>Schritt 1:</b> Wählen Sie <b>Work > WO Planning > WO Scheduling</b>.</li>\n  <li><b>Schritt 2:</b> Klicken Sie mit der rechten Maustaste auf das Formular und wählen Sie <b>Freeze/Unfreeze</b>.</li>\n  <li><b>Schritt 3:</b> Geben Sie folgende Informationen an:\n    <ul>\n      <li><i>Freeze/Unfreeze</i> - Wählen Sie <i>Freeze</i>, um den Zeitplan einzufrieren, oder <i>Unfreeze</i>, um ihn aufzutauen.</li>\n      <li><i>From Date/To Date</i> - Geben Sie das Start- und Enddatum für den Einfrierzeitraum an.</li>\n      <li><i>Department</i> - Geben Sie die Abteilung an, für die Sie die Zeitpläne einfrieren oder auftauen möchten.</li>\n    </ul>\n  </li>\n  <li><b>Schritt 4:</b> Klicken Sie auf <b>Submit</b>.</li>\n</ul>\n\n<br>\n\n<h3>Arbeitsbelastung ausgleichen</h3>\n<ul>\n  <li><b>Schritt 1:</b> Wählen Sie <b>Work > WO Planning > WO Load Balancing</b>.</li>\n  <li><b>Schritt 2:</b> Geben Sie folgende Informationen ein:\n    <ul>\n      <li><i>Work Order Org.</i> - Geben Sie die Organisation an, zu der der Arbeitsauftrag gehört, wenn Sie die Mehrfachorganisations-Sicherheit verwenden.</li>\n    </ul>\n  </li>\n  <li><b>Schritt 3:</b> Geben Sie die Auswahlkriterien im Abschnitt <i>Selection Parameters</i> des Formulars an.</li>\n  <li><b>Schritt 4:</b> Geben Sie folgende Informationen an:\n    <ul>\n      <li><i>Schedule Window (Days)</i> - Geben Sie die Anzahl der Tage in der Zukunft an, für die die Arbeitsverfügbarkeit berechnet werden soll.</li>\n    </ul>\n  </li>\n  <li><b>Schritt 5:</b> Klicken Sie auf <b>Process</b>.</li>\n  <li>... (Hier würden weitere Schritte folgen, diese sind jedoch basierend auf dem gegebenen Kontext nicht spezifiziert.)</li>\n</ul>\n\n</body>\n</html>\n```",
+    "Performance": 28.299036599993705,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:29:46.892Z"
+  },
+  {
+    "id": "44a5b53f-84bc-4986-807c-70c41c0cdbe8",
+    "Prompt": "And tell me more about it",
+    "Answer": "```html\n<h3>Overview of EAM System Operations</h3>\n<ul>\n  <li>\n    <b>Updating Work Order Activities:</b>\n    <br> \n    <ul>\n      <li>Trade - Specify the trade to update for the activity.</li>\n      <li>Start Date - Specify the starting date to update for the activity.</li>\n      <li><b>Step 11</b> > Click Save.</li>\n      <li><b>Step 12</b> > Click Close Session and Update Work Orders.</li>\n    </ul>\n  </li>\n  <br>\n  <li>\n    <b>Viewing Work Order Details While Balancing Workload:</b>\n    <br>\n    <ul>\n      <li><b>Step 1</b> > Select Work > WO Planning > WO Load Balancing.</li>\n      <li><b>Step 3</b> > Select the work order to view details, then click View WO Details.</li>\n      <li><b>Step 5</b> > Click Close.</li>\n    </ul>\n  </li>\n  <br>\n  <li>\n    <b>Booking Labor Corrections for Work Orders:</b>\n    <br>\n    <ul>\n      <li>Department - Specify the department to calculate labor availability.</li>\n      <li>Start/End Date - Enter the period for calculating available labor.</li>\n      <li><b>Step 4</b> > Click Calculate.</li>\n      <li><b>Step 5</b> > Click Close.</li>\n    </ul>\n  </li>\n  <br>\n  <li>\n    <b>Viewing Labor Utilization:</b>\n    <br>\n    <ul>\n      <li><b>Step 1</b> > Select Work > WO Planning > WO Scheduling.</li>\n      <li><b>Step 2</b> > Specify organization and scheduling preferences.</li>\n    </ul>\n  </li>\n  <br>\n  <li>\n    <b>Dispatching Labor for Work Orders:</b>\n    <br>\n    <ul>\n      <li><b>Step 1</b> > Open GIS Map WO Dispatching screen.</li>\n      <li><b>Step 2</b> > Select work order activity for dispatching labor.</li>\n      <li><b>Step 3</b> > Click Create Crew.</li>\n    </ul>\n  </li>\n  <br>\n  <li>\n    <b>Reopening Closed Work Orders:</b>\n    <br>\n    <ul>\n      <li><b>Step 1</b> > Select Work > Work Orders.</li>\n      <li><b>Step 3</b> > Specify Status - select Released.</li>\n      <li><b>Step 4</b> > Click Save Record. The status 'Reopened' will be selected automatically.</li>\n    </ul>\n  </li>\n  <br>\n  <li>\n    <b>Entering Meter Readings for Work Order Equipment:</b>\n    <br>\n    <ul>\n      <li>Meter Readings - Enter new readings or review recent ones for work order equipment.</li>\n    </ul>\n  </li>\n</ul>\n```",
+    "Performance": 25.17460370004177,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:30:23.326Z"
+  },
+  {
+    "id": "828d8362-9e99-493d-8b4d-cd23ff34ba4b",
+    "Prompt": "How do I scchedule a workorder?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\">\n<title>Scheduling a Work Order</title>\n</head>\n<body>\n<h3>Scheduling Unscheduled Work Orders</h3>\n<ul>\n  <li><b>Select Unscheduled WOs for Dataspy</b> in the <i>Activities</i> section of the form.</li>\n  <li>Select a work order from the list and <b>drag it to the day on the calendar</b> for which to schedule it.</li>\n  <li>The system creates a new <b>work order schedule record</b>.</li>\n</ul>\n\n<h3>Scheduling Backlogged Work Orders</h3>\n<ul>\n  <li><b>Select Backlogged WOs for Dataspy</b> in the <i>Activities</i> section of the form.</li>\n  <li>Select a work order from the list and <b>drag it to the day on the calendar</b> for which to schedule it.</li>\n  <li>The system creates a new <b>work order schedule record</b>.</li>\n</ul>\n\n<br>\n</body>\n</html>\n```",
+    "Performance": 11.894687600016594,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:32:38.488Z",
+    "Rating": 2
+  },
+  {
+    "id": "d101b10a-8731-4b4d-baea-12031f18e26f",
+    "Prompt": "wie plane ich einen Arbeitsauftrag?",
+    "Answer": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<title>Planung eines Arbeitsauftrags</title>\n</head>\n<body>\n  <h3>Arbeitsauftrag planen</h3>\n  <ul>\n    <li><b>Schritt 1:</b> Wählen Sie <b>Work > WO Planning > WO Load Balancing</b>.</li>\n    <li><b>Schritt 2:</b> Geben Sie folgende Informationen an:\n      <ul>\n        <li><b>Work Order Org.:</b> Geben Sie die Organisation an, zu der der Arbeitsauftrag gehört, wenn Sie eine Sicherheit für mehrere Organisationen verwenden.</li>\n        <li>Geben Sie bei Bedarf Auswahlkriterien im Abschnitt <b>Selection Parameters</b> des Formulars ein.\n          <ul>\n            <li>Sie können Wildcards für <b>Department, PM Schedule, Project Budget, WO Type, Priority, Trade, Status, Reported By, Work Order, Assigned To</b> und <b>Assigned By</b> Parameter eingeben. Geben Sie das erste Zeichen des Parameters gefolgt von einem Prozentzeichen ein und klicken Sie dann auf <b>Process</b>. Zum Beispiel, wenn Sie E% für <b>Trade</b> eingeben, ruft das System alle Arbeitsaufträge ab, bei denen der Handel mit dem Buchstaben \"E\" beginnt.</li>\n          </ul>\n        </li>\n        <li><b>Schedule Window (Days):</b> Geben Sie die Anzahl der Tage in der Zukunft an, für die die Arbeitsverfügbarkeit berechnet werden soll.</li>\n      </ul>\n    </li>\n    <li><b>Schritt 3:</b> Gehen Sie zur <b>Preview</b> Registerkarte.</li>\n    <li><b>Schritt 4:</b> Wählen Sie jeden Arbeitsauftrag aus, den Sie ausgleichen möchten oder entfernen Sie die Auswahl bei jedem Arbeitsauftrag, den Sie nicht ausgleichen möchten, wie erforderlich.\n      <ul>\n        <li>Um alle Arbeitsaufträge auf einmal auszuwählen, wählen Sie <b>Select</b>.</li>\n        <li>Um alle Arbeitsaufträge auf einmal zu löschen, löschen Sie <b>Select</b>.</li>\n      </ul>\n    </li>\n    <li><b>Schritt 5:</b> Klicken Sie auf <b>Lock Selected Work Orders</b>.</li>\n    <li><b>Schritt 6:</b> Wählen Sie einen Arbeitsauftrag aus, und klicken Sie dann auf den nächsten Pfeil, um den aktuellen Arbeitsauftrag zeitlich nach vorne zu verschieben. Klicken Sie auf den vorherigen Pfeil, um den aktuellen Arbeitsauftrag zeitlich zurückzuverschieben. Sie können auch ein spezifisches Datumsfeld anklicken, um das Datum des Arbeitsauftrags zu ändern.</li>\n    <li><b>Schritt 7:</b> Klicken Sie auf <b>Update Activity</b>, um die Aktivität des Arbeitsauftrags zu aktualisieren.</li>\n    <li><b>Schritt 8:</b> Geben Sie folgende Informationen an:\n      <ul>\n        <li><b>Activity-Trade:</b> Wählen Sie die Aktivität-Hand",
+    "Performance": 32.81102869999409,
+    "LLM": "gpt-4-1106-preview",
+    "Location": "Glasgow,UK",
+    "DateTime": "2024-04-24T01:33:23.187Z"
   }
 ]

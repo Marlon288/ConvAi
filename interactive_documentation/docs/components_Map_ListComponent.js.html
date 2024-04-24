@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Map/ListComponent.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Map/ListComponent.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file ListComponent.js
+ * @description This component renders a list of locations with collapsible subcategories and handles location selection.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
+import React, { useState } from 'react';
+import './../../css/ListComponent.css';
+
+/**
+ * ListComponent component
+ * @param {Object} props - Component props
+ * @param {Array} props.locations - Array of location objects
+ * @param {Function} props.setLocation - Function to set the selected location
+ * @returns {JSX.Element} The rendered list component
+ */
+const ListComponent = ({ locations, setLocation, setHoveredLocation  }) => {
+  const [expandedCountries, setExpandedCountries] = useState([]);
+
+  /**
+   * Handles the click event on a location item
+   * @param {Object} location - The selected location object
+   */
+  const handleLocationClick = (location) => {
+    setLocation(location);
+  };
+
+  const handleMouseEnter = (location) => {
+    setHoveredLocation(location);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredLocation(null);
+  };
+
+  /**
+   * Handles the click event on a country item
+   * @param {string} country - The selected country
+   */
+  const handleCountryClick = (country) => {
+    if (expandedCountries.includes(country)) {
+      setExpandedCountries(expandedCountries.filter((c) => c !== country));
+    } else {
+      setExpandedCountries([...expandedCountries, country]);
+    }
+  };
+
+  // Group locations by country
+  const locationsByCountry = locations.reduce((acc, location) => {
+    const { location_country } = location;
+    if (acc[location_country]) {
+      acc[location_country].push(location);
+    } else {
+      acc[location_country] = [location];
+    }
+    return acc;
+  }, {});
+
+  // Sort countries alphabetically
+  const sortedCountries = Object.keys(locationsByCountry).sort();
+
+  return (
+    &lt;div className="list-container">
+      {sortedCountries.map((country) => (
+        &lt;div key={country}>
+          &lt;div
+            className="country-item"
+            onClick={() => handleCountryClick(country)}
+            role="button"
+            tabIndex="0"
+            aria-label={`Expand ${country}`}
+          >
+            {country}
+            &lt;span className="arrow">
+              {expandedCountries.includes(country) ? '  ▼' : '  ▶'}
+            &lt;/span>
+          &lt;/div>
+          {expandedCountries.includes(country) &amp;&amp; (
+            &lt;div className="location-list">
+              {locationsByCountry[country].map((location, index) => (
+                &lt;div
+                  key={index}
+                  className="list-item"
+                  onClick={() => handleLocationClick(location)}
+                  role="button"
+                  onMouseEnter={() => handleMouseEnter(location)}
+                  onMouseLeave={handleMouseLeave}
+                  tabIndex="0"
+                  aria-label={`Select ${location.location_label}`}
+                >
+                  {location.location_label}
+                &lt;/div>
+              ))}
+            &lt;/div>
+          )}
+        &lt;/div>
+      ))}
+    &lt;/div>
+  );
+};
+
+export default ListComponent;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ChatComponent">ChatComponent</a></li><li><a href="global.html#ExpandMap">ExpandMap</a></li><li><a href="global.html#FileTable">FileTable</a></li><li><a href="global.html#FileUpload">FileUpload</a></li><li><a href="global.html#ListComponent">ListComponent</a></li><li><a href="global.html#LocationSelector">LocationSelector</a></li><li><a href="global.html#LoginPage">LoginPage</a></li><li><a href="global.html#MapComponent">MapComponent</a></li><li><a href="global.html#MapEffect">MapEffect</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RatingChartCard">RatingChartCard</a></li><li><a href="global.html#ResetZoom">ResetZoom</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#UsageGraph">UsageGraph</a></li><li><a href="global.html#WordCloudCard">WordCloudCard</a></li><li><a href="global.html#generateRequestId">generateRequestId</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Apr 24 2024 05:05:56 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

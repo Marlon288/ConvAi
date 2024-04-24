@@ -6,7 +6,7 @@
 
   .average-rating-container {
     position: relative;
-    height: 30px; /* Adjust the height as needed */
+    height: 32px; /* Adjust the height as needed */
     display: flex;
     justify-content: center;
     align-items: center;

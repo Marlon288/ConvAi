@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Map/MapComponent.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Map/MapComponent.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file MapComponent.js
+ * @description This component renders a map with markers and handles map interactions.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
+import { React, useState, useEffect, useRef } from 'react';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+import './../../css/MapComponent.css';
+import ResetZoom from './ZoomComponent.js';
+import ExpandMap from './ExpandMapComponent.js';
+
+const poi_icon = new L.Icon({
+  iconUrl: '/Resource/Images/poi.svg',
+  iconSize: [25, 41],
+  iconAnchor: [15, 35],
+  popupAnchor: [1, -34],
+});
+
+const poi_icon_disable = new L.Icon({
+  iconUrl: '/Resource/Images/poi_disabled.svg',
+  iconSize: [25, 41],
+  iconAnchor: [15, 35],
+  popupAnchor: [1, -34],
+});
+
+/**
+ * MapEffect component
+ * @param {Object} props - Component props
+ * @param {boolean} props.isChatOpen - Indicates if the chat is open
+ * @returns {null} This component does not render anything
+ */
+const MapEffect = ({ isChatOpen }) => {
+  const map = useMap();
+  
+  useEffect(() => {
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 600);
+  }, [isChatOpen, map]);
+
+  return null;
+};
+
+/**
+ * MapComponent component
+ * @param {Object} props - Component props
+ * @param {boolean} props.isChatOpen - Indicates if the chat is open
+ * @param {Function} props.setIsChatOpen - Function to set the chat open state
+ * @param {Function} props.setLocation - Function to set the selected location
+ * @param {Array} props.locations - Array of location objects
+ * @returns {JSX.Element} The rendered map component
+ */
+const MapComponent = ({ isChatOpen, setIsChatOpen, setLocation, location, locations, selectedLocation,  hoveredLocation }) => {
+  const [resetZoomData, setResetZoomData] = useState(null);
+  const defaultZoom = 3;
+  const position = [47.566453725650305, 8.903938751666576]; // Frauenfeld
+
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    if (hoveredLocation) {
+      setResetZoomData({ position: hoveredLocation.coordinates, zoom: defaultZoom, duration: 1 });
+    } else if (location) {
+      setResetZoomData({ location: location.coordinates, zoom: defaultZoom, duration: 1 });
+    }
+  }, [hoveredLocation, location]);
+
+  /**
+   * Handles the click event on a popup
+   * @param {Object} location - The selected location object
+   */
+  const handlePopupClick = (location) => {
+    setIsChatOpen(true);
+    setLocation(location);
+    if (popupRef.current) {
+      popupRef.current._closeButton.click()
+    }
+  };
+
+
+  return (
+    &lt;div className={`map-container ${isChatOpen ? "minimized" : ""}`}>
+      &lt;MapContainer center={position} zoom={4} maxZoom={7} minZoom={3}>
+        &lt;TileLayer url="https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png" />
+        {locations.map((location, index) => (
+          &lt;Marker
+            key={index}
+            position={location.coordinates}
+            icon={location.api_link ? poi_icon : poi_icon_disable}
+            aria-label={location.location_label}
+          >
+            &lt;Popup ref={popupRef}>
+              &lt;div
+                style={{ cursor: "pointer" }}
+                onClick={() => handlePopupClick(location)}
+                role="button"
+                className="popUpButton"
+              >
+                {location.location_label}
+                &lt;br />
+                {location.api_link ? (
+                  &lt;span
+                    tabIndex="0"
+                    aria-label={`Go to AI for ${location.location_label}`}
+                  >
+                    Click here!
+                  &lt;/span>
+                ) : (
+                  "The service is not available at this location yet"
+                )}
+              &lt;/div>
+            &lt;/Popup>
+          &lt;/Marker>
+        ))}
+        &lt;MapEffect isChatOpen={isChatOpen} />
+        {resetZoomData &amp;&amp; (
+          &lt;ResetZoom
+            position={resetZoomData.position}
+            zoom={resetZoomData.zoom}
+          />
+        )}
+      &lt;/MapContainer>
+      {isChatOpen &amp;&amp; (
+        &lt;ExpandMap isChatOpen={isChatOpen} setIsChatOpen={setIsChatOpen} />
+      )}
+    &lt;/div>
+  );
+};
+
+export default MapComponent;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ChatComponent">ChatComponent</a></li><li><a href="global.html#ExpandMap">ExpandMap</a></li><li><a href="global.html#FileTable">FileTable</a></li><li><a href="global.html#FileUpload">FileUpload</a></li><li><a href="global.html#ListComponent">ListComponent</a></li><li><a href="global.html#LocationSelector">LocationSelector</a></li><li><a href="global.html#LoginPage">LoginPage</a></li><li><a href="global.html#MapComponent">MapComponent</a></li><li><a href="global.html#MapEffect">MapEffect</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RatingChartCard">RatingChartCard</a></li><li><a href="global.html#ResetZoom">ResetZoom</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#UsageGraph">UsageGraph</a></li><li><a href="global.html#WordCloudCard">WordCloudCard</a></li><li><a href="global.html#generateRequestId">generateRequestId</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Apr 24 2024 05:05:56 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

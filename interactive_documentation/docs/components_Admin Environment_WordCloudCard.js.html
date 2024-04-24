@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Admin Environment/WordCloudCard.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Admin Environment/WordCloudCard.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file WordCloudCard.js
+ * @description This component represents a word cloud card with search functionality.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+import React, { useState, useEffect } from "react";
+import { TagCloud } from "react-tagcloud";
+import "./../../css/WordCloudCard.css";
+import Tooltip from "../Tooltip";
+
+/**
+ * WordCloudCard component
+ * @param {Object} props - Component props
+ * @param {string} props.selectedLocation - The currently selected location
+ * @returns {JSX.Element} The rendered word cloud card component
+ */
+const WordCloudCard = ({ selectedLocation }) => {
+  const [wordFrequencyData, setWordFrequencyData] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [hoveredColumn, setHoveredColumn] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    fetchWordFrequencyData();
+  }, [selectedLocation]);
+
+  /**
+   * Fetches the word frequency data from the backend
+   */
+  const fetchWordFrequencyData = async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:9000/api/protected/analytics/word-frequency?location=${encodeURIComponent(
+          selectedLocation
+        )}`,
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+          },
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      const sortedData = data.sort((a, b) => b.amount - a.amount);
+      setWordFrequencyData(
+        sortedData.map((item) => ({
+          value: item.keyword,
+          count: item.amount,
+        }))
+      );
+    } catch (error) {
+      console.error("Error fetching word frequency data:", error);
+    }
+  };
+
+  /**
+   * Handles the search query change
+   * @param {Event} event - The search input change event
+   */
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const filteredWordFrequencyData = wordFrequencyData.filter(
+    (item) => item.count >= 3
+  );
+
+  const searchResults = wordFrequencyData.filter((item) =>
+    item.value.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  /**
+   * Handles the mouse enter event on the count column
+   */
+  const handleCountMouseEnter = () => {
+    setHoveredColumn(true);
+  };
+
+  /**
+   * Handles the mouse leave event on the count column
+   */
+  const handleCountMouseLeave = () => {
+    setHoveredColumn(false);
+  };
+
+  /**
+   * Handles the mouse move event
+   * @param {Event} event - The mouse move event
+   */
+  const handleMouseMove = (event) => {
+    setMousePosition({ x: event.clientX, y: event.clientY });
+  };
+
+  return (
+    &lt;div className="word-cloud-card">
+      &lt;h3>Word Cloud&lt;/h3>
+      &lt;div className="word-cloud-container">
+        &lt;TagCloud
+          minSize={12}
+          maxSize={35}
+          tags={filteredWordFrequencyData}
+          className="tag-cloud"
+        />
+      &lt;/div>
+      &lt;div className="search-container">
+        &lt;input
+          type="text"
+          placeholder="Search words..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          aria-label="Search words"
+        />
+        &lt;div className="search-results" onMouseMove={handleMouseMove}>
+          &lt;table>
+            &lt;tbody>
+              {searchResults.map((item, index) => (
+                &lt;tr key={index}>
+                  &lt;td>{item.value}&lt;/td>
+                  &lt;td
+                    onMouseEnter={handleCountMouseEnter}
+                    onMouseLeave={handleCountMouseLeave}
+                  >
+                    {item.count}
+                  &lt;/td>
+                &lt;/tr>
+              ))}
+            &lt;/tbody>
+          &lt;/table>
+        &lt;/div>
+      &lt;/div>
+      {hoveredColumn &amp;&amp; &lt;Tooltip text="Count" x={mousePosition.x} y={mousePosition.y} />}
+    &lt;/div>
+  );
+};
+
+export default WordCloudCard;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ChatComponent">ChatComponent</a></li><li><a href="global.html#ExpandMap">ExpandMap</a></li><li><a href="global.html#FileTable">FileTable</a></li><li><a href="global.html#FileUpload">FileUpload</a></li><li><a href="global.html#ListComponent">ListComponent</a></li><li><a href="global.html#LocationSelector">LocationSelector</a></li><li><a href="global.html#LoginPage">LoginPage</a></li><li><a href="global.html#MapComponent">MapComponent</a></li><li><a href="global.html#MapEffect">MapEffect</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RatingChartCard">RatingChartCard</a></li><li><a href="global.html#ResetZoom">ResetZoom</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#UsageGraph">UsageGraph</a></li><li><a href="global.html#WordCloudCard">WordCloudCard</a></li><li><a href="global.html#generateRequestId">generateRequestId</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Apr 24 2024 05:05:56 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

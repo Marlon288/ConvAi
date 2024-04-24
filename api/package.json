@@ -16,6 +16,7 @@
     "debug": "~2.6.9",
     "dotenv": "^16.4.5",
     "express": "~4.16.1",
+    "express-jsdoc-swagger": "^1.8.0",
     "graphql": "^16.8.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
@@ -23,6 +24,8 @@
     "langchain": "^0.1.32",
     "morgan": "~1.9.1",
     "stopword": "^3.0.1",
+    "swagger-jsdoc": "5.0.1",
+    "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1",
     "weaviate-ts-client": "^1.6.0"
   },

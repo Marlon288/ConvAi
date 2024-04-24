@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Admin Environment/FileUpload.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Admin Environment/FileUpload.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file FileUpload.js
+ * @description This component is a file upload interface and handles file selection and upload.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+import React, { useState, useEffect } from "react";
+
+/**
+ * FileUpload component
+ * @param {Object} props - Component props
+ * @param {Function} props.onFileUpload - Function to handle file upload
+ * @returns {JSX.Element} The rendered file upload component
+ */
+function FileUpload({ onFileUpload }) {
+  const [fileName, setFileName] = useState("No file chosen...");
+  const [selectedFile, setSelectedFile] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [locations, setLocations] = useState([]);
+
+  useEffect(() => {
+    fetchLocations();
+  }, []);
+
+  /**
+   * Fetches the locations from the backend
+   */
+  const fetchLocations = async () => {
+    try {
+      const response = await fetch("http://localhost:9000/api/getLocations");
+      if (response.ok) {
+        const data = await response.json();
+        const sortedLocations = data.sort((a, b) =>
+          a.location_label.localeCompare(b.location_label)
+        );
+        setLocations(sortedLocations);
+      } else {
+        console.error("Failed to fetch locations");
+      }
+    } catch (error) {
+      console.error("Error fetching locations:", error);
+    }
+  };
+
+  /**
+   * Handles the file change event
+   * @param {Object} event - The file change event
+   */
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedFile(file);
+      setFileName(file.name);
+    } else {
+      setFileName("No file chosen...");
+    }
+  };
+
+  /**
+   * Handles the upload button click event
+   */
+  const handleUploadClick = () => {
+    if (selectedFile &amp;&amp; selectedLocation) {
+      onFileUpload(selectedFile, selectedLocation);
+    }
+  };
+
+  /**
+   * Handles the location change event
+   * @param {Object} event - The location change event
+   */
+  const handleLocationChange = (event) => {
+    setSelectedLocation(event.target.value);
+  };
+
+  return (
+    &lt;div className="file-upload">
+      &lt;div className="file-select">
+        &lt;div
+          className="file-select-button"
+          id="fileName"
+          onClick={() => document.getElementById("chooseFile").click()}
+          role="button"
+          tabIndex="0"
+          aria-label="Choose File"
+        >
+          Choose File
+        &lt;/div>
+        &lt;div className="file-select-name" id="noFile">
+          {fileName}
+        &lt;/div>
+        &lt;input
+          type="file"
+          name="chooseFile"
+          id="chooseFile"
+          onChange={handleFileChange}
+          style={{ display: "none" }}
+          aria-hidden="true"
+        />
+        &lt;div className="file-select-right">
+          &lt;select
+            value={selectedLocation}
+            onChange={handleLocationChange}
+            className="location-select"
+            aria-label="Select Location"
+          >
+            &lt;option value="">Select Location&lt;/option>
+            {locations.map((location) => (
+              &lt;option key={location._id} value={location.location_label}>
+                {location.location_label}
+              &lt;/option>
+            ))}
+          &lt;/select>
+          &lt;div className={`file-upload-button-container ${selectedLocation ? 'show' : ''}`}>
+            {selectedFile &amp;&amp; selectedLocation &amp;&amp; (
+              &lt;button
+                type="submit"
+                className="file-upload-button"
+                onClick={handleUploadClick}
+                aria-label="Upload File"
+              >
+                Upload
+              &lt;/button>
+            )}
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  );
+}
+
+export default FileUpload;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ChatComponent">ChatComponent</a></li><li><a href="global.html#ExpandMap">ExpandMap</a></li><li><a href="global.html#FileTable">FileTable</a></li><li><a href="global.html#FileUpload">FileUpload</a></li><li><a href="global.html#ListComponent">ListComponent</a></li><li><a href="global.html#LocationSelector">LocationSelector</a></li><li><a href="global.html#LoginPage">LoginPage</a></li><li><a href="global.html#MapComponent">MapComponent</a></li><li><a href="global.html#MapEffect">MapEffect</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RatingChartCard">RatingChartCard</a></li><li><a href="global.html#ResetZoom">ResetZoom</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#UsageGraph">UsageGraph</a></li><li><a href="global.html#WordCloudCard">WordCloudCard</a></li><li><a href="global.html#generateRequestId">generateRequestId</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Apr 24 2024 05:05:56 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

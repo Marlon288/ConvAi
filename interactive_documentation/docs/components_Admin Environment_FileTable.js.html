@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/Admin Environment/FileTable.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/Admin Environment/FileTable.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @file FileTable.js
+ * @description This component renders a table of files with sorting and searching capabilities.
+ * @author Marlon D'Ambrosio
+ * @version 1.0
+ */
+
+import React, { useMemo, useState } from "react";
+
+/**
+ * FileTable component
+ * @param {Object} props - Component props
+ * @param {Array} props.files - Array of file objects
+ * @param {Object} props.sortConfig - Object containing the current sort configuration
+ * @param {Function} props.setSortConfig - Function to set the sort configuration
+ * @param {string} props.searchQuery - The current search query
+ * @param {Function} props.setSearchQuery - Function to set the search query
+ * @param {Function} props.onDelete - Function to handle file deletion
+ * @returns {JSX.Element} The rendered file table component
+ */
+function FileTable({ files, onDelete }) {
+  const [nameSearchQuery, setNameSearchQuery] = useState("");
+  const [locationSearchQuery, setLocationSearchQuery] = useState("");
+  const [sortConfig, setSortConfig] = useState({
+    key: null,
+    direction: "ascending",
+  });
+  const [searchQuery, setSearchQuery] = useState("");
+
+  /**
+   * Requests sorting of files based on the provided key
+   * @param {string} key - The key to sort by
+   */
+  const requestSort = (key) => {
+    let direction = "ascending";
+    if (sortConfig.key === key &amp;&amp; sortConfig.direction === "ascending") {
+      direction = "descending";
+    }
+    setSortConfig({ key, direction });
+  };
+
+  /**
+   * Sorts and filters the files based on the current sort configuration and search query
+   * @returns {Array} The sorted and filtered files
+   */
+  const sortedAndFilteredFiles = useMemo(() => {
+    let filteredFiles = [...files];
+    if (nameSearchQuery) {
+      const lowerCaseNameSearchQuery = nameSearchQuery.toLowerCase();
+      filteredFiles = filteredFiles.filter((file) =>
+        file.name.toLowerCase().includes(lowerCaseNameSearchQuery)
+      );
+    }
+    if (locationSearchQuery) {
+      const lowerCaseLocationSearchQuery = locationSearchQuery.toLowerCase();
+      filteredFiles = filteredFiles.filter((file) =>
+        file.location.toLowerCase().includes(lowerCaseLocationSearchQuery)
+      );
+    }
+    if (sortConfig.key !== null) {
+      filteredFiles.sort((a, b) => {
+        if (a[sortConfig.key] &lt; b[sortConfig.key]) {
+          return sortConfig.direction === "ascending" ? -1 : 1;
+        }
+        if (a[sortConfig.key] > b[sortConfig.key]) {
+          return sortConfig.direction === "ascending" ? 1 : -1;
+        }
+        return 0;
+      });
+    }
+    return filteredFiles;
+  }, [files, sortConfig, nameSearchQuery, locationSearchQuery]);
+
+  /**
+   * Gets the sort direction symbol for the provided key
+   * @param {string} key - The key to get the sort direction symbol for
+   * @returns {string} The sort direction symbol
+   */
+  const getSortDirectionSymbol = (key) => {
+    return sortConfig.key === key
+      ? sortConfig.direction === "ascending"
+        ? " ↓"
+        : " ↑"
+      : "\u00A0\u00A0\u00A0";
+  };
+
+  return (
+    &lt;div className="table-container">
+      &lt;table className="table">
+        &lt;thead>
+          &lt;tr>
+          &lt;th className="name-column" onClick={() => requestSort("name")}>
+              Name{getSortDirectionSymbol("name")}
+              &lt;input
+                type="text"
+                placeholder="name"
+                onChange={(e) => {
+                  e.stopPropagation();
+                  setNameSearchQuery(e.target.value);
+                }}
+                onClick={(e) => e.stopPropagation()}
+                style={{ padding: "2px" }}
+                className="search-input"
+                aria-label="Search by name"
+              />
+            &lt;/th>
+            &lt;th className="location-column" onClick={() => requestSort("location")}>
+              Location{getSortDirectionSymbol("location")}
+              &lt;input
+                type="text"
+                placeholder="location"
+                onChange={(e) => {
+                  e.stopPropagation();
+                  setLocationSearchQuery(e.target.value);
+                }}
+                onClick={(e) => e.stopPropagation()}
+                style={{ padding: "2px" }}
+                className="search-input"
+                aria-label="Search by location"
+              />
+            &lt;/th>
+            &lt;th
+              className="date-column"
+              onClick={() => requestSort("lastUpdated")}
+            >
+              Date{getSortDirectionSymbol("lastUpdated")}
+            &lt;/th>
+            &lt;th className="action-column">Actions&lt;/th>
+          &lt;/tr>
+        &lt;/thead>
+        &lt;tbody>
+          {sortedAndFilteredFiles.map((file, index) => (
+            &lt;tr key={index}>
+              &lt;td>{file.name}&lt;/td>
+              &lt;td>{file.location}&lt;/td>
+              &lt;td>{file.lastUpdated}&lt;/td>
+              &lt;td>
+                {!file.isDeleted &amp;&amp; (
+                  &lt;button
+                    className="delete-btn"
+                    onClick={() => onDelete(file.name)}
+                  >
+                    Delete
+                  &lt;/button>
+                )}
+              &lt;/td>
+            &lt;/tr>
+          ))}
+        &lt;/tbody>
+      &lt;/table>
+    &lt;/div>
+  );
+}
+
+export default FileTable;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ChatComponent">ChatComponent</a></li><li><a href="global.html#ExpandMap">ExpandMap</a></li><li><a href="global.html#FileTable">FileTable</a></li><li><a href="global.html#FileUpload">FileUpload</a></li><li><a href="global.html#ListComponent">ListComponent</a></li><li><a href="global.html#LocationSelector">LocationSelector</a></li><li><a href="global.html#LoginPage">LoginPage</a></li><li><a href="global.html#MapComponent">MapComponent</a></li><li><a href="global.html#MapEffect">MapEffect</a></li><li><a href="global.html#ProtectedRoute">ProtectedRoute</a></li><li><a href="global.html#RatingChartCard">RatingChartCard</a></li><li><a href="global.html#ResetZoom">ResetZoom</a></li><li><a href="global.html#Sidebar">Sidebar</a></li><li><a href="global.html#UsageGraph">UsageGraph</a></li><li><a href="global.html#WordCloudCard">WordCloudCard</a></li><li><a href="global.html#generateRequestId">generateRequestId</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Wed Apr 24 2024 05:05:56 GMT+0100 (British Summer Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

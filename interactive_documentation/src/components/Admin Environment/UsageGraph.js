@@ -68,9 +68,9 @@ const UsageGraph = ({ selectedLocation }) => {
   const averagePromptsPerDay = calculateAveragePromptsPerDay();
 
   return (
-    <div>
+    <div className="chart-container">
       <h3>Usage Rate</h3>
-      <ResponsiveContainer width="100%" height={400}>
+      <ResponsiveContainer className="recharts-wrapper" width="100%" height="100%">
         <LineChart
           data={sortedUsageData}
           margin={{ top: 10, right: 10, bottom: 10, left: 15 }}

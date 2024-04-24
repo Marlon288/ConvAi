@@ -1,8 +1,29 @@
+
+.location-selector-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .location-selector-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(250, 238, 238, 0.568);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+  }
+
+
 .location-selector {
     text-align: left;
   }
   
   .location-selector h2 {
+    margin-top: 0px;
     margin-bottom: 10px;
   }
   .location-selector p {

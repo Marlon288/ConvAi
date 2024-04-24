@@ -55,7 +55,7 @@ router.post("/setPrompt", async (req, res) => {
       Prompt: userInput,
       Answer: response.answer,
       Performance: responseTime,
-      LLM: "gpt-3.5-turbo",
+      LLM: "gpt-4-1106-preview",
       Location: location,
       DateTime: formattedDate // Add the date and time attribute
     };

@@ -48,24 +48,25 @@ async function initVectorStore() {
 async function initRetrievalChain() {
   const chatModel = new ChatOpenAI({
     openAIApiKey: process.env.OPENAI_API_KEY,
-    modelName: "gpt-3.5-turbo",
+    modelName: "gpt-4-1106-preview",
     temperature: 0.92,
     maxTokens: 750
   });
   setModel(chatModel);
   const prompt = ChatPromptTemplate.fromTemplate(`
-    You are an expert at EAM System and are tasked to help employees with their issues and inquieries. The context is the manual of the system.
-    You need to relay all of the steps and information of the context to me.
-    Answer the following question based on the provided context
-    and refer to the previous conversation, if required.
-
-    If there is no context that fits say: "Nothing was found that fits your description"
-
-    Chat History:
+   Chat History:
     <chat_history>
       {chat_history}
     </chat_history>
+
+    You are an expert at EAM System and are tasked to help employees with their issues and inquieries. 
+    Answer the following question based on the provided context
+    and refer to the previous conversation, if required.
+    If the context is insufficient, use your general knowledge.
+    Clearly indicate whether your response is based on the provided documentation or general knowledge.
+
     
+ 
     Return your answer in a HTML format, this is really important:
     - Use <ul> and <li> tags for bullet points or numbered lists.
     - Employ <b> tags for emphasizing bold text.
