@@ -31,9 +31,11 @@ async function initialize() {
 
 /**
  * Initializes the vector store by loading and splitting the training data.
+ * Change the FilePath to either include the small set (for testing) or the entire data set
  */
 async function initVectorStore() {
   const filePath = path.join(__dirname, "../data/TrainingData/HexagonDocumentationSmallSet.txt");
+  //const filePath = path.join(__dirname, "../data/TrainingData/HexagonDocumentation.txt");
   const loader = new TextLoader(filePath);
   const docs = await loader.load();
   const splitter = new RecursiveCharacterTextSplitter();

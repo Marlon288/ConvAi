@@ -23,9 +23,12 @@ function readPromptsData() {
 }
 
 /**
- * Route to get all prompts.
- * @route GET /prompts
- * @returns {Object} The prompts data.
+ * GET /api/protected/analytics/prompts
+ * @summary Get all prompts
+ * @tags Analytic
+ * @security bearerAuth
+ * @returns {Object} 200 - The prompts data
+ * @returns {Object} 500 - Internal Server Error
  */
 router.get('/prompts', verifyToken, (req, res) => {
   try {
@@ -38,10 +41,13 @@ router.get('/prompts', verifyToken, (req, res) => {
 });
 
 /**
- * Route to get prompts by country.
- * @route GET /country/:country
- * @param {string} country - The country to filter prompts by.
- * @returns {Object} The filtered prompts data.
+ * GET /api/protected/analytics/country/{country}
+ * @summary Get prompts by country
+ * @tags Analytic
+ * @security bearerAuth
+ * @param {string} country.path.required - The country to filter prompts by
+ * @returns {Object} 200 - The filtered prompts data
+ * @returns {Object} 500 - Internal Server Error
  */
 router.get('/country/:country', verifyToken, (req, res) => {
   try {
@@ -56,10 +62,13 @@ router.get('/country/:country', verifyToken, (req, res) => {
 });
 
 /**
- * Route to get prompts by location.
- * @route GET /location/:location
- * @param {string} location - The location to filter prompts by.
- * @returns {Object} The filtered prompts data.
+ * GET /api/protected/analytics/location/{location}
+ * @summary Get prompts by location
+ * @tags Analytic
+ * @security bearerAuth
+ * @param {string} location.path.required - The location to filter prompts by
+ * @returns {Object} 200 - The filtered prompts data
+ * @returns {Object} 500 - Internal Server Error
  */
 router.get('/location/:location', verifyToken, (req, res) => {
   try {
@@ -74,10 +83,13 @@ router.get('/location/:location', verifyToken, (req, res) => {
 });
 
 /**
- * Route to get usage data.
- * @route POST /usage
- * @param {string} location - The location to filter usage data by.
- * @returns {Object} The usage data.
+ * POST /api/protected/analytics/usage
+ * @summary Get usage data
+ * @tags Analytic
+ * @security bearerAuth
+ * @param {string} request.body - The location to filter usage data by
+ * @returns {Object} 200 - The usage data
+ * @returns {Object} 500 - Internal Server Error
  */
 router.post("/usage", verifyToken, (req, res) => {
   try {
@@ -106,10 +118,13 @@ router.post("/usage", verifyToken, (req, res) => {
 });
 
 /**
- * Route to get rating counts.
- * @route GET /rating-counts
- * @param {string} location - The location to filter rating counts by.
- * @returns {Object} The rating counts data.
+ * GET /api/protected/analytics/rating-counts
+ * @summary Get rating counts of the prompts
+ * @tags Analytic
+ * @security bearerAuth
+ * @param {string} location.query - The location to filter rating counts by
+ * @returns {Object} 200 - The rating counts data
+ * @returns {Object} 500 - Internal Server Error
  */
 router.get("/rating-counts", verifyToken, (req, res) => {
   try {
@@ -144,10 +159,13 @@ router.get("/rating-counts", verifyToken, (req, res) => {
 });
 
 /**
- * Route to get word frequency data.
- * @route GET /word-frequency
- * @param {string} location - The location to filter word frequency data by.
- * @returns {Object} The word frequency data.
+ * GET /api/protected/analytics/word-frequency
+ * @summary Get word frequency data
+ * @tags Analytic
+ * @security bearerAuth
+ * @param {string} location.query - The location to filter word frequency data by
+ * @returns {Object} 200 - The word frequency data
+ * @returns {Object} 500 - Internal Server Error
  */
 router.get("/word-frequency", verifyToken, (req, res) => {
   try {

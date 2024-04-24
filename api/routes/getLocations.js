@@ -11,13 +11,10 @@ var path = require("path");
 var fs = require('fs');
 
 /**
- * @api {get} /api/getFormattedLocations Get formatted locations
- * @apiName GetFormattedLocations
- * @apiGroup Locations
- *
- * @apiSuccess {Array} formattedLocations List of formatted locations.
- *
- * @apiError (500) InternalServerError Internal server error.
+ * GET /api/getFormattedLocations
+ * @summary Get formatted locations
+ * @returns {Array} 200 - List of formatted locations
+ * @returns {string} 500 - Internal server error
  */
 router.get('/getFormattedLocations', (req, res) => {
     const filePath = path.join(__dirname, '../data/Locations.json');
@@ -33,13 +30,10 @@ router.get('/getFormattedLocations', (req, res) => {
 });
 
 /**
- * @api {get} /api/getLocations Get locations
- * @apiName GetLocations
- * @apiGroup Locations
- *
- * @apiSuccess {Array} locations List of locations.
- *
- * @apiError (500) InternalServerError Internal server error.
+ * GET /api/getLocations
+ * @summary get the locations
+ * @returns {Array} 200 - List of locations
+ * @returns {string} 500 - Internal server error
  */
 router.get('/getLocations', (req, res) => {
     const filePath = path.join(__dirname, '../data/Locations.json');

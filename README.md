@@ -32,3 +32,16 @@ This project focuses on developing a conversational AI application to optimize i
         OPENAI_API_KEY and JWT_SECRET
 4.  Start the development server
 5.  Access the application through the provided URL
+
+## Documentation
+To access the frontend documentation, follow these steps:
+
+    1.  Navigate to the `/interactive_documentation/docs/` directory in your project.
+    2.  Open the `index.html` file in a web browser.
+
+To generate and view the backend API documentation, use the following command:
+
+    1.  Open a terminal or command prompt.
+    2.  Navigate to the `/api` directory of your project.
+    3.  Run the command: `npm run doc`.
+    4.  A documentation page for the API will open automn

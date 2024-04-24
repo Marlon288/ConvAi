@@ -32,7 +32,12 @@ function writeUsers(users) {
 }
 
 /**
- * Route for user login.
+ * POST /auth/login
+ * @summary User login through credentials
+ * @param {string} request.body.required - Username
+ * @param {string} request.body.required - Password
+ * @returns {Object} 200 - Login success response
+ * @returns {Object} 400 - Invalid credentials or user not found
  */
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;

@@ -11,8 +11,6 @@ var aiHandler = require("./routes/aiHandler");
 var filesRouter = require("./routes/filesRouter");
 const { router: authRouter } = require('./routes/authRouter');
 var analyticsRouter = require('./routes/analyticsRouter');
-const swaggerJSDoc = require('swagger-jsdoc');
-const swaggerUi = require('swagger-ui-express');
 var app = express();
 
 
@@ -40,23 +38,6 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-//Documentation
-const swaggerDefinition = {
-  openapi: '3.0.0',
-  info: {
-    title: 'Express API for JSONPlaceholder',
-    version: '1.0.0',
-  },
-};
-
-const options = {
-  swaggerDefinition,
-  // Paths to files containing OpenAPI definitions
-  apis: ['./routes/*.js'],
-};
-
-const swaggerSpec = swaggerJSDoc(options);
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 
 

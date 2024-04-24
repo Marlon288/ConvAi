@@ -19,7 +19,16 @@ const {
 } = require("../modules/sharedData");
 
 /**
- * Route for setting a prompt and generating a response.
+ * POST /api/setPrompt
+ * @summary Set a prompt, generate a response and save the information in backend
+ * @tags AI
+ * @param {string} request.body.required - Request ID
+ * @param {array} request.body - Chat history
+ * @param {string} request.body.required - User input
+ * @param {string} request.body - Location
+ * @returns {object} 200 - Response sent successfully
+ * @returns {object} 400 - Request ID is missing
+ * @returns {object} 500 - Internal Server Error
  */
 router.post("/setPrompt", async (req, res) => {
   const requestId = req.body.id;
@@ -81,9 +90,15 @@ router.post("/setPrompt", async (req, res) => {
     res.end();
   }
 });
-
 /**
- * Route for cancelling a request.
+ * POST /api/cancelRequest
+ * @summary Cancel a request
+ * @tags AI
+ * @param {string} request.body.required - Request ID
+ * @returns {string} 200 - Request cancelled
+ * @returns {string} 400 - Request ID is missing
+ * @returns {string} 404 - Request ID not found
+ * @returns {string} 500 - Internal Server Error
  */
 router.post("/cancelRequest", (req, res) => {
   const { requestId } = req.body;
@@ -109,6 +124,15 @@ router.post("/cancelRequest", (req, res) => {
   }
 });
 
+/**
+ * POST /api/setRating
+ * @summary Set rating for a prompt
+ * @tags AI
+ * @param {string} request.body.required - Prompt ID
+ * @param {number} request.body.required - Rating value
+ * @returns {object} 200 - Rating and location saved
+ * @returns {object} 500 - Internal Server Error
+ */
 router.post("/setRating", async (req, res) => {
   const { id, rating } = req.body;
 

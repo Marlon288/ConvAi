@@ -22,14 +22,24 @@ const files = [
 ];
 
 /**
- * Route for getting the list of files.
+ * GET /api/protected/files
+ * @summary Get the list of files
+ * @tag File Management
+ * @security bearerAuth
+ * @returns {Array} 200 - The list of files
  */
 router.get('/files', verifyToken, (req, res) => {
   res.json(files);
 });
 
 /**
- * Route for adding a file (simulated).
+ * POST /api/protected/files
+ * @summary Add a file (simulated in local JSON)
+ * @tag File Management 
+ * @security bearerAuth
+ * @param {string} request.body.required - The name of the file
+ * @param {string} request.body.required - The last updated date of the file
+ * @returns {string} 201 - File added successfully
  */
 router.post('/files', verifyToken, (req, res) => {
   const { name, lastUpdated } = req.body;
@@ -38,7 +48,13 @@ router.post('/files', verifyToken, (req, res) => {
 });
 
 /**
- * Route for deleting a file (simulated).
+ * DELETE /api/protected/files/{name}
+ * @summary Delete a file (simulated in local JSON)
+ * @tag File Management 
+ * @security bearerAuth
+ * @param {string} name.path.required - The name of the file to delete
+ * @returns {string} 200 - File deleted successfully
+ * @returns {string} 404 - File not found
  */
 router.delete('/files/:name', verifyToken, (req, res) => {
   const { name } = req.params;
