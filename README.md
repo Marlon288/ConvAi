@@ -44,4 +44,4 @@ To generate and view the backend API documentation, use the following command:
 1.  Open a terminal or command prompt.
 2.  Navigate to the `/api` directory of your project.
 3.  Run the command: `npm run doc`.
-4.  A documentation page for the API will open automn
+4.  The documentation can be accessed through `http://localhost:443/api-docs/`
